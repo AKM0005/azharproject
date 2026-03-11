@@ -26,9 +26,7 @@
         content="https://lh3.googleusercontent.com/aida-public/AB6AXuBS3qmiVA14KLjPNxeNIxm_1bImCwmTnEytj39YGl6Zoo7Q-1lG0LPGCsy1rILKdcCo-B22gJmUAqxo2ySEjMo06qyKyH6gzNLt6IUxQZeHOWLXh20RbKnLuIIsZiy5fwpDVMC60FYau25pNuubOPoWiAVz1-WMFTjxBCyEz1T1ZcRdWGH96g4aqMwWfAi6MGrcvEOrfTM3wtWyiJBlGVoI_rkNk4VUahU9hYC8p2Wu5lILT0OhTXykonJ-_PN6FyTwQnh9Mgn86ME" />
     <link rel="canonical" href="https://www.earthwormx.com/" />
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&amp;family=Playfair+Display:wght@400;700&amp;display=swap"
-        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <script>
@@ -37,20 +35,25 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: "#6B5B47", // Rich earth brown
-                        "background-light": "#F7F5F1", // Warm parchment
-                        "background-dark": "#3E3529", // Deep earth
-                        "card-light": "#E8DCC6", // Sandy beige
-                        "card-dark": "#8B7355", // Earthy brown
-                        "text-light": "#2D2418", // Dark earth text
-                        "text-dark": "#F4F1EB", // Warm cream text
-                        "text-muted-light": "#8B7D6B", // Muted earth
-                        "text-muted-dark": "#C4B5A0", // Light earth grey
-                        "accent-mud": "#A68B5B", // Golden earth
+                        primary: "#1F3A2E",
+                        "moss": "#4E6F4F",
+                        "fern": "#7A9B7A",
+                        "teal": "#2F5F5A",
+                        "stone": "#6B5442",
+                        "amber": "#CFA46A",
+                        "background-light": "#FDFBF5",
+                        "background-dark": "#151F19",
+                        "card-light": "#FFFFFF",
+                        "card-dark": "#1F3A2E",
+                        "text-light": "#1A251E",
+                        "text-dark": "#F4F1EB",
+                        "text-muted-light": "#4E6F4F",
+                        "text-muted-dark": "#A3BCA3",
+                        "accent-mud": "#CFA46A",
                     },
                     fontFamily: {
-                        display: ["Playfair Display", "serif"],
-                        body: ["Kalam", "cursive"],
+                        display: ["Cormorant Garamond", "serif"],
+                        body: ["Inter", "sans-serif"],
                     },
                     borderRadius: {
                         'lg': '1rem',
@@ -70,17 +73,13 @@
         }
 
         .dark body {
-            background-color: #2A3F31;
-        }
-
-        .font-handwritten {
-            font-family: 'Kalam', cursive;
+            background-color: #151F19;
         }
 
         .wavy-underline {
             text-decoration: underline;
             text-decoration-style: wavy;
-            text-decoration-color: #8B9B7E;
+            text-decoration-color: #7A9B7A;
             text-underline-offset: 8px;
         }
 
@@ -106,16 +105,71 @@
                 min-height: 44px;
             }
         }
+    
+        /* Premium UI Upgrades */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+        }
+        
+        .dark .glass-card {
+            background: rgba(31, 58, 46, 0.7); /* Deep Forest Green with opacity */
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Ken Burns Animation */
+        @keyframes kenburns {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.1); }
+        }
+        
+        .ken-burns {
+            animation: kenburns 15s ease-out infinite alternate;
+        }
+
+        /* Sticky Nav Transitions */
+        #main-header {
+            transition: all 0.3s ease;
+        }
+        
+        #main-header.scrolled {
+            background: rgba(253, 251, 245, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            padding-top: 1rem !important;
+            padding-bottom: 1rem !important;
+        }
+
+        .dark #main-header.scrolled {
+            background: rgba(21, 31, 25, 0.95);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+        
+        /* Modern generic transitions */
+        .hover-lift {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .hover-lift:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px rgba(78, 111, 79, 0.15); /* Moss green shadow */
+        }
+
     </style>
+<script src="https://unpkg.com/feather-icons"></script>
 </head>
 
 <body class="bg-background-light dark:bg-background-dark font-body text-text-light dark:text-text-dark">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <header class="py-8">
+        <header id="main-header" class="py-8 fixed top-0 w-full z-50 left-0 px-4 sm:px-6 lg:px-8 max-w-none">
             <div class="flex justify-between items-center">
                 <h1 class="text-3xl font-bold font-display text-primary dark:text-text-dark">EARTHWORMX</h1>
                 <!-- Desktop Navigation -->
-                <nav class="hidden md:flex items-center space-x-10 font-handwritten text-lg">
+                <nav class="hidden md:flex items-center space-x-10 text-lg">
                     <a class="text-text-light dark:text-text-dark hover:text-primary transition-colors"
                         href="#home">Home</a>
                     <a class="text-text-light dark:text-text-dark hover:text-primary transition-colors"
@@ -128,7 +182,7 @@
                 <div class="flex items-center space-x-4">
                     <a href="https://wa.me/918891401048" target="_blank" class="hidden md:block">
                         <button
-                            class="bg-accent-mud text-white px-6 py-2 flex items-center gap-2 rounded-lg font-handwritten text-lg shadow-md hover:bg-opacity-90 transition-colors">
+                            class="bg-accent-mud text-white px-6 py-2 flex items-center gap-2 rounded-full text-lg shadow-md hover:bg-opacity-90 transition-colors">
                             <i class="fab fa-whatsapp text-xl"></i> Chat on WhatsApp
                         </button>
                     </a>
@@ -144,7 +198,7 @@
             </div>
             <!-- Mobile Navigation -->
             <nav id="mobile-menu" class="mobile-menu md:hidden mt-4 pb-4">
-                <div class="flex flex-col space-y-4 font-handwritten text-lg">
+                <div class="flex flex-col space-y-4 text-lg">
                     <a class="text-text-light dark:text-text-dark hover:text-primary transition-colors py-2"
                         href="#home">Home</a>
                     <a class="text-text-light dark:text-text-dark hover:text-primary transition-colors py-2"
@@ -155,51 +209,50 @@
                         href="#contact">Contact</a>
                     <a href="https://wa.me/918891401048" target="_blank" class="inline-block">
                         <button
-                            class="w-full flex items-center justify-center gap-2 bg-accent-mud text-white px-6 py-3 rounded-lg font-handwritten text-lg shadow-md hover:bg-opacity-90 transition-colors">
+                            class="w-full flex items-center justify-center gap-2 bg-accent-mud text-white px-6 py-3 rounded-full text-lg shadow-md hover:bg-opacity-90 transition-colors">
                             <i class="fab fa-whatsapp text-xl"></i> Chat on WhatsApp
                         </button>
                     </a>
                 </div>
             </nav>
         </header>
-        <main>
+        <main class="pt-24">
             <section class="grid md:grid-cols-2 gap-12 items-center py-12 md:py-20" id="home">
                 <div class="space-y-6">
                     <h2
                         class="text-5xl md:text-6xl font-display font-bold leading-tight text-primary dark:text-text-dark">
-                        Restoring Earth.<br /> Root by Root.
+                        Bring Life Back<br /> to the Land.
                     </h2>
-                    <p class="text-xl text-text-muted-light dark:text-text-muted-dark font-handwritten">
-                        EarthwormX transforms barren lands into thriving ecosystems. We specialize in Miyawaki and food
-                        forests, soil regeneration, and sustainable farm landscapes—reviving degraded land while
-                        building climate resilience.
+                    <p class="text-xl text-text-muted-light dark:text-text-dark">
+                        Restoring ecosystems through soil regeneration and native forests.<br/><br/>
+                        We regenerate soil, plant dense Miyawaki forests, and design landscapes that reconnect people with nature. Our mission is to restore ecological balance and help the earth breathe again.
                     </p>
                     <a href="about.html"><button
-                            class="bg-primary text-white px-8 py-3 rounded-lg font-handwritten text-xl shadow-lg hover:bg-opacity-90 transition-transform hover:scale-105">
+                            class="bg-primary text-white px-8 py-3 rounded-full text-xl shadow-lg hover:bg-opacity-90 transition-transform hover:scale-105">
                             Discover Our Story
                         </button></a>
                     <!-- Impact Stats with Nature Icons -->
                     <div class="mt-10 pt-8 border-t border-card-light dark:border-card-dark">
                         <div class="grid grid-cols-3 gap-6">
                             <div class="text-center">
-                                <div class="text-4xl mb-2">🌱</div>
+                                <div class="text-4xl mb-2"><i data-feather="leaf" class="w-12 h-12 text-moss"></i></div>
                                 <p class="text-3xl font-display font-bold text-primary dark:text-text-dark">10,000+</p>
                                 <p
-                                    class="text-xs font-handwritten text-text-muted-light dark:text-text-muted-dark mt-1">
+                                    class="text-xs text-text-muted-light dark:text-text-muted-dark mt-1">
                                     Native Trees</p>
                             </div>
                             <div class="text-center">
-                                <div class="text-4xl mb-2">🌳</div>
+                                <div class="text-4xl mb-2"><i data-feather="tree-pine" class="w-12 h-12 text-moss"></i></div>
                                 <p class="text-3xl font-display font-bold text-primary dark:text-text-dark">20+</p>
                                 <p
-                                    class="text-xs font-handwritten text-text-muted-light dark:text-text-muted-dark mt-1">
+                                    class="text-xs text-text-muted-light dark:text-text-muted-dark mt-1">
                                     Miyawaki Forests</p>
                             </div>
                             <div class="text-center">
-                                <div class="text-4xl mb-2">🌍</div>
+                                <div class="text-4xl mb-2"><i data-feather="globe" class="w-12 h-12 text-teal"></i></div>
                                 <p class="text-3xl font-display font-bold text-primary dark:text-text-dark">Tons</p>
                                 <p
-                                    class="text-xs font-handwritten text-text-muted-light dark:text-text-muted-dark mt-1">
+                                    class="text-xs text-text-muted-light dark:text-text-muted-dark mt-1">
                                     CO₂ Offset</p>
                             </div>
                         </div>
@@ -239,50 +292,37 @@
                     class="text-4xl font-display font-bold text-primary dark:text-text-dark inline-block mb-4 wavy-underline">
                     Our Services</h2>
                 <p
-                    class="text-lg text-text-muted-light dark:text-text-muted-dark max-w-3xl mx-auto font-handwritten mb-12">
+                    class="text-lg text-text-muted-light dark:text-text-muted-dark max-w-3xl mx-auto mb-12">
                     From Miyawaki forests to sustainable farm design—regenerating land, restoring ecosystems.</p>
-                <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-10">
-                    <div class="p-6">
-                        <div class="text-5xl mb-4">🌳</div>
+                <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <div class="p-6 bg-card-light dark:bg-card-dark rounded-xl shadow-sm border border-black/5">
+                        <div class="text-5xl mb-4"><i data-feather="tree-pine" class="w-12 h-12 text-moss"></i></div>
                         <h3 class="text-2xl font-display font-bold text-primary dark:text-text-dark">Miyawaki Forest
                             Creation</h3>
-                        <p class="mt-2 text-text-muted-light dark:text-text-muted-dark font-handwritten">Dense,
-                            fast-growing native forests in 1/10th the time.</p>
+                        <p class="mt-2 text-text-muted-light dark:text-text-dark text-sm leading-relaxed">We create dense native forests using the Miyawaki method — an advanced ecological approach where diverse native species are planted in high density to accelerate natural forest growth. This rapidly restores biodiversity and improves local microclimates.</p>
                     </div>
-                    <div class="p-6">
-                        <div class="text-5xl mb-4">🍎</div>
-                        <h3 class="text-2xl font-display font-bold text-primary dark:text-text-dark">Food Forest
-                            Development</h3>
-                        <p class="mt-2 text-text-muted-light dark:text-text-muted-dark font-handwritten">Layered edible
-                            ecosystems that restore fertility and capture carbon.</p>
+                    <div class="p-6 bg-card-light dark:bg-card-dark rounded-xl shadow-sm border border-black/5">
+                        <div class="text-5xl mb-4"><i data-feather="leaf" class="w-12 h-12 text-moss"></i></div>
+                        <h3 class="text-2xl font-display font-bold text-primary dark:text-text-dark">Plant Supply</h3>
+                        <p class="mt-2 text-text-muted-light dark:text-text-dark text-sm leading-relaxed">We supply diverse plant varieties for landscaping, farming, and ecological restoration. <br><br><b>Our Range:</b> Bamboo, Fruit Plants, Shade Trees, Ornamental Plants, Forest Plants, Medicinal Plants.</p>
                     </div>
-                    <div class="p-6">
-                        <div class="text-5xl mb-4">🪱</div>
-                        <h3 class="text-2xl font-display font-bold text-primary dark:text-text-dark">Soil Regeneration
-                        </h3>
-                        <p class="mt-2 text-text-muted-light dark:text-text-muted-dark font-handwritten">
-                            Vermicomposting, biochar, and microbial restoration.</p>
-                    </div>
-                    <div class="p-6">
-                        <div class="text-5xl mb-4">🗺️</div>
-                        <h3 class="text-2xl font-display font-bold text-primary dark:text-text-dark">Farm Master
-                            Planning</h3>
-                        <p class="mt-2 text-text-muted-light dark:text-text-muted-dark font-handwritten">Sustainable
-                            layouts with rainwater harvesting and agroforestry.</p>
-                    </div>
-                    <div class="p-6">
-                        <div class="text-5xl mb-4">💧</div>
+                    <div class="p-6 bg-card-light dark:bg-card-dark rounded-xl shadow-sm border border-black/5">
+                        <div class="text-5xl mb-4"><i data-feather="droplet" class="w-12 h-12 text-teal"></i></div>
                         <h3 class="text-2xl font-display font-bold text-primary dark:text-text-dark">Smart Irrigation
                             Systems</h3>
-                        <p class="mt-2 text-text-muted-light dark:text-text-muted-dark font-handwritten">Precision drip,
-                            mist, and fog setups with 90% water efficiency.</p>
+                        <p class="mt-2 text-text-muted-light dark:text-text-dark text-sm leading-relaxed">We design intelligent irrigation systems that deliver water efficiently to plant roots while minimizing wastage and supporting healthy plant growth. Systems include Mist, Drip, Artificial Rain, and Pop-up Sprinklers.</p>
                     </div>
-                    <div class="p-6">
-                        <div class="text-5xl mb-4">🎋</div>
-                        <h3 class="text-2xl font-display font-bold text-primary dark:text-text-dark">Bamboo Plantations
+                    <div class="p-6 bg-card-light dark:bg-card-dark rounded-xl shadow-sm border border-black/5">
+                        <div class="text-5xl mb-4"><i data-feather="map" class="w-12 h-12 text-stone"></i></div>
+                        <h3 class="text-2xl font-display font-bold text-primary dark:text-text-dark">Natural & Sustainable Landscape Design</h3>
+                        <p class="mt-2 text-text-muted-light dark:text-text-dark text-sm leading-relaxed">We provide landscape design and implementation services that focus on natural, eco-friendly, and sustainable methods. Designing spaces where humans and nature can meet, coexist, and thrive in balance.</p>
+                    </div>
+                    <div class="p-6 bg-card-light dark:bg-card-dark rounded-xl shadow-sm border border-black/5">
+                        <div class="text-5xl mb-4"><i data-feather="activity" class="w-12 h-12 text-amber"></i></div>
+                        <h3 class="text-2xl font-display font-bold text-primary dark:text-text-dark">Soil Regeneration
                         </h3>
-                        <p class="mt-2 text-text-muted-light dark:text-text-muted-dark font-handwritten">Carbon storage,
-                            erosion control, and sustainable livelihoods.</p>
+                        <p class="mt-2 text-text-muted-light dark:text-text-dark text-sm leading-relaxed">
+                            Restoring soil. Regrowing forests. Reconnecting humans with nature. We restore what the earth once had.</p>
                     </div>
                 </div>
             </section>
@@ -292,7 +332,7 @@
                     <h2
                         class="text-4xl font-display font-bold text-primary dark:text-text-dark inline-block wavy-underline">
                         Our Process</h2>
-                    <p class="mt-4 text-lg text-text-muted-light dark:text-text-muted-dark font-handwritten">From
+                    <p class="mt-4 text-lg text-text-muted-light dark:text-text-muted-dark">From
                         assessment to self-sustaining forest</p>
                 </div>
                 <div class="max-w-5xl mx-auto">
@@ -303,7 +343,7 @@
                                 <span class="text-2xl font-display font-bold text-primary">1</span>
                             </div>
                             <h3 class="font-display font-bold text-primary dark:text-text-dark mb-2">Assess</h3>
-                            <p class="text-sm text-text-muted-light dark:text-text-muted-dark font-handwritten">Soil,
+                            <p class="text-sm text-text-muted-light dark:text-text-muted-dark">Soil,
                                 terrain & ecology analysis</p>
                         </div>
                         <div class="hidden md:flex items-center justify-center">
@@ -315,7 +355,7 @@
                                 <span class="text-2xl font-display font-bold text-primary">2</span>
                             </div>
                             <h3 class="font-display font-bold text-primary dark:text-text-dark mb-2">Design</h3>
-                            <p class="text-sm text-text-muted-light dark:text-text-muted-dark font-handwritten">Custom
+                            <p class="text-sm text-text-muted-light dark:text-text-muted-dark">Custom
                                 native forest layouts</p>
                         </div>
                         <div class="hidden md:flex items-center justify-center">
@@ -327,7 +367,7 @@
                                 <span class="text-2xl font-display font-bold text-primary">3</span>
                             </div>
                             <h3 class="font-display font-bold text-primary dark:text-text-dark mb-2">Regenerate</h3>
-                            <p class="text-sm text-text-muted-light dark:text-text-muted-dark font-handwritten">Restore
+                            <p class="text-sm text-text-muted-light dark:text-text-muted-dark">Restore
                                 soil vitality</p>
                         </div>
                         <div class="hidden md:flex items-center justify-center">
@@ -339,7 +379,7 @@
                                 <span class="text-2xl font-display font-bold text-primary">4</span>
                             </div>
                             <h3 class="font-display font-bold text-primary dark:text-text-dark mb-2">Plant</h3>
-                            <p class="text-sm text-text-muted-light dark:text-text-muted-dark font-handwritten">
+                            <p class="text-sm text-text-muted-light dark:text-text-muted-dark">
                                 Multi-layer native species</p>
                         </div>
                         <div class="hidden md:flex items-center justify-center">
@@ -351,7 +391,7 @@
                                 <span class="text-2xl font-display font-bold text-primary">5</span>
                             </div>
                             <h3 class="font-display font-bold text-primary dark:text-text-dark mb-2">Thrive</h3>
-                            <p class="text-sm text-text-muted-light dark:text-text-muted-dark font-handwritten">
+                            <p class="text-sm text-text-muted-light dark:text-text-muted-dark">
                                 Self-sustaining growth</p>
                         </div>
                     </div>
@@ -360,58 +400,87 @@
             <section class="py-16 md:py-24" id="gallery">
                 <div class="text-center mb-12">
                     <h2 class="text-4xl font-display font-bold text-primary dark:text-text-dark">Projects</h2>
-                    <p class="mt-2 text-lg text-text-muted-light dark:text-text-muted-dark font-handwritten">From barren
+                    <p class="mt-2 text-lg text-text-muted-light dark:text-text-muted-dark">From barren
                         to bountiful</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <div
-                        class="bg-white dark:bg-background-dark rounded-lg overflow-hidden shadow-lg border-4 border-card-light dark:border-card-dark transform hover:rotate-2 hover:scale-105 transition-transform duration-300">
+                        class="glass-card rounded-2xl overflow-hidden hover-lift border border-black/5 transform hover:rotate-2 hover:scale-105 transition-transform duration-300">
                         <img alt="Lush green fairway on a sunny day" class="w-full h-56 object-cover"
                             src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxlOF5I9SAkAfvgcaYPyWIXzRdySrGSyFCk3k6Kc3viY_8ffDrbN2Pr9U0oEGByJtr4xci2RwANmK5L8EhyNyyFT1zrFTX6tTW8R2z5P8DFeFHWjGDwIJh13BY0gJuFI5_bhx5GE-knmfytRLqSmsK35p6uTbQ2tbNOXpuDiV2K92yt2rz486QhMRqpBQd2MxMMY2Mf3b6RT5tIU-oFWWigISIV-kCkqls6umNVT4yXOKsvDLl8qVXRPMhnGajNYDeihLJ8-_xnnU" />
                         <div class="p-6">
                             <h3 class="text-xl font-display font-bold text-primary dark:text-text-dark mb-2">Urban
                                 Rooftop Oasis</h3>
-                            <p class="text-text-muted-light dark:text-text-muted-dark font-handwritten">From concrete to
+                            <p class="text-text-muted-light dark:text-text-muted-dark">From concrete to
                                 canopy, a city rooftop finds its wild heart.</p>
                         </div>
                     </div>
                     <div
-                        class="bg-white dark:bg-background-dark rounded-lg overflow-hidden shadow-lg border-4 border-card-light dark:border-card-dark mt-0 md:mt-8 transform hover:-rotate-2 hover:scale-105 transition-transform duration-300">
+                        class="glass-card rounded-2xl overflow-hidden hover-lift border border-black/5 mt-0 md:mt-8 transform hover:-rotate-2 hover:scale-105 transition-transform duration-300">
                         <img alt="Resort swimming pool with lounge chairs" class="w-full h-56 object-cover"
                             src="https://lh3.googleusercontent.com/aida-public/AB6AXuDf5rpAkZJqE4r7ctkFoKUo7AhOAYmegwRobtIDWlNB-Az4qq6xXwVJjCPGcwx1tzEFO7vlxXE95bs8Sl5TEcjEZ48M9HERszEeagULM8OM2e8lYbePz_kSAeRGX0mOZl6v8mHjLx6h8ir7Aiu_jZKelYsnDtS9vqBBeLdGMEr2iVNxHPcWW4PIpIqYjdGuqHK6yJOZBuw2K00cbjF_L7K46O6Stox2NsVGYGwRD90APhSq5vx__Yp8mpkgTHA-Ux7pW_ZgFyEhJSs" />
                         <div class="p-6">
                             <h3 class="text-xl font-display font-bold text-primary dark:text-text-dark mb-2">Corporate
                                 Campus Greenspace</h3>
-                            <p class="text-text-muted-light dark:text-text-muted-dark font-handwritten">A corporate
+                            <p class="text-text-muted-light dark:text-text-muted-dark">A corporate
                                 space re-energized with natural corridors and quiet groves.</p>
                         </div>
                     </div>
                     <div
-                        class="bg-white dark:bg-background-dark rounded-lg overflow-hidden shadow-lg border-4 border-card-light dark:border-card-dark transform hover:rotate-1 hover:scale-105 transition-transform duration-300">
+                        class="glass-card rounded-2xl overflow-hidden hover-lift border border-black/5 transform hover:rotate-1 hover:scale-105 transition-transform duration-300">
                         <img alt="The clubhouse exterior with a vibrant garden" class="w-full h-56 object-cover"
                             src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwSn9rRRoezM8ZrmtH0sIvNIRLxOCipEakmFrpDnzGOckX_kHyFKICrMvLEx6zxIU5SIUSEMjVD7kA-aREhrTSYMKJA9zGmn0iBB5YfjPMG17pfqH13wZXPr8Hxls9J3t1wBwqkrr8AehDIwOb2cE9-fWHKwby44e6th9mjr_EGVSnzd06BEXEnYjumyr7MDUvW-GAkapF1f-90BsqUf66n8_x8wF4uHd9bNj45B84On3kdV2-c0pi7p6oFmJIVtO_caEDXK3PDWA" />
                         <div class="p-6">
                             <h3 class="text-xl font-display font-bold text-primary dark:text-text-dark mb-2">Residential
                                 Eco-Lawn</h3>
-                            <p class="text-text-muted-light dark:text-text-muted-dark font-handwritten">A family's yard
+                            <p class="text-text-muted-light dark:text-text-muted-dark">A family's yard
                                 transformed into a biodiverse haven for pollinators and play.</p>
                         </div>
                     </div>
                 </div>
             </section>
+
+            <section class="py-16 md:py-24 bg-card-light dark:bg-card-dark/20 border-t border-b border-black/5" id="ideal-for">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h2 class="text-4xl font-display font-bold text-primary dark:text-text-dark mb-10">Ideal For</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="p-6 bg-white dark:bg-background-dark rounded-xl shadow-sm border border-black/5 flex items-center justify-center space-x-3">
+                            <i data-feather="check-circle" class="w-6 h-6 text-primary border-none"></i>
+                            <p class="font-display text-xl font-bold text-text-light dark:text-text-dark">Villa Owners</p>
+                        </div>
+                        <div class="p-6 bg-white dark:bg-background-dark rounded-xl shadow-sm border border-black/5 flex items-center justify-center space-x-3">
+                            <i data-feather="check-circle" class="w-6 h-6 text-primary border-none"></i>
+                            <p class="font-display text-xl font-bold text-text-light dark:text-text-dark">Gated Communities</p>
+                        </div>
+                        <div class="p-6 bg-white dark:bg-background-dark rounded-xl shadow-sm border border-black/5 flex items-center justify-center space-x-3">
+                            <i data-feather="check-circle" class="w-6 h-6 text-primary border-none"></i>
+                            <p class="font-display text-xl font-bold text-text-light dark:text-text-dark">Farm & Land Owners</p>
+                        </div>
+                        <div class="p-6 bg-white dark:bg-background-dark rounded-xl shadow-sm border border-black/5 flex items-center justify-center space-x-3 md:col-start-1 md:col-end-3">
+                            <i data-feather="check-circle" class="w-6 h-6 text-primary border-none"></i>
+                            <p class="font-display text-xl font-bold text-text-light dark:text-text-dark flex-1">Resorts & Hospitality Spaces</p>
+                        </div>
+                        <div class="p-6 bg-white dark:bg-background-dark rounded-xl shadow-sm border border-black/5 flex items-center justify-center space-x-3 md:col-start-3 md:col-end-auto"> <!-- Fix col spanning -->
+                            <i data-feather="check-circle" class="w-6 h-6 text-primary border-none"></i>
+                            <p class="font-display text-xl font-bold text-text-light dark:text-text-dark flex-1">Real Estate & Industrial Developments</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <section class="py-16 md:py-24">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
                     <div class="space-y-8">
-                        <div class="bg-card-light/70 dark:bg-card-dark/70 p-6 rounded-lg relative">
-                            <p class="font-handwritten text-lg text-text-light dark:text-text-dark">"EARTHWORMX didn't
+                        <div class="bg-card-light/70 dark:bg-card-dark/70 p-6 rounded-full relative">
+                            <p class="text-lg text-text-light dark:text-text-dark">"EARTHWORMX didn't
                                 just give us a garden; they gave us a new way to connect with nature right outside our
                                 door. Absolutely magical."</p>
                             <p class="text-md font-bold mt-3 text-primary dark:text-text-dark">- The Miller Family</p>
                             <img class="w-16 h-16 rounded-full absolute -bottom-6 -right-6 border-4 border-white dark:border-background-light"
                                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuCb12k59Vh2rfRx_ZbRw1X9xMIsFJJCmN2fzuMM_Pb5axoi5uWvhiMH-rJkrDGPdm1CWd4STic5dq-8wa4S7fASTww8VBIDRG0JLzOf4S9418z9j5YhZQAEBQT7xFhmcqGa18WWQQxKGCnDwvtF3kUDc6U0KWHyQ-jcA-e_9n1acBgZeTvSrnQtw6EEkO_E3q5U0yeTMcIpOM8CELWmvhxrqeiMsUR6bVtsGVPKvnm3DD22sntKBvjLhGeOjkDJUJfMgmybJAkuxSo" />
                         </div>
-                        <div class="bg-card-light/70 dark:bg-card-dark/70 p-6 rounded-lg ml-8 relative">
-                            <p class="font-handwritten text-lg text-text-light dark:text-text-dark">"Our employees are
+                        <div class="bg-card-light/70 dark:bg-card-dark/70 p-6 rounded-full ml-8 relative">
+                            <p class="text-lg text-text-light dark:text-text-dark">"Our employees are
                                 happier and more productive with the green wall. It's like a living piece of art."</p>
                             <p class="text-md font-bold mt-3 text-primary dark:text-text-dark">- CEO, TechBloom</p>
                             <img class="w-16 h-16 rounded-full absolute -bottom-6 -right-6 border-4 border-white dark:border-background-light"
@@ -423,10 +492,10 @@
                             class="text-4xl md:text-5xl font-display font-bold leading-tight text-primary dark:text-text-dark">
                             Client Testimonials
                         </h2>
-                        <p class="mt-4 text-lg text-text-muted-light dark:text-text-muted-dark font-handwritten">
+                        <p class="mt-4 text-lg text-text-muted-light dark:text-text-muted-dark">
                             Partners in regeneration—landowners, corporates, and citizens creating lasting impact.</p>
                         <a href="about.html"><button
-                                class="bg-accent-mud text-white px-8 py-3 rounded-lg font-handwritten text-xl shadow-lg hover:bg-opacity-90 transition-transform hover:scale-105 mt-6">
+                                class="bg-accent-mud text-white px-8 py-3 rounded-full text-xl shadow-lg hover:bg-opacity-90 transition-transform hover:scale-105 mt-6">
                                 Learn More
                             </button></a>
                     </div>
@@ -436,43 +505,43 @@
                 <div class="text-center mb-10">
                     <h2 class="text-4xl font-display font-bold text-primary dark:text-text-dark">Frequently Asked
                         Questions</h2>
-                    <p class="mt-2 text-lg text-text-muted-light dark:text-text-muted-dark font-handwritten">Answers to
+                    <p class="mt-2 text-lg text-text-muted-light dark:text-text-muted-dark">Answers to
                         common questions about our process and services.</p>
                 </div>
                 <div class="max-w-3xl mx-auto space-y-4">
                     <details
-                        class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-lg p-4">
+                        class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-full p-4">
                         <summary
                             class="cursor-pointer list-none flex justify-between items-center font-display text-lg text-text-light dark:text-text-dark">
                             What areas do you serve?<span class="ml-4 text-primary">+</span></summary>
-                        <div class="mt-3 text-text-muted-light dark:text-text-muted-dark font-handwritten">We primarily
+                        <div class="mt-3 text-text-muted-light dark:text-text-muted-dark">We primarily
                             serve the city and surrounding regions. For larger projects, we travel further—tell us about
                             your site and we’ll confirm.</div>
                     </details>
                     <details
-                        class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-lg p-4">
+                        class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-full p-4">
                         <summary
                             class="cursor-pointer list-none flex justify-between items-center font-display text-lg text-text-light dark:text-text-dark">
                             Do you use native plants?<span class="ml-4 text-primary">+</span></summary>
-                        <div class="mt-3 text-text-muted-light dark:text-text-muted-dark font-handwritten">Yes. We
+                        <div class="mt-3 text-text-muted-light dark:text-text-muted-dark">Yes. We
                             prioritize native, climate-appropriate species for resilience, biodiversity, and low
                             maintenance.</div>
                     </details>
                     <details
-                        class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-lg p-4">
+                        class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-full p-4">
                         <summary
                             class="cursor-pointer list-none flex justify-between items-center font-display text-lg text-text-light dark:text-text-dark">
                             How long does a project take?<span class="ml-4 text-primary">+</span></summary>
-                        <div class="mt-3 text-text-muted-light dark:text-text-muted-dark font-handwritten">Small
+                        <div class="mt-3 text-text-muted-light dark:text-text-muted-dark">Small
                             installations can be completed in a few days. Full landscape transformations typically take
                             2–8 weeks depending on scope and season.</div>
                     </details>
                     <details
-                        class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-lg p-4">
+                        class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-full p-4">
                         <summary
                             class="cursor-pointer list-none flex justify-between items-center font-display text-lg text-text-light dark:text-text-dark">
                             Do you provide maintenance?<span class="ml-4 text-primary">+</span></summary>
-                        <div class="mt-3 text-text-muted-light dark:text-text-muted-dark font-handwritten">We offer
+                        <div class="mt-3 text-text-muted-light dark:text-text-muted-dark">We offer
                             ongoing care plans and seasonal tune-ups to keep your landscape thriving.</div>
                     </details>
                 </div>
@@ -482,18 +551,18 @@
                     <h2 class="text-4xl font-display font-bold text-primary dark:text-text-dark wavy-underline">Contact
                         Us</h2>
                     <p
-                        class="mt-4 text-lg text-text-muted-light dark:text-text-muted-dark max-w-2xl mx-auto font-handwritten">
+                        class="mt-4 text-lg text-text-muted-light dark:text-text-muted-dark max-w-2xl mx-auto">
                         Ready to restore your land? Let's create a thriving ecosystem together.
                     </p>
                 </div>
                 <div class="mt-12 max-w-lg mx-auto">
-                    <form id="contact-form" class="space-y-6 font-handwritten">
+                    <form id="contact-form" class="space-y-6">
                         <div>
                             <label class="block text-sm font-bold text-text-light dark:text-text-dark"
                                 for="full-name">Your Name</label>
                             <div class="mt-1">
                                 <input
-                                    class="py-3 px-4 block w-full shadow-sm focus:ring-primary focus:border-primary border-accent-mud/50 rounded-lg bg-white dark:bg-background-dark text-text-light dark:text-text-dark text-lg"
+                                    class="py-3 px-4 block w-full shadow-sm focus:ring-primary focus:border-primary border-accent-mud/50 rounded-full bg-white dark:bg-background-dark text-text-light dark:text-text-dark text-lg"
                                     id="full-name" name="name" type="text" required />
                             </div>
                         </div>
@@ -502,7 +571,7 @@
                                 Email</label>
                             <div class="mt-1">
                                 <input
-                                    class="py-3 px-4 block w-full shadow-sm focus:ring-primary focus:border-primary border-accent-mud/50 rounded-lg bg-white dark:bg-background-dark text-text-light dark:text-text-dark text-lg"
+                                    class="py-3 px-4 block w-full shadow-sm focus:ring-primary focus:border-primary border-accent-mud/50 rounded-full bg-white dark:bg-background-dark text-text-light dark:text-text-dark text-lg"
                                     id="email" name="email" type="email" required />
                             </div>
                         </div>
@@ -511,7 +580,7 @@
                                 Phone (Optional)</label>
                             <div class="mt-1">
                                 <input
-                                    class="py-3 px-4 block w-full shadow-sm focus:ring-primary focus:border-primary border-accent-mud/50 rounded-lg bg-white dark:bg-background-dark text-text-light dark:text-text-dark text-lg"
+                                    class="py-3 px-4 block w-full shadow-sm focus:ring-primary focus:border-primary border-accent-mud/50 rounded-full bg-white dark:bg-background-dark text-text-light dark:text-text-dark text-lg"
                                     id="phone" name="phone" type="tel" />
                             </div>
                         </div>
@@ -520,15 +589,15 @@
                                 for="message">Your Message</label>
                             <div class="mt-1">
                                 <textarea
-                                    class="py-3 px-4 block w-full shadow-sm focus:ring-primary focus:border-primary border border-accent-mud/50 rounded-lg bg-white dark:bg-background-dark text-text-light dark:text-text-dark text-lg"
+                                    class="py-3 px-4 block w-full shadow-sm focus:ring-primary focus:border-primary border border-accent-mud/50 rounded-full bg-white dark:bg-background-dark text-text-light dark:text-text-dark text-lg"
                                     id="message" name="message" placeholder="Tell us about your dream garden..."
                                     rows="4" required></textarea>
                             </div>
                         </div>
-                        <div id="form-status" class="hidden text-center font-handwritten"></div>
+                        <div id="form-status" class="hidden text-center"></div>
                         <div>
                             <button
-                                class="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-lg shadow-sm text-xl font-medium text-white bg-primary hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                                class="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-full shadow-sm text-xl font-medium text-white bg-primary hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                                 type="submit" id="submit-btn">
                                 Send Message
                             </button>
@@ -542,9 +611,9 @@
                 class="flex flex-col md:flex-row justify-between items-center text-center md:text-left space-y-6 md:space-y-0">
                 <div>
                     <h3 class="text-2xl font-bold font-display text-primary dark:text-text-dark">EARTHWORMX</h3>
-                    <p class="font-handwritten text-text-muted-light dark:text-text-muted-dark">Regeneration in Action
+                    <p class="text-text-muted-light dark:text-text-muted-dark">Regeneration in Action
                     </p>
-                    <p class="mt-2 text-sm text-text-muted-light dark:text-text-muted-dark font-handwritten">
+                    <p class="mt-2 text-sm text-text-muted-light dark:text-text-muted-dark">
                         <a href="mailto:info@earthwormx.com"
                             class="hover:text-primary transition-colors">info@earthwormx.com</a><br />
                         <a href="https://wa.me/918891401048" target="_blank"
@@ -552,7 +621,7 @@
                     </p>
                 </div>
                 <div class="flex flex-col items-center space-y-3">
-                    <p class="font-handwritten text-text-light dark:text-text-dark font-semibold">Follow Our Journey</p>
+                    <p class="text-text-light dark:text-text-dark font-semibold">Follow Our Journey</p>
                     <div class="flex space-x-4">
                         <a class="text-text-light dark:text-text-dark hover:text-primary transition-colors transform hover:scale-110"
                             href="https://instagram.com/earthwormx" target="_blank" rel="noopener noreferrer"
@@ -577,7 +646,7 @@
                     </div>
                 </div>
                 <div class="text-center md:text-right">
-                    <p class="text-sm text-text-muted-light dark:text-text-muted-dark font-handwritten mb-2">
+                    <p class="text-sm text-text-muted-light dark:text-text-muted-dark mb-2">
                         <a href="#home" class="hover:text-primary transition-colors">Home</a> •
                         <a href="about.html" class="hover:text-primary transition-colors">About</a> •
                         <a href="#contact" class="hover:text-primary transition-colors">Contact</a>
@@ -700,6 +769,24 @@
             });
         });
     </script>
+
+
+        // Initialize Feather Icons
+        if (typeof feather !== 'undefined') {
+            feather.replace();
+        }
+        
+        // Sticky Header Logic
+        window.addEventListener('scroll', function() {
+            var header = document.getElementById('main-header');
+            if(header) {
+                if (window.scrollY > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            }
+        });
 
 </body>
 
