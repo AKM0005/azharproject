@@ -74,6 +74,8 @@
             background-color: #151F19;
         }
 
+        /* .class { font-family: 'Kalam', cursive; } */
+
         .mobile-menu {
             display: none;
         }
@@ -89,67 +91,12 @@
                 min-height: 44px;
             }
         }
-    
-        /* Premium UI Upgrades */
-        .glass-card {
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
-        }
-        
-        .dark .glass-card {
-            background: rgba(31, 58, 46, 0.7); /* Deep Forest Green with opacity */
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
-        }
-
-        /* Ken Burns Animation */
-        @keyframes kenburns {
-            0% { transform: scale(1); }
-            100% { transform: scale(1.1); }
-        }
-        
-        .ken-burns {
-            animation: kenburns 15s ease-out infinite alternate;
-        }
-
-        /* Sticky Nav Transitions */
-        #main-header {
-            transition: all 0.3s ease;
-        }
-        
-        #main-header.scrolled {
-            background: rgba(253, 251, 245, 0.95);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-            padding-top: 1rem !important;
-            padding-bottom: 1rem !important;
-        }
-
-        .dark #main-header.scrolled {
-            background: rgba(21, 31, 25, 0.95);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-        }
-        
-        /* Modern generic transitions */
-        .hover-lift {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .hover-lift:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 40px rgba(78, 111, 79, 0.15); /* Moss green shadow */
-        }
-
     </style>
-<script src="https://unpkg.com/feather-icons"></script>
 </head>
 
 <body class="bg-background-light dark:bg-background-dark font-body text-text-light dark:text-text-dark">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <header id="main-header" class="py-8 fixed top-0 w-full z-50 left-0 px-4 sm:px-6 lg:px-8 max-w-none">
+        <header class="py-8">
             <div class="flex justify-between items-center">
                 <h1 class="text-3xl font-bold font-display text-primary dark:text-text-dark"><a href="index.html"
                         class="hover:opacity-80 transition-opacity">EARTHWORMX</a></h1>
@@ -167,7 +114,7 @@
                 <div class="flex items-center space-x-4">
                     <a href="https://wa.me/918891401048" target="_blank" class="hidden md:block">
                         <button
-                            class="bg-accent-mud text-white px-6 py-2 flex items-center gap-2 rounded-full text-lg shadow-md hover:bg-opacity-90 transition-colors">
+                            class="bg-accent-mud text-white px-6 py-2 flex items-center gap-2 rounded-lg text-lg shadow-md hover:bg-opacity-90 transition-colors">
                             <i class="fab fa-whatsapp text-xl"></i> Chat on WhatsApp
                         </button>
                     </a>
@@ -194,21 +141,21 @@
                         href="index.html#contact">Contact</a>
                     <a href="https://wa.me/918891401048" target="_blank" class="inline-block">
                         <button
-                            class="w-full justify-center flex items-center gap-2 bg-accent-mud text-white px-6 py-3 rounded-full text-lg shadow-md hover:bg-opacity-90 transition-colors">
+                            class="w-full justify-center flex items-center gap-2 bg-accent-mud text-white px-6 py-3 rounded-lg text-lg shadow-md hover:bg-opacity-90 transition-colors">
                             <i class="fab fa-whatsapp text-xl"></i> Chat on WhatsApp
                         </button>
                     </a>
                 </div>
             </nav>
         </header>
-        <main class="pt-24">
+        <main>
             <section class="py-16 md:py-20">
                 <div class="text-center max-w-4xl mx-auto mb-16">
                     <h2 class="text-5xl md:text-6xl font-display font-bold text-primary dark:text-text-dark mb-6">
-                        EarthwormX – Regeneration in Action
+                        Bring Life Back to the Land
                     </h2>
                     <p class="text-2xl text-text-muted-light dark:text-text-muted-dark">
-                        Nature doesn't need saving—it needs restoring.
+                        Restoring soil. Regrowing forests. Reconnecting humans with nature.
                     </p>
                 </div>
                 <div class="grid md:grid-cols-2 gap-12 items-center mb-20">
@@ -217,23 +164,19 @@
                             src="https://lh3.googleusercontent.com/aida-public/AB6AXuBS3qmiVA14KLjPNxeNIxm_1bImCwmTnEytj39YGl6Zoo7Q-1lG0LPGCsy1rILKdcCo-B22gJmUAqxo2ySEjMo06qyKyH6gzNLt6IUxQZeHOWLXh20RbKnLuIIsZiy5fwpDVMC60FYau25pNuubOPoWiAVz1-WMFTjxBCyEz1T1ZcRdWGH96g4aqMwWfAi6MGrcvEOrfTM3wtWyiJBlGVoI_rkNk4VUahU9hYC8p2Wu5lILT0OhTXykonJ-_PN6FyTwQnh9Mgn86ME" />
                     </div>
                     <div class="space-y-6">
-                        <h3 class="text-3xl font-display font-bold text-primary dark:text-text-dark">Natural Land Regeneration & Transformation</h3>
-                        <p class="text-lg text-text-muted-light dark:text-text-dark">
-                            We work with landowners and real-estate developers to restore degraded land and unlock its long-term ecological and economic potential.
+                        <h3 class="text-3xl font-display font-bold text-primary dark:text-text-dark">Our Mission</h3>
+                        <p class="text-lg text-text-muted-light dark:text-text-muted-dark">
+                            At EarthwormX, our mission is to <strong>regenerate the land</strong>, protect native
+                            species, and empower landowners to become stewards of the Earth.
                         </p>
-                        <div class="space-y-2 text-lg text-text-muted-light dark:text-text-dark">
-                            <p><strong>Restore:</strong> It is time to restore what the earth once had.</p>
-                            <p><strong>Plant:</strong> Plant native species that allow the land to heal, regenerate, and thrive again.</p>
-                            <p><strong>Design:</strong> Designing spaces where humans and nature can meet, coexist, and thrive in balance.</p>
-                        </div>
-                        <div class="text-lg text-text-muted-light dark:text-text-dark">
-                            <p class="font-bold mb-2">Our approach includes:</p>
-                            <ul class="list-disc pl-5 space-y-1">
-                                <li>Soil regeneration and land rehabilitation</li>
-                                <li>Ecological landscape planning</li>
-                                <li>Preparing land for sustainable, high-value development</li>
-                            </ul>
-                        </div>
+                        <p class="text-lg text-text-muted-light dark:text-text-muted-dark">
+                            We fuse the Miyawaki technique with regenerative agriculture principles inspired by global
+                            best practices in soil, biodiversity, and water management.
+                        </p>
+                        <p class="text-lg text-text-muted-light dark:text-text-muted-dark">
+                            From barren plot to food forest, we're your complete farming partner—designing layouts,
+                            restoring soil vitality, and managing plantations from concept to canopy.
+                        </p>
                     </div>
                 </div>
                 <div class="bg-card-light/50 dark:bg-card-dark/20 rounded-xl p-12 mb-20">
@@ -241,42 +184,42 @@
                         Drives Us</h3>
                     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                         <div class="text-center p-6">
-                            <div class="text-5xl mb-4"><i data-feather="leaf" class="w-12 h-12 text-moss"></i></div>
+                            <div class="text-5xl mb-4">🌱</div>
                             <h4 class="text-xl font-display font-bold text-primary dark:text-text-dark mb-2">Native
                                 Ecology as Foundation</h4>
                             <p class="text-text-muted-light dark:text-text-muted-dark">Every project
                                 begins with local biodiversity, ensuring ecosystems thrive naturally.</p>
                         </div>
                         <div class="text-center p-6">
-                            <div class="text-5xl mb-4"><i data-feather="users" class="w-12 h-12 text-moss"></i></div>
+                            <div class="text-5xl mb-4">🤝</div>
                             <h4 class="text-xl font-display font-bold text-primary dark:text-text-dark mb-2">
                                 Community-Driven Afforestation</h4>
                             <p class="text-text-muted-light dark:text-text-muted-dark">We work
                                 alongside local communities to build lasting green legacies.</p>
                         </div>
                         <div class="text-center p-6">
-                            <div class="text-5xl mb-4"><i data-feather="refresh-ccw" class="w-12 h-12 text-teal"></i></div>
+                            <div class="text-5xl mb-4">♻️</div>
                             <h4 class="text-xl font-display font-bold text-primary dark:text-text-dark mb-2">
                                 Carbon-Positive Operations</h4>
                             <p class="text-text-muted-light dark:text-text-muted-dark">Every forest we
                                 plant actively offsets carbon and creates climate resilience.</p>
                         </div>
                         <div class="text-center p-6">
-                            <div class="text-5xl mb-4"><i data-feather="pen-tool" class="w-12 h-12 text-amber"></i></div>
+                            <div class="text-5xl mb-4">🎨</div>
                             <h4 class="text-xl font-display font-bold text-primary dark:text-text-dark mb-2">
                                 Nature-Based Design</h4>
                             <p class="text-text-muted-light dark:text-text-muted-dark">Integrating
                                 natural patterns into every landscape for harmony and beauty.</p>
                         </div>
                         <div class="text-center p-6">
-                            <div class="text-5xl mb-4"><i data-feather="tree-pine" class="w-12 h-12 text-moss"></i></div>
+                            <div class="text-5xl mb-4">🌳</div>
                             <h4 class="text-xl font-display font-bold text-primary dark:text-text-dark mb-2">
                                 Life-Centered Landscapes</h4>
                             <p class="text-text-muted-light dark:text-text-muted-dark">Creating
                                 ecosystems that sustain generations, not just seasons.</p>
                         </div>
                         <div class="text-center p-6">
-                            <div class="text-5xl mb-4"><i data-feather="activity" class="w-12 h-12 text-amber"></i></div>
+                            <div class="text-5xl mb-4">🪱</div>
                             <h4 class="text-xl font-display font-bold text-primary dark:text-text-dark mb-2">Inspired by
                                 Earthworms</h4>
                             <p class="text-text-muted-light dark:text-text-muted-dark">Nature's soil
@@ -331,9 +274,9 @@
                         Services</h3>
                     <div class="space-y-8 max-w-4xl mx-auto">
                         <div
-                            class="bg-white dark:bg-background-dark p-8 rounded-full shadow-lg border-l-4 border-primary">
+                            class="bg-white dark:bg-background-dark p-8 rounded-lg shadow-lg border-l-4 border-primary">
                             <div class="flex items-start space-x-4 mb-4">
-                                <span class="text-4xl"><i data-feather="tree-pine" class="w-12 h-12 text-moss"></i></span>
+                                <span class="text-4xl">🌳</span>
                                 <div>
                                     <h4 class="text-2xl font-display font-bold text-primary dark:text-text-dark mb-3">
                                         Miyawaki Forest Creation</h4>
@@ -349,9 +292,9 @@
                         </div>
 
                         <div
-                            class="bg-white dark:bg-background-dark p-8 rounded-full shadow-lg border-l-4 border-primary">
+                            class="bg-white dark:bg-background-dark p-8 rounded-lg shadow-lg border-l-4 border-primary">
                             <div class="flex items-start space-x-4 mb-4">
-                                <span class="text-4xl"><i data-feather="apple" class="w-12 h-12 text-amber"></i></span>
+                                <span class="text-4xl">🍎</span>
                                 <div>
                                     <h4 class="text-2xl font-display font-bold text-primary dark:text-text-dark mb-3">
                                         Food Forest Development</h4>
@@ -366,9 +309,9 @@
                         </div>
 
                         <div
-                            class="bg-white dark:bg-background-dark p-8 rounded-full shadow-lg border-l-4 border-primary">
+                            class="bg-white dark:bg-background-dark p-8 rounded-lg shadow-lg border-l-4 border-primary">
                             <div class="flex items-start space-x-4 mb-4">
-                                <span class="text-4xl"><i data-feather="activity" class="w-12 h-12 text-amber"></i></span>
+                                <span class="text-4xl">🪱</span>
                                 <div>
                                     <h4 class="text-2xl font-display font-bold text-primary dark:text-text-dark mb-3">
                                         Soil Regeneration & Carbon Farming</h4>
@@ -384,9 +327,9 @@
                         </div>
 
                         <div
-                            class="bg-white dark:bg-background-dark p-8 rounded-full shadow-lg border-l-4 border-primary">
+                            class="bg-white dark:bg-background-dark p-8 rounded-lg shadow-lg border-l-4 border-primary">
                             <div class="flex items-start space-x-4 mb-4">
-                                <span class="text-4xl"><i data-feather="map" class="w-12 h-12 text-stone"></i></span>
+                                <span class="text-4xl">🗺️</span>
                                 <div>
                                     <h4 class="text-2xl font-display font-bold text-primary dark:text-text-dark mb-3">
                                         Farm Layouts & Master Planning</h4>
@@ -401,9 +344,9 @@
                         </div>
 
                         <div
-                            class="bg-white dark:bg-background-dark p-8 rounded-full shadow-lg border-l-4 border-primary">
+                            class="bg-white dark:bg-background-dark p-8 rounded-lg shadow-lg border-l-4 border-primary">
                             <div class="flex items-start space-x-4 mb-4">
-                                <span class="text-4xl"><i data-feather="globe" class="w-12 h-12 text-teal"></i></span>
+                                <span class="text-4xl">🌍</span>
                                 <div>
                                     <h4 class="text-2xl font-display font-bold text-primary dark:text-text-dark mb-3">
                                         Land Restoration</h4>
@@ -418,9 +361,9 @@
                         </div>
 
                         <div
-                            class="bg-white dark:bg-background-dark p-8 rounded-full shadow-lg border-l-4 border-primary">
+                            class="bg-white dark:bg-background-dark p-8 rounded-lg shadow-lg border-l-4 border-primary">
                             <div class="flex items-start space-x-4 mb-4">
-                                <span class="text-4xl"><i data-feather="wind" class="w-12 h-12 text-moss"></i></span>
+                                <span class="text-4xl">🎋</span>
                                 <div>
                                     <h4 class="text-2xl font-display font-bold text-primary dark:text-text-dark mb-3">
                                         Bamboo Plantation & Propagation</h4>
@@ -440,7 +383,7 @@
                 <div class="mb-20 bg-card-light/30 dark:bg-card-dark/10 p-8 md:p-12 rounded-2xl">
                     <div class="max-w-4xl mx-auto">
                         <div class="text-center mb-8">
-                            <div class="text-5xl mb-4"><i data-feather="droplet" class="w-12 h-12 text-teal"></i></div>
+                            <div class="text-5xl mb-4">💧</div>
                             <h3 class="text-4xl font-display font-bold text-primary dark:text-text-dark mb-4">
                                 Intelligent Irrigation & Plumbing Systems</h3>
                             <p class="text-2xl text-primary dark:text-text-dark">Water Efficiency, Root
@@ -465,35 +408,35 @@
                             <h4 class="text-2xl font-display font-bold text-primary dark:text-text-dark mb-6">What Makes
                                 It Different</h4>
                             <div class="grid md:grid-cols-2 gap-6">
-                                <div class="bg-white dark:bg-background-dark p-6 rounded-full shadow">
+                                <div class="bg-white dark:bg-background-dark p-6 rounded-lg shadow">
                                     <h5 class="font-display font-bold text-primary dark:text-text-dark mb-2 text-lg">✓
                                         Efficient Water Delivery</h5>
                                     <p class="text-text-muted-light dark:text-text-muted-dark">Our
                                         systems ensure up to 90% water-use efficiency compared to traditional
                                         irrigation, with minimized evaporation and runoff.</p>
                                 </div>
-                                <div class="bg-white dark:bg-background-dark p-6 rounded-full shadow">
+                                <div class="bg-white dark:bg-background-dark p-6 rounded-lg shadow">
                                     <h5 class="font-display font-bold text-primary dark:text-text-dark mb-2 text-lg">✓
                                         Custom Engineered Plumbing</h5>
                                     <p class="text-text-muted-light dark:text-text-muted-dark">We
                                         source premium materials from trusted hubs, handpicked to suit each client's
                                         project size, terrain, and water source.</p>
                                 </div>
-                                <div class="bg-white dark:bg-background-dark p-6 rounded-full shadow">
+                                <div class="bg-white dark:bg-background-dark p-6 rounded-lg shadow">
                                     <h5 class="font-display font-bold text-primary dark:text-text-dark mb-2 text-lg">✓
                                         Precision Irrigation Design</h5>
                                     <p class="text-text-muted-light dark:text-text-muted-dark">Using
                                         fog, mist, micro-sprinkler, and drip setups, we achieve controlled flow and
                                         coverage across orchards, food forests, and farmlands.</p>
                                 </div>
-                                <div class="bg-white dark:bg-background-dark p-6 rounded-full shadow">
+                                <div class="bg-white dark:bg-background-dark p-6 rounded-lg shadow">
                                     <h5 class="font-display font-bold text-primary dark:text-text-dark mb-2 text-lg">✓
                                         Smart Control Technology</h5>
                                     <p class="text-text-muted-light dark:text-text-muted-dark">
                                         Integrating moisture sensors, fertigation control, and timer automation for
                                         optimum irrigation cycles with minimal labor.</p>
                                 </div>
-                                <div class="bg-white dark:bg-background-dark p-6 rounded-full shadow">
+                                <div class="bg-white dark:bg-background-dark p-6 rounded-lg shadow">
                                     <h5 class="font-display font-bold text-primary dark:text-text-dark mb-2 text-lg">✓
                                         Water and Energy Savings</h5>
                                     <p class="text-text-muted-light dark:text-text-muted-dark">Our
@@ -503,7 +446,7 @@
                             </div>
                         </div>
 
-                        <div class="bg-primary/10 dark:bg-primary/20 p-6 rounded-full">
+                        <div class="bg-primary/10 dark:bg-primary/20 p-6 rounded-lg">
                             <h4 class="text-2xl font-display font-bold text-primary dark:text-text-dark mb-4">Why Choose
                                 EarthwormX Irrigation</h4>
                             <ul class="space-y-2 text-text-light dark:text-text-dark">
@@ -554,30 +497,30 @@
                         EarthwormX?</h3>
                     <div class="max-w-3xl mx-auto space-y-4 text-left">
                         <div class="flex items-start space-x-3">
-                            <i data-feather="check-circle" class="w-6 h-6 text-primary flex-shrink-0"></i>
+                            <span class="text-primary text-2xl">✓</span>
                             <p class="text-lg text-text-muted-light dark:text-text-muted-dark">We bring
                                 ecological logic into every design.</p>
                         </div>
                         <div class="flex items-start space-x-3">
-                            <i data-feather="check-circle" class="w-6 h-6 text-primary flex-shrink-0"></i>
+                            <span class="text-primary text-2xl">✓</span>
                             <p class="text-lg text-text-muted-light dark:text-text-muted-dark">We
                                 partner with farm owners, corporates, and conscious citizens to create self-sustaining
                                 green investments.</p>
                         </div>
                         <div class="flex items-start space-x-3">
-                            <i data-feather="check-circle" class="w-6 h-6 text-primary flex-shrink-0"></i>
+                            <span class="text-primary text-2xl">✓</span>
                             <p class="text-lg text-text-muted-light dark:text-text-muted-dark">Every
                                 project is tracked from soil health to carbon capture.</p>
                         </div>
                         <div class="flex items-start space-x-3">
-                            <i data-feather="check-circle" class="w-6 h-6 text-primary flex-shrink-0"></i>
+                            <span class="text-primary text-2xl">✓</span>
                             <p class="text-lg text-text-muted-light dark:text-text-muted-dark">Our
                                 forests stand as climate-resilient havens that grow richer each year.</p>
                         </div>
                     </div>
                     <div class="mt-12">
                         <a href="https://wa.me/918891401048" target="_blank"><button
-                                class="bg-primary text-white px-10 py-4 flex items-center gap-3 mx-auto rounded-full text-2xl shadow-lg hover:bg-opacity-90 transition-transform hover:scale-105">
+                                class="bg-primary text-white px-10 py-4 flex items-center gap-3 mx-auto rounded-lg text-2xl shadow-lg hover:bg-opacity-90 transition-transform hover:scale-105">
                                 <i class="fab fa-whatsapp text-2xl"></i> Chat on WhatsApp
                             </button></a>
                     </div>
@@ -599,7 +542,7 @@
                         General Services</h3>
                     <div class="space-y-4">
                         <details
-                            class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-full p-4">
+                            class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-lg p-4">
                             <summary
                                 class="cursor-pointer list-none flex justify-between items-center font-display text-lg text-text-light dark:text-text-dark">
                                 What is the Miyawaki Method, and why is it special?
@@ -615,7 +558,7 @@
                         </details>
 
                         <details
-                            class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-full p-4">
+                            class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-lg p-4">
                             <summary
                                 class="cursor-pointer list-none flex justify-between items-center font-display text-lg text-text-light dark:text-text-dark">
                                 How does EarthwormX choose which species to plant?
@@ -630,7 +573,7 @@
                         </details>
 
                         <details
-                            class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-full p-4">
+                            class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-lg p-4">
                             <summary
                                 class="cursor-pointer list-none flex justify-between items-center font-display text-lg text-text-light dark:text-text-dark">
                                 How do you restore barren or degraded land?
@@ -645,7 +588,7 @@
                         </details>
 
                         <details
-                            class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-full p-4">
+                            class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-lg p-4">
                             <summary
                                 class="cursor-pointer list-none flex justify-between items-center font-display text-lg text-text-light dark:text-text-dark">
                                 What's included in your farm layout and landscape master plans?
@@ -660,7 +603,7 @@
                         </details>
 
                         <details
-                            class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-full p-4">
+                            class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-lg p-4">
                             <summary
                                 class="cursor-pointer list-none flex justify-between items-center font-display text-lg text-text-light dark:text-text-dark">
                                 What maintenance does a Miyawaki or food forest need?
@@ -674,7 +617,7 @@
                         </details>
 
                         <details
-                            class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-full p-4">
+                            class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-lg p-4">
                             <summary
                                 class="cursor-pointer list-none flex justify-between items-center font-display text-lg text-text-light dark:text-text-dark">
                                 How do I know my plantation or project is making an impact?
@@ -689,7 +632,7 @@
                         </details>
 
                         <details
-                            class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-full p-4">
+                            class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-lg p-4">
                             <summary
                                 class="cursor-pointer list-none flex justify-between items-center font-display text-lg text-text-light dark:text-text-dark">
                                 Does EarthwormX work with individuals, businesses, or landowners?
@@ -703,7 +646,7 @@
                         </details>
 
                         <details
-                            class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-full p-4">
+                            class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-lg p-4">
                             <summary
                                 class="cursor-pointer list-none flex justify-between items-center font-display text-lg text-text-light dark:text-text-dark">
                                 How soon do you see results after plantation?
@@ -717,7 +660,7 @@
                         </details>
 
                         <details
-                            class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-full p-4">
+                            class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-lg p-4">
                             <summary
                                 class="cursor-pointer list-none flex justify-between items-center font-display text-lg text-text-light dark:text-text-dark">
                                 What are the benefits of bamboo plantation and propagation?
@@ -731,7 +674,7 @@
                         </details>
 
                         <details
-                            class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-full p-4">
+                            class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-lg p-4">
                             <summary
                                 class="cursor-pointer list-none flex justify-between items-center font-display text-lg text-text-light dark:text-text-dark">
                                 Can I visit my project site or participate in planting?
@@ -752,7 +695,7 @@
                         Irrigation Systems</h3>
                     <div class="space-y-4">
                         <details
-                            class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-full p-4">
+                            class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-lg p-4">
                             <summary
                                 class="cursor-pointer list-none flex justify-between items-center font-display text-lg text-text-light dark:text-text-dark">
                                 What types of irrigation systems do you install?
@@ -765,7 +708,7 @@
                         </details>
 
                         <details
-                            class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-full p-4">
+                            class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-lg p-4">
                             <summary
                                 class="cursor-pointer list-none flex justify-between items-center font-display text-lg text-text-light dark:text-text-dark">
                                 How does drip irrigation differ from sprinkler irrigation?
@@ -779,7 +722,7 @@
                         </details>
 
                         <details
-                            class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-full p-4">
+                            class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-lg p-4">
                             <summary
                                 class="cursor-pointer list-none flex justify-between items-center font-display text-lg text-text-light dark:text-text-dark">
                                 What is the benefit of mist and fog irrigation?
@@ -792,7 +735,7 @@
                         </details>
 
                         <details
-                            class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-full p-4">
+                            class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-lg p-4">
                             <summary
                                 class="cursor-pointer list-none flex justify-between items-center font-display text-lg text-text-light dark:text-text-dark">
                                 How do you ensure my irrigation system uses water efficiently?
@@ -805,7 +748,7 @@
                         </details>
 
                         <details
-                            class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-full p-4">
+                            class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-lg p-4">
                             <summary
                                 class="cursor-pointer list-none flex justify-between items-center font-display text-lg text-text-light dark:text-text-dark">
                                 How long does it take to install an irrigation system?
@@ -818,7 +761,7 @@
                         </details>
 
                         <details
-                            class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-full p-4">
+                            class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-lg p-4">
                             <summary
                                 class="cursor-pointer list-none flex justify-between items-center font-display text-lg text-text-light dark:text-text-dark">
                                 Do you offer maintenance services?
@@ -831,7 +774,7 @@
                         </details>
 
                         <details
-                            class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-full p-4">
+                            class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-lg p-4">
                             <summary
                                 class="cursor-pointer list-none flex justify-between items-center font-display text-lg text-text-light dark:text-text-dark">
                                 Can the system be automated?
@@ -844,7 +787,7 @@
                         </details>
 
                         <details
-                            class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-full p-4">
+                            class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-lg p-4">
                             <summary
                                 class="cursor-pointer list-none flex justify-between items-center font-display text-lg text-text-light dark:text-text-dark">
                                 Are your plumbing materials customizable?
@@ -857,7 +800,7 @@
                         </details>
 
                         <details
-                            class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-full p-4">
+                            class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-lg p-4">
                             <summary
                                 class="cursor-pointer list-none flex justify-between items-center font-display text-lg text-text-light dark:text-text-dark">
                                 Is your irrigation system suitable for all crops?
@@ -870,7 +813,7 @@
                         </details>
 
                         <details
-                            class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-full p-4">
+                            class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-lg p-4">
                             <summary
                                 class="cursor-pointer list-none flex justify-between items-center font-display text-lg text-text-light dark:text-text-dark">
                                 How do I get started?
@@ -975,24 +918,6 @@
             });
         });
     </script>
-
-        // Initialize Feather Icons
-        if (typeof feather !== 'undefined') {
-            feather.replace();
-        }
-        
-        // Sticky Header Logic
-        window.addEventListener('scroll', function() {
-            var header = document.getElementById('main-header');
-            if(header) {
-                if (window.scrollY > 50) {
-                    header.classList.add('scrolled');
-                } else {
-                    header.classList.remove('scrolled');
-                }
-            }
-        });
-
 </body>
 
 </html>
