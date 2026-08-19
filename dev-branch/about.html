@@ -26,9 +26,12 @@
         content="https://lh3.googleusercontent.com/aida-public/AB6AXuBS3qmiVA14KLjPNxeNIxm_1bImCwmTnEytj39YGl6Zoo7Q-1lG0LPGCsy1rILKdcCo-B22gJmUAqxo2ySEjMo06qyKyH6gzNLt6IUxQZeHOWLXh20RbKnLuIIsZiy5fwpDVMC60FYau25pNuubOPoWiAVz1-WMFTjxBCyEz1T1ZcRdWGH96g4aqMwWfAi6MGrcvEOrfTM3wtWyiJBlGVoI_rkNk4VUahU9hYC8p2Wu5lILT0OhTXykonJ-_PN6FyTwQnh9Mgn86ME" />
     <link rel="canonical" href="https://www.earthwormx.com/about" />
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <link
         href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&amp;family=Playfair+Display:wght@400;700&amp;display=swap"
         rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script>
         tailwind.config = {
             darkMode: "class",
@@ -90,15 +93,31 @@
                 min-height: 44px;
             }
         }
+
+        /* Scrollbar hiding utility */
+        .scrollbar-none::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollbar-none {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
     </style>
 </head>
 
 <body class="bg-background-light dark:bg-background-dark font-body text-text-light dark:text-text-dark">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <header class="py-8">
+        <header class="py-4 sm:py-6 lg:py-8">
             <div class="flex justify-between items-center">
-                <h1 class="text-3xl font-bold font-display text-primary dark:text-text-dark"><a href="index.html"
-                        class="hover:opacity-80 transition-opacity">EARTHWORMX</a></h1>
+                <h1 class="flex items-center">
+                    <a href="index.html" aria-label="EarthwormX Home" class="flex items-center hover:opacity-80 transition-opacity">
+                        <span class="text-3xl font-bold font-display text-primary dark:text-text-dark">Earthworm</span>
+                        <img src="../Logos-PNG/Earthwormx_Logo_-07.png"
+                             alt="X"
+                             class="h-10 w-auto -ml-2 transform translate-y-[2px]"
+                             id="logo-icon" />
+                    </a>
+                </h1>
                 <!-- Desktop Navigation -->
                 <nav class="hidden md:flex items-center space-x-10 font-handwritten text-lg">
                     <a class="text-text-light dark:text-text-dark hover:text-primary transition-colors"
@@ -106,7 +125,7 @@
                     <a class="text-text-light dark:text-text-dark hover:text-primary font-bold transition-colors"
                         href="about.html">About</a>
                     <a class="text-text-light dark:text-text-dark hover:text-primary transition-colors"
-                        href="index.html#services">Services</a>
+                        href="#services">Services</a>
                     <a class="text-text-light dark:text-text-dark hover:text-primary transition-colors"
                         href="index.html#contact">Contact</a>
                 </nav>
@@ -135,7 +154,7 @@
                     <a class="text-text-light dark:text-text-dark hover:text-primary font-bold transition-colors py-2"
                         href="about.html">About</a>
                     <a class="text-text-light dark:text-text-dark hover:text-primary transition-colors py-2"
-                        href="index.html#services">Services</a>
+                        href="#services">Services</a>
                     <a class="text-text-light dark:text-text-dark hover:text-primary transition-colors py-2"
                         href="index.html#contact">Contact</a>
                     <a href="https://wa.me/918891401048" target="_blank" class="inline-block">
@@ -148,99 +167,111 @@
             </nav>
         </header>
         <main>
-            <section class="py-16 md:py-20">
-                <div class="text-center max-w-4xl mx-auto mb-16">
-                    <h2 class="text-5xl md:text-6xl font-display font-bold text-primary dark:text-text-dark mb-6">
+            <section class="py-6 sm:py-14 lg:py-20">
+                <div class="text-center max-w-4xl mx-auto mb-6 sm:mb-12 lg:mb-16">
+                    <h2 class="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold text-primary dark:text-text-dark mb-3 sm:mb-6">
                         EarthwormX – Regeneration in Action
                     </h2>
-                    <p class="text-2xl text-text-muted-light dark:text-text-muted-dark font-handwritten">
+                    <p class="text-base sm:text-xl lg:text-2xl text-text-muted-light dark:text-text-muted-dark font-handwritten">
                         Nature doesn't need saving—it needs restoring.
                     </p>
                 </div>
-                <div class="grid md:grid-cols-2 gap-12 items-center mb-20">
-                    <div>
-                        <img alt="Native forest ecosystem thriving" class="rounded-xl shadow-2xl"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBS3qmiVA14KLjPNxeNIxm_1bImCwmTnEytj39YGl6Zoo7Q-1lG0LPGCsy1rILKdcCo-B22gJmUAqxo2ySEjMo06qyKyH6gzNLt6IUxQZeHOWLXh20RbKnLuIIsZiy5fwpDVMC60FYau25pNuubOPoWiAVz1-WMFTjxBCyEz1T1ZcRdWGH96g4aqMwWfAi6MGrcvEOrfTM3wtWyiJBlGVoI_rkNk4VUahU9hYC8p2Wu5lILT0OhTXykonJ-_PN6FyTwQnh9Mgn86ME" />
+                <div class="grid md:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center mb-8 sm:mb-16 lg:mb-20">
+                    <div class="max-w-[280px] xs:max-w-[320px] md:max-w-none mx-auto w-full">
+                        <img alt="Native forest ecosystem thriving" class="rounded-xl shadow-2xl w-full"
+                            src="../Images/heroimage.PNG" />
                     </div>
-                    <div class="space-y-6">
-                        <h3 class="text-3xl font-display font-bold text-primary dark:text-text-dark">Our Mission</h3>
-                        <p class="text-lg text-text-muted-light dark:text-text-muted-dark font-handwritten">
+                    <div class="space-y-4 sm:space-y-6 mt-6 md:mt-0">
+                        <h3 class="text-xl sm:text-2xl lg:text-3xl font-display font-bold text-primary dark:text-text-dark">Our Mission</h3>
+                        <p class="text-base lg:text-lg text-text-muted-light dark:text-text-muted-dark font-handwritten">
                             At EarthwormX, our mission is to <strong>regenerate the land</strong>, protect native
                             species, and empower landowners to become stewards of the Earth.
                         </p>
-                        <p class="text-lg text-text-muted-light dark:text-text-muted-dark font-handwritten">
+                        <p class="text-base lg:text-lg text-text-muted-light dark:text-text-muted-dark font-handwritten">
                             We fuse the Miyawaki technique with regenerative agriculture principles inspired by global
                             best practices in soil, biodiversity, and water management.
                         </p>
-                        <p class="text-lg text-text-muted-light dark:text-text-muted-dark font-handwritten">
+                        <p class="text-base lg:text-lg text-text-muted-light dark:text-text-muted-dark font-handwritten">
                             From barren plot to food forest, we're your complete farming partner—designing layouts,
                             restoring soil vitality, and managing plantations from concept to canopy.
                         </p>
                     </div>
                 </div>
-                <div class="bg-card-light/50 dark:bg-card-dark/20 rounded-xl p-12 mb-20">
-                    <h3 class="text-4xl font-display font-bold text-primary dark:text-text-dark text-center mb-12">What
+                <div class="bg-card-light/50 dark:bg-card-dark/20 rounded-xl p-4 sm:p-10 lg:p-12 mb-10 sm:mb-16 lg:mb-20">
+                    <h3 class="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-primary dark:text-text-dark text-center mb-6 sm:mb-10 lg:mb-12">What
                         Drives Us</h3>
-                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <div class="text-center p-6">
-                            <div class="text-5xl mb-4">🌱</div>
-                            <h4 class="text-xl font-display font-bold text-primary dark:text-text-dark mb-2">Native
-                                Ecology as Foundation</h4>
-                            <p class="text-text-muted-light dark:text-text-muted-dark font-handwritten">Every project
-                                begins with local biodiversity, ensuring ecosystems thrive naturally.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+                        <div class="flex flex-row md:flex-col items-start md:items-center gap-4 md:gap-0 p-3 sm:p-6 text-left md:text-center">
+                            <div class="text-3xl md:text-5xl md:mb-4 flex-shrink-0">🌱</div>
+                            <div>
+                                <h4 class="text-base sm:text-lg lg:text-xl font-display font-bold text-primary dark:text-text-dark mb-1 md:mb-2">Native
+                                    Ecology as Foundation</h4>
+                                <p class="text-text-muted-light dark:text-text-muted-dark font-handwritten text-xs sm:text-sm lg:text-base leading-relaxed">Every project
+                                    begins with local biodiversity, ensuring ecosystems thrive naturally.</p>
+                            </div>
                         </div>
-                        <div class="text-center p-6">
-                            <div class="text-5xl mb-4">🤝</div>
-                            <h4 class="text-xl font-display font-bold text-primary dark:text-text-dark mb-2">
-                                Community-Driven Afforestation</h4>
-                            <p class="text-text-muted-light dark:text-text-muted-dark font-handwritten">We work
-                                alongside local communities to build lasting green legacies.</p>
+                        <div class="flex flex-row md:flex-col items-start md:items-center gap-4 md:gap-0 p-3 sm:p-6 text-left md:text-center">
+                            <div class="text-3xl md:text-5xl md:mb-4 flex-shrink-0">🤝</div>
+                            <div>
+                                <h4 class="text-base sm:text-lg lg:text-xl font-display font-bold text-primary dark:text-text-dark mb-1 md:mb-2">
+                                    Community-Driven Afforestation</h4>
+                                <p class="text-text-muted-light dark:text-text-muted-dark font-handwritten text-xs sm:text-sm lg:text-base leading-relaxed">We work
+                                    alongside local communities to build lasting green legacies.</p>
+                            </div>
                         </div>
-                        <div class="text-center p-6">
-                            <div class="text-5xl mb-4">♻️</div>
-                            <h4 class="text-xl font-display font-bold text-primary dark:text-text-dark mb-2">
-                                Carbon-Positive Operations</h4>
-                            <p class="text-text-muted-light dark:text-text-muted-dark font-handwritten">Every forest we
-                                plant actively offsets carbon and creates climate resilience.</p>
+                        <div class="flex flex-row md:flex-col items-start md:items-center gap-4 md:gap-0 p-3 sm:p-6 text-left md:text-center">
+                            <div class="text-3xl md:text-5xl md:mb-4 flex-shrink-0">♻️</div>
+                            <div>
+                                <h4 class="text-base sm:text-lg lg:text-xl font-display font-bold text-primary dark:text-text-dark mb-1 md:mb-2">
+                                    Carbon-Positive Operations</h4>
+                                <p class="text-text-muted-light dark:text-text-muted-dark font-handwritten text-xs sm:text-sm lg:text-base leading-relaxed">Every forest we
+                                    plant actively offsets carbon and creates climate resilience.</p>
+                            </div>
                         </div>
-                        <div class="text-center p-6">
-                            <div class="text-5xl mb-4">🎨</div>
-                            <h4 class="text-xl font-display font-bold text-primary dark:text-text-dark mb-2">
-                                Nature-Based Design</h4>
-                            <p class="text-text-muted-light dark:text-text-muted-dark font-handwritten">Integrating
-                                natural patterns into every landscape for harmony and beauty.</p>
+                        <div class="flex flex-row md:flex-col items-start md:items-center gap-4 md:gap-0 p-3 sm:p-6 text-left md:text-center">
+                            <div class="text-3xl md:text-5xl md:mb-4 flex-shrink-0">🎨</div>
+                            <div>
+                                <h4 class="text-base sm:text-lg lg:text-xl font-display font-bold text-primary dark:text-text-dark mb-1 md:mb-2">
+                                    Nature-Based Design</h4>
+                                <p class="text-text-muted-light dark:text-text-muted-dark font-handwritten text-xs sm:text-sm lg:text-base leading-relaxed">Integrating
+                                    natural patterns into every landscape for harmony and beauty.</p>
+                            </div>
                         </div>
-                        <div class="text-center p-6">
-                            <div class="text-5xl mb-4">🌳</div>
-                            <h4 class="text-xl font-display font-bold text-primary dark:text-text-dark mb-2">
-                                Life-Centered Landscapes</h4>
-                            <p class="text-text-muted-light dark:text-text-muted-dark font-handwritten">Creating
-                                ecosystems that sustain generations, not just seasons.</p>
+                        <div class="flex flex-row md:flex-col items-start md:items-center gap-4 md:gap-0 p-3 sm:p-6 text-left md:text-center">
+                            <div class="text-3xl md:text-5xl md:mb-4 flex-shrink-0">🌳</div>
+                            <div>
+                                <h4 class="text-base sm:text-lg lg:text-xl font-display font-bold text-primary dark:text-text-dark mb-1 md:mb-2">
+                                    Life-Centered Landscapes</h4>
+                                <p class="text-text-muted-light dark:text-text-muted-dark font-handwritten text-xs sm:text-sm lg:text-base leading-relaxed">Creating
+                                    ecosystems that sustain generations, not just seasons.</p>
+                            </div>
                         </div>
-                        <div class="text-center p-6">
-                            <div class="text-5xl mb-4">🪱</div>
-                            <h4 class="text-xl font-display font-bold text-primary dark:text-text-dark mb-2">Inspired by
-                                Earthworms</h4>
-                            <p class="text-text-muted-light dark:text-text-muted-dark font-handwritten">Nature's soil
-                                engineers guide our regenerative practices.</p>
+                        <div class="flex flex-row md:flex-col items-start md:items-center gap-4 md:gap-0 p-3 sm:p-6 text-left md:text-center">
+                            <div class="text-3xl md:text-5xl md:mb-4 flex-shrink-0">🪱</div>
+                            <div>
+                                <h4 class="text-base sm:text-lg lg:text-xl font-display font-bold text-primary dark:text-text-dark mb-1 md:mb-2">Inspired by
+                                    Earthworms</h4>
+                                <p class="text-text-muted-light dark:text-text-muted-dark font-handwritten text-xs sm:text-sm lg:text-base leading-relaxed">Nature's soil
+                                    engineers guide our regenerative practices.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <!-- Founder Section -->
-                <div class="mb-20 bg-card-light/20 dark:bg-card-dark/10 rounded-2xl p-8 md:p-12 mb-20">
-                    <div class="text-center mb-10">
-                        <h3 class="text-4xl font-display font-bold text-primary dark:text-text-dark mb-4">Meet Our
+                <div class="bg-card-light/20 dark:bg-card-dark/10 rounded-2xl p-5 sm:p-8 lg:p-12 mb-10 sm:mb-16 lg:mb-20">
+                    <div class="text-center mb-6 sm:mb-10">
+                        <h3 class="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-primary dark:text-text-dark mb-2 sm:mb-4">Meet Our
                             Founder</h3>
-                        <h4 class="text-2xl text-accent-mud dark:text-text-muted-dark font-handwritten">Azhar Shah</h4>
+                        <h4 class="text-xl sm:text-2xl text-accent-mud dark:text-text-muted-dark font-handwritten">Azhar Shah</h4>
                     </div>
 
-                    <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="grid md:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
                         <!-- Images Grid -->
-                        <div class="grid grid-cols-2 gap-4">
+                        <div class="grid grid-cols-2 gap-3 sm:gap-4 max-w-[300px] xs:max-w-[320px] sm:max-w-md mx-auto md:max-w-none w-full">
                             <img src="../Azhar/WhatsApp%20Image%202026-02-20%20at%2012.48.34%20(2).jpeg"
                                 alt="Azhar Shah - Founder of EarthwormX"
                                 class="rounded-xl shadow-lg w-full h-full object-cover">
-                            <div class="grid grid-rows-2 gap-4">
+                            <div class="grid grid-rows-2 gap-3 sm:gap-4">
                                 <img src="../Azhar/WhatsApp%20Image%202026-02-20%20at%2012.48.37.jpeg"
                                     alt="Azhar Shah in the field"
                                     class="rounded-xl shadow-lg w-full h-full object-cover">
@@ -250,276 +281,200 @@
                         </div>
 
                         <!-- Bio -->
-                        <div class="space-y-6">
-                            <p
-                                class="text-lg text-text-muted-light dark:text-text-muted-dark font-handwritten leading-relaxed">
-                                Azhar Shah's journey began with a simple belief: nature knows how to heal itself; it
-                                just needs a little help. With a profound passion for ecosystems and sustainable
-                                practices, Azhar founded EarthwormX to accelerate land regeneration at a global scale.
+                        <div class="space-y-4 sm:space-y-6 mt-6 md:mt-0">
+                            <div class="border-l-4 border-primary dark:border-accent-mud pl-4 py-1.5 italic text-primary dark:text-text-dark font-handwritten text-lg sm:text-xl">
+                                "Nature knows how to heal itself; it just needs a little help."
+                            </div>
+                            <p class="text-sm sm:text-base text-text-muted-light dark:text-text-muted-dark font-handwritten leading-relaxed">
+                                Driven by a passion for ecosystems, Azhar Shah founded EarthwormX to accelerate land regeneration at scale. By pioneering Miyawaki forest creation alongside modern, water-efficient irrigation, he has transformed barren plots into thriving, independent ecosystems.
                             </p>
-                            <p
-                                class="text-lg text-text-muted-light dark:text-text-muted-dark font-handwritten leading-relaxed">
-                                By pioneering Miyawaki forest implementation alongside modern irrigation setups, Azhar
-                                has successfully transformed barren lands into thriving, independent ecosystems. The
-                                vision is clear—restoration is not just a profession, it is our responsibility to the
-                                future.
+                            <p class="text-sm sm:text-base text-text-muted-light dark:text-text-muted-dark font-handwritten leading-relaxed">
+                                For Azhar, restoration is more than a profession—it is a responsibility to future generations, creating green legacies where once there was only dust.
                             </p>
+                            <div class="pt-2 sm:pt-4 flex items-center">
+                                <a href="https://www.instagram.com/azarverse?igsh=MWI5MmJmenRvbTc5dQ%3D%3D&utm_source=qr" 
+                                   target="aria-label" rel="noopener noreferrer" target="_blank"
+                                   class="inline-flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 bg-primary/10 hover:bg-primary text-primary hover:text-white rounded-lg transition-all duration-300 font-handwritten text-sm sm:text-base lg:text-lg font-bold">
+                                    <i class="fab fa-instagram text-xl"></i> Follow Azhar Shah @azarverse
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="mb-20">
-                    <h3 class="text-4xl font-display font-bold text-primary dark:text-text-dark text-center mb-12">Our
+                <div class="mb-10 sm:mb-16 lg:mb-20" id="services">
+                    <h3 class="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-primary dark:text-text-dark text-center mb-6 sm:mb-10 lg:mb-12">Our
                         Services</h3>
-                    <div class="space-y-8 max-w-4xl mx-auto">
-                        <div
-                            class="bg-white dark:bg-background-dark p-8 rounded-lg shadow-lg border-l-4 border-primary">
-                            <div class="flex items-start space-x-4 mb-4">
-                                <span class="text-4xl">🌳</span>
-                                <div>
-                                    <h4 class="text-2xl font-display font-bold text-primary dark:text-text-dark mb-3">
-                                        Miyawaki Forest Creation</h4>
-                                    <p
-                                        class="text-lg text-text-muted-light dark:text-text-muted-dark font-handwritten leading-relaxed">
-                                        Dense, fast-growing native forests built in 1/10th the time of natural
-                                        ecosystems. Perfect for urban areas, industrial campuses, or landowners seeking
-                                        long-term ecological wealth. Our forests grow 10x faster, harbor native
-                                        biodiversity, and create microclimates that sustain life.
-                                    </p>
-                                </div>
-                            </div>
+                    <div class="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-4 scrollbar-none md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-6 lg:gap-8 max-w-5xl mx-auto px-4">
+                        <!-- Miyawaki Forest Creation -->
+                        <div class="w-[280px] xs:w-[320px] md:w-auto flex-shrink-0 snap-center overflow-hidden rounded-2xl shadow-lg border-4 border-card-light dark:border-card-dark transition-all duration-300 transform hover:scale-[1.03] hover:-translate-y-1 hover:shadow-2xl">
+                            <img src="../Images/s1.PNG" alt="Miyawaki Forest Creation" class="w-full h-auto block" />
                         </div>
-
-                        <div
-                            class="bg-white dark:bg-background-dark p-8 rounded-lg shadow-lg border-l-4 border-primary">
-                            <div class="flex items-start space-x-4 mb-4">
-                                <span class="text-4xl">🍎</span>
-                                <div>
-                                    <h4 class="text-2xl font-display font-bold text-primary dark:text-text-dark mb-3">
-                                        Food Forest Development</h4>
-                                    <p
-                                        class="text-lg text-text-muted-light dark:text-text-muted-dark font-handwritten leading-relaxed">
-                                        From soil to sustenance—create layered, edible ecosystems with fruit, nut, and
-                                        timber trees that restore fertility and capture carbon. These multi-layered
-                                        systems provide food security while regenerating the land.
-                                    </p>
-                                </div>
-                            </div>
+                        <!-- Food Forest Development -->
+                        <div class="w-[280px] xs:w-[320px] md:w-auto flex-shrink-0 snap-center overflow-hidden rounded-2xl shadow-lg border-4 border-card-light dark:border-card-dark transition-all duration-300 transform hover:scale-[1.03] hover:-translate-y-1 hover:shadow-2xl">
+                            <img src="../Images/s2.PNG" alt="Food Forest Development" class="w-full h-auto block" />
                         </div>
-
-                        <div
-                            class="bg-white dark:bg-background-dark p-8 rounded-lg shadow-lg border-l-4 border-primary">
-                            <div class="flex items-start space-x-4 mb-4">
-                                <span class="text-4xl">🪱</span>
-                                <div>
-                                    <h4 class="text-2xl font-display font-bold text-primary dark:text-text-dark mb-3">
-                                        Soil Regeneration & Carbon Farming</h4>
-                                    <p
-                                        class="text-lg text-text-muted-light dark:text-text-muted-dark font-handwritten leading-relaxed">
-                                        Restore soil health using vermicomposting, cover cropping, biochar, and
-                                        microbial inoculants. Inspired by nature's own engineering—earthworms. We bring
-                                        degraded soil back to life, turning it into a thriving foundation for
-                                        ecosystems.
-                                    </p>
-                                </div>
-                            </div>
+                        <!-- Soil Regeneration & Carbon Farming -->
+                        <div class="w-[280px] xs:w-[320px] md:w-auto flex-shrink-0 snap-center overflow-hidden rounded-2xl shadow-lg border-4 border-card-light dark:border-card-dark transition-all duration-300 transform hover:scale-[1.03] hover:-translate-y-1 hover:shadow-2xl">
+                            <img src="../Images/s3.PNG" alt="Soil Regeneration & Carbon Farming" class="w-full h-auto block" />
                         </div>
-
-                        <div
-                            class="bg-white dark:bg-background-dark p-8 rounded-lg shadow-lg border-l-4 border-primary">
-                            <div class="flex items-start space-x-4 mb-4">
-                                <span class="text-4xl">🗺️</span>
-                                <div>
-                                    <h4 class="text-2xl font-display font-bold text-primary dark:text-text-dark mb-3">
-                                        Farm Layouts & Master Planning</h4>
-                                    <p
-                                        class="text-lg text-text-muted-light dark:text-text-muted-dark font-handwritten leading-relaxed">
-                                        We design landscapes that balance utility with ecology. Sustainable farm plans
-                                        integrating rainwater harvesting, agroforestry, and biodiversity zones. Complete
-                                        eco-friendly designs customized for productivity and conservation.
-                                    </p>
-                                </div>
-                            </div>
+                        <!-- Farm Layouts & Master Planning -->
+                        <div class="w-[280px] xs:w-[320px] md:w-auto flex-shrink-0 snap-center overflow-hidden rounded-2xl shadow-lg border-4 border-card-light dark:border-card-dark transition-all duration-300 transform hover:scale-[1.03] hover:-translate-y-1 hover:shadow-2xl">
+                            <img src="../Images/s4.PNG" alt="Farm Layouts & Master Planning" class="w-full h-auto block" />
                         </div>
-
-                        <div
-                            class="bg-white dark:bg-background-dark p-8 rounded-lg shadow-lg border-l-4 border-primary">
-                            <div class="flex items-start space-x-4 mb-4">
-                                <span class="text-4xl">🌍</span>
-                                <div>
-                                    <h4 class="text-2xl font-display font-bold text-primary dark:text-text-dark mb-3">
-                                        Land Restoration</h4>
-                                    <p
-                                        class="text-lg text-text-muted-light dark:text-text-muted-dark font-handwritten leading-relaxed">
-                                        Our proven model converts barren or degraded lands into productive green zones
-                                        through native afforestation and regenerative soil systems. We transform dead
-                                        land into thriving ecosystems within a few years.
-                                    </p>
-                                </div>
-                            </div>
+                        <!-- Land Restoration -->
+                        <div class="w-[280px] xs:w-[320px] md:w-auto flex-shrink-0 snap-center overflow-hidden rounded-2xl shadow-lg border-4 border-card-light dark:border-card-dark transition-all duration-300 transform hover:scale-[1.03] hover:-translate-y-1 hover:shadow-2xl">
+                            <img src="../Images/s5.PNG" alt="Land Restoration" class="w-full h-auto block" />
                         </div>
-
-                        <div
-                            class="bg-white dark:bg-background-dark p-8 rounded-lg shadow-lg border-l-4 border-primary">
-                            <div class="flex items-start space-x-4 mb-4">
-                                <span class="text-4xl">🎋</span>
-                                <div>
-                                    <h4 class="text-2xl font-display font-bold text-primary dark:text-text-dark mb-3">
-                                        Bamboo Plantation & Propagation</h4>
-                                    <p
-                                        class="text-lg text-text-muted-light dark:text-text-muted-dark font-handwritten leading-relaxed">
-                                        Bamboo stands that store carbon, control soil erosion, and provide sustainable
-                                        livelihoods—crafted for both ecology and economy. Bamboo restores soil structure
-                                        with minimal ongoing maintenance after establishment.
-                                    </p>
-                                </div>
-                            </div>
+                        <!-- Bamboo Plantation & Propagation -->
+                        <div class="w-[280px] xs:w-[320px] md:w-auto flex-shrink-0 snap-center overflow-hidden rounded-2xl shadow-lg border-4 border-card-light dark:border-card-dark transition-all duration-300 transform hover:scale-[1.03] hover:-translate-y-1 hover:shadow-2xl">
+                            <img src="../Images/s6.PNG" alt="Bamboo Plantation & Propagation" class="w-full h-auto block" />
                         </div>
                     </div>
                 </div>
+            <!-- Intelligent Irrigation & Plumbing Systems commented out
+            <div class="mb-20 bg-card-light/30 dark:bg-card-dark/10 p-8 md:p-12 rounded-2xl">
+                <div class="max-w-4xl mx-auto">
+                    <div class="text-center mb-8">
+                        <div class="text-5xl mb-4">💧</div>
+                        <h3 class="text-4xl font-display font-bold text-primary dark:text-text-dark mb-4">
+                            Intelligent Irrigation & Plumbing Systems</h3>
+                        <p class="text-2xl text-primary dark:text-text-dark font-handwritten">Water Efficiency, Root
+                            Deep.</p>
+                    </div>
+                    <div class="space-y-6 mb-8">
+                        <p class="text-lg text-text-light dark:text-text-dark font-handwritten leading-relaxed">
+                            At EarthwormX, we understand that water is life—and precise water management is the root
+                            of sustainable growth. Our innovative irrigation and plumbing solutions are tailored to
+                            deliver the right amount of water, at the right time, exactly where plants need it most.
+                        </p>
+                        <p
+                            class="text-lg text-text-muted-light dark:text-text-muted-dark font-handwritten leading-relaxed">
+                            We design and install smart irrigation systems—including mist, fog, pop-up, and drip
+                            line setups—custom-fitted to every farm's ecosystem. Each project uses advanced
+                            irrigation logic that minimizes wastage, enhances soil health, and accelerates plant
+                            growth.
+                        </p>
+                    </div>
 
-                <!-- Irrigation Systems Section -->
-                <div class="mb-20 bg-card-light/30 dark:bg-card-dark/10 p-8 md:p-12 rounded-2xl">
-                    <div class="max-w-4xl mx-auto">
-                        <div class="text-center mb-8">
-                            <div class="text-5xl mb-4">💧</div>
-                            <h3 class="text-4xl font-display font-bold text-primary dark:text-text-dark mb-4">
-                                Intelligent Irrigation & Plumbing Systems</h3>
-                            <p class="text-2xl text-primary dark:text-text-dark font-handwritten">Water Efficiency, Root
-                                Deep.</p>
-                        </div>
-                        <div class="space-y-6 mb-8">
-                            <p class="text-lg text-text-light dark:text-text-dark font-handwritten leading-relaxed">
-                                At EarthwormX, we understand that water is life—and precise water management is the root
-                                of sustainable growth. Our innovative irrigation and plumbing solutions are tailored to
-                                deliver the right amount of water, at the right time, exactly where plants need it most.
-                            </p>
-                            <p
-                                class="text-lg text-text-muted-light dark:text-text-muted-dark font-handwritten leading-relaxed">
-                                We design and install smart irrigation systems—including mist, fog, pop-up, and drip
-                                line setups—custom-fitted to every farm's ecosystem. Each project uses advanced
-                                irrigation logic that minimizes wastage, enhances soil health, and accelerates plant
-                                growth.
-                            </p>
-                        </div>
-
-                        <div class="mb-8">
-                            <h4 class="text-2xl font-display font-bold text-primary dark:text-text-dark mb-6">What Makes
-                                It Different</h4>
-                            <div class="grid md:grid-cols-2 gap-6">
-                                <div class="bg-white dark:bg-background-dark p-6 rounded-lg shadow">
-                                    <h5 class="font-display font-bold text-primary dark:text-text-dark mb-2 text-lg">✓
-                                        Efficient Water Delivery</h5>
-                                    <p class="text-text-muted-light dark:text-text-muted-dark font-handwritten">Our
-                                        systems ensure up to 90% water-use efficiency compared to traditional
-                                        irrigation, with minimized evaporation and runoff.</p>
-                                </div>
-                                <div class="bg-white dark:bg-background-dark p-6 rounded-lg shadow">
-                                    <h5 class="font-display font-bold text-primary dark:text-text-dark mb-2 text-lg">✓
-                                        Custom Engineered Plumbing</h5>
-                                    <p class="text-text-muted-light dark:text-text-muted-dark font-handwritten">We
-                                        source premium materials from trusted hubs, handpicked to suit each client's
-                                        project size, terrain, and water source.</p>
-                                </div>
-                                <div class="bg-white dark:bg-background-dark p-6 rounded-lg shadow">
-                                    <h5 class="font-display font-bold text-primary dark:text-text-dark mb-2 text-lg">✓
-                                        Precision Irrigation Design</h5>
-                                    <p class="text-text-muted-light dark:text-text-muted-dark font-handwritten">Using
-                                        fog, mist, micro-sprinkler, and drip setups, we achieve controlled flow and
-                                        coverage across orchards, food forests, and farmlands.</p>
-                                </div>
-                                <div class="bg-white dark:bg-background-dark p-6 rounded-lg shadow">
-                                    <h5 class="font-display font-bold text-primary dark:text-text-dark mb-2 text-lg">✓
-                                        Smart Control Technology</h5>
-                                    <p class="text-text-muted-light dark:text-text-muted-dark font-handwritten">
-                                        Integrating moisture sensors, fertigation control, and timer automation for
-                                        optimum irrigation cycles with minimal labor.</p>
-                                </div>
-                                <div class="bg-white dark:bg-background-dark p-6 rounded-lg shadow">
-                                    <h5 class="font-display font-bold text-primary dark:text-text-dark mb-2 text-lg">✓
-                                        Water and Energy Savings</h5>
-                                    <p class="text-text-muted-light dark:text-text-muted-dark font-handwritten">Our
-                                        cutting-edge approach ensures reduced electricity consumption and measurable CO₂
-                                        savings while improving crop yield.</p>
-                                </div>
+                    <div class="mb-8">
+                        <h4 class="text-2xl font-display font-bold text-primary dark:text-text-dark mb-6">What Makes
+                            It Different</h4>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="bg-white dark:bg-background-dark p-6 rounded-lg shadow">
+                                <h5 class="font-display font-bold text-primary dark:text-text-dark mb-2 text-lg">✓
+                                    Efficient Water Delivery</h5>
+                                <p class="text-text-muted-light dark:text-text-muted-dark font-handwritten">Our
+                                    systems ensure up to 90% water-use efficiency compared to traditional
+                                    irrigation, with minimized evaporation and runoff.</p>
+                            </div>
+                            <div class="bg-white dark:bg-background-dark p-6 rounded-lg shadow">
+                                <h5 class="font-display font-bold text-primary dark:text-text-dark mb-2 text-lg">✓
+                                    Custom Engineered Plumbing</h5>
+                                <p class="text-text-muted-light dark:text-text-muted-dark font-handwritten">We
+                                    source premium materials from trusted hubs, handpicked to suit each client's
+                                    project size, terrain, and water source.</p>
+                            </div>
+                            <div class="bg-white dark:bg-background-dark p-6 rounded-lg shadow">
+                                <h5 class="font-display font-bold text-primary dark:text-text-dark mb-2 text-lg">✓
+                                    Precision Irrigation Design</h5>
+                                <p class="text-text-muted-light dark:text-text-muted-dark font-handwritten">Using
+                                    fog, mist, micro-sprinkler, and drip setups, we achieve controlled flow and
+                                    coverage across orchards, food forests, and farmlands.</p>
+                            </div>
+                            <div class="bg-white dark:bg-background-dark p-6 rounded-lg shadow">
+                                <h5 class="font-display font-bold text-primary dark:text-text-dark mb-2 text-lg">✓
+                                    Smart Control Technology</h5>
+                                <p class="text-text-muted-light dark:text-text-muted-dark font-handwritten">
+                                    Integrating moisture sensors, fertigation control, and timer automation for
+                                    optimum irrigation cycles with minimal labor.</p>
+                            </div>
+                            <div class="bg-white dark:bg-background-dark p-6 rounded-lg shadow">
+                                <h5 class="font-display font-bold text-primary dark:text-text-dark mb-2 text-lg">✓
+                                    Water and Energy Savings</h5>
+                                <p class="text-text-muted-light dark:text-text-muted-dark font-handwritten">Our
+                                    cutting-edge approach ensures reduced electricity consumption and measurable CO₂
+                                    savings while improving crop yield.</p>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="bg-primary/10 dark:bg-primary/20 p-6 rounded-lg">
-                            <h4 class="text-2xl font-display font-bold text-primary dark:text-text-dark mb-4">Why Choose
-                                EarthwormX Irrigation</h4>
-                            <ul class="space-y-2 text-text-light dark:text-text-dark font-handwritten">
-                                <li class="flex items-start"><span class="text-primary mr-2">•</span> Tailored plumbing
-                                    and irrigation design for any scale farm.</li>
-                                <li class="flex items-start"><span class="text-primary mr-2">•</span> Reduced irrigation
-                                    time, lower operational cost, and zero water waste.</li>
-                                <li class="flex items-start"><span class="text-primary mr-2">•</span> Reliable
-                                    setups—built for long-term performance and sustainability.</li>
-                                <li class="flex items-start"><span class="text-primary mr-2">•</span> Seamless
-                                    integration with our soil, landscape, and farm design services.</li>
-                            </ul>
-                            <p class="mt-6 text-lg font-handwritten text-primary dark:text-text-dark italic">
-                                Your land deserves an irrigation system as efficient as the ecosystems you grow.<br />
-                                <strong>EarthwormX – Efficient watering. Thriving landscapes.</strong>
-                            </p>
-                        </div>
+                    <div class="bg-primary/10 dark:bg-primary/20 p-6 rounded-lg">
+                        <h4 class="text-2xl font-display font-bold text-primary dark:text-text-dark mb-4">Why Choose
+                            EarthwormX Irrigation</h4>
+                        <ul class="space-y-2 text-text-light dark:text-text-dark font-handwritten">
+                            <li class="flex items-start"><span class="text-primary mr-2">•</span> Tailored plumbing
+                                and irrigation design for any scale farm.</li>
+                            <li class="flex items-start"><span class="text-primary mr-2">•</span> Reduced irrigation
+                                time, lower operational cost, and zero water waste.</li>
+                            <li class="flex items-start"><span class="text-primary mr-2">•</span> Reliable
+                                setups—built for long-term performance and sustainability.</li>
+                            <li class="flex items-start"><span class="text-primary mr-2">•</span> Seamless
+                                integration with our soil, landscape, and farm design services.</li>
+                        </ul>
+                        <p class="mt-6 text-lg font-handwritten text-primary dark:text-text-dark italic">
+                            Your land deserves an irrigation system as efficient as the ecosystems you grow.<br />
+                            <strong>EarthwormX – Efficient watering. Thriving landscapes.</strong>
+                        </p>
                     </div>
                 </div>
-                <div class="bg-primary/10 dark:bg-primary/20 rounded-xl p-12 mb-20">
-                    <h3 class="text-4xl font-display font-bold text-primary dark:text-text-dark text-center mb-8">Our
+            </div>
+            -->
+                <div class="bg-primary/10 dark:bg-primary/20 rounded-xl p-5 sm:p-10 lg:p-12 mb-10 sm:mb-16 lg:mb-20">
+                    <h3 class="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-primary dark:text-text-dark text-center mb-6 sm:mb-8">Our
                         Impact in 4 Years</h3>
-                    <div class="grid md:grid-cols-3 gap-8 text-center">
+                    <div class="grid grid-cols-3 gap-2 sm:gap-8 text-center">
                         <div>
-                            <p class="text-6xl font-bold text-primary dark:text-text-dark font-display">10,000+</p>
-                            <p class="text-xl font-handwritten text-text-light dark:text-text-dark mt-2">Native Trees
+                            <p class="text-2xl xs:text-3xl sm:text-5xl lg:text-6xl font-bold text-primary dark:text-text-dark font-display">10,000+</p>
+                            <p class="text-[10px] xs:text-xs sm:text-base lg:text-xl font-handwritten text-text-light dark:text-text-dark mt-1 lg:mt-2">Native Trees
                                 Planted</p>
                         </div>
                         <div>
-                            <p class="text-6xl font-bold text-primary dark:text-text-dark font-display">20+</p>
-                            <p class="text-xl font-handwritten text-text-light dark:text-text-dark mt-2">Miyawaki
+                            <p class="text-2xl xs:text-3xl sm:text-5xl lg:text-6xl font-bold text-primary dark:text-text-dark font-display">20+</p>
+                            <p class="text-[10px] xs:text-xs sm:text-base lg:text-xl font-handwritten text-text-light dark:text-text-dark mt-1 lg:mt-2">Miyawaki
                                 Forests Created</p>
                         </div>
                         <div>
-                            <p class="text-6xl font-bold text-primary dark:text-text-dark font-display">Tons</p>
-                            <p class="text-xl font-handwritten text-text-light dark:text-text-dark mt-2">of CO₂ Offset
+                            <p class="text-2xl xs:text-3xl sm:text-5xl lg:text-6xl font-bold text-primary dark:text-text-dark font-display">Tons</p>
+                            <p class="text-[10px] xs:text-xs sm:text-base lg:text-xl font-handwritten text-text-light dark:text-text-dark mt-1 lg:mt-2">of CO₂ Offset
                             </p>
                         </div>
                     </div>
                     <p
-                        class="text-center text-xl font-handwritten text-text-muted-light dark:text-text-muted-dark mt-8">
+                        class="text-center text-xs sm:text-lg lg:text-xl font-handwritten text-text-muted-light dark:text-text-muted-dark mt-4 sm:mt-8 px-2 leading-relaxed">
                         Creating lasting green legacies where once there was dust. With every project, we get one step
                         closer to restoring balance between humanity and nature.
                     </p>
                 </div>
-                <div class="text-center py-16">
-                    <h3 class="text-4xl font-display font-bold text-primary dark:text-text-dark mb-6">Why Choose
+                <div class="text-center py-6 sm:py-16">
+                    <h3 class="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-primary dark:text-text-dark mb-3 sm:mb-6">Why Choose
                         EarthwormX?</h3>
-                    <div class="max-w-3xl mx-auto space-y-4 text-left">
+                    <div class="max-w-3xl mx-auto space-y-2 sm:space-y-4 text-left px-4">
                         <div class="flex items-start space-x-3">
-                            <span class="text-primary text-2xl">✓</span>
-                            <p class="text-lg text-text-muted-light dark:text-text-muted-dark font-handwritten">We bring
+                            <span class="text-primary text-xl sm:text-2xl">✓</span>
+                            <p class="text-sm sm:text-base text-text-muted-light dark:text-text-muted-dark font-handwritten">We bring
                                 ecological logic into every design.</p>
                         </div>
                         <div class="flex items-start space-x-3">
-                            <span class="text-primary text-2xl">✓</span>
-                            <p class="text-lg text-text-muted-light dark:text-text-muted-dark font-handwritten">We
+                            <span class="text-primary text-xl sm:text-2xl">✓</span>
+                            <p class="text-sm sm:text-base text-text-muted-light dark:text-text-muted-dark font-handwritten">We
                                 partner with farm owners, corporates, and conscious citizens to create self-sustaining
                                 green investments.</p>
                         </div>
                         <div class="flex items-start space-x-3">
-                            <span class="text-primary text-2xl">✓</span>
-                            <p class="text-lg text-text-muted-light dark:text-text-muted-dark font-handwritten">Every
+                            <span class="text-primary text-xl sm:text-2xl">✓</span>
+                            <p class="text-sm sm:text-base text-text-muted-light dark:text-text-muted-dark font-handwritten">Every
                                 project is tracked from soil health to carbon capture.</p>
                         </div>
                         <div class="flex items-start space-x-3">
-                            <span class="text-primary text-2xl">✓</span>
-                            <p class="text-lg text-text-muted-light dark:text-text-muted-dark font-handwritten">Our
+                            <span class="text-primary text-xl sm:text-2xl">✓</span>
+                            <p class="text-sm sm:text-base text-text-muted-light dark:text-text-muted-dark font-handwritten">Our
                                 forests stand as climate-resilient havens that grow richer each year.</p>
                         </div>
                     </div>
-                    <div class="mt-12">
+                    <div class="mt-8 sm:mt-12">
                         <a href="https://wa.me/918891401048" target="_blank"><button
-                                class="bg-primary text-white px-10 py-4 flex items-center gap-3 mx-auto rounded-lg font-handwritten text-2xl shadow-lg hover:bg-opacity-90 transition-transform hover:scale-105">
+                                class="bg-primary text-white px-8 py-3.5 flex items-center gap-2 sm:gap-3 mx-auto rounded-lg font-handwritten text-lg sm:text-2xl shadow-lg hover:bg-opacity-90 transition-transform hover:scale-105">
                                 <i class="fab fa-whatsapp text-2xl"></i> Chat on WhatsApp
                             </button></a>
                     </div>
@@ -527,27 +482,27 @@
             </section>
 
             <!-- FAQ Section -->
-            <section class="py-16 md:py-20 bg-card-light/30 dark:bg-card-dark/10">
-                <div class="text-center mb-12">
-                    <h2 class="text-4xl md:text-5xl font-display font-bold text-primary dark:text-text-dark mb-4">
+            <section class="py-10 sm:py-16 lg:py-20 bg-card-light/30 dark:bg-card-dark/10">
+                <div class="text-center mb-8 lg:mb-12">
+                    <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-bold text-primary dark:text-text-dark mb-4">
                         Frequently Asked Questions</h2>
-                    <p class="text-lg text-text-muted-light dark:text-text-muted-dark font-handwritten">Everything you
+                    <p class="text-base lg:text-lg text-text-muted-light dark:text-text-muted-dark font-handwritten">Everything you
                         need to know about our services</p>
                 </div>
 
                 <!-- General FAQs -->
-                <div class="max-w-4xl mx-auto mb-16">
-                    <h3 class="text-2xl font-display font-bold text-primary dark:text-text-dark mb-6 text-center">
+                <div class="max-w-4xl mx-auto mb-8 sm:mb-12">
+                    <h3 class="text-2xl font-display font-bold text-primary dark:text-text-dark mb-4 text-center">
                         General Services</h3>
-                    <div class="space-y-4">
+                    <div class="space-y-2 md:space-y-4">
                         <details
-                            class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-lg p-4">
+                            class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-lg py-1.5 px-3 sm:p-4">
                             <summary
-                                class="cursor-pointer list-none flex justify-between items-center font-display text-lg text-text-light dark:text-text-dark">
+                                class="cursor-pointer list-none flex justify-between items-center font-display text-sm sm:text-base lg:text-lg text-text-light dark:text-text-dark">
                                 What is the Miyawaki Method, and why is it special?
                                 <span class="ml-4 text-primary">+</span>
                             </summary>
-                            <div class="mt-3 text-text-muted-light dark:text-text-muted-dark font-handwritten">
+                            <div class="mt-2 text-sm sm:text-base text-text-muted-light dark:text-text-muted-dark font-handwritten">
                                 The Miyawaki Method is an advanced Japanese technique for creating ultra-dense native
                                 forests on degraded land. Trees are planted densely (3–5 plants per square meter),
                                 prioritized as local native species, and managed to grow 10 times faster than
@@ -557,13 +512,13 @@
                         </details>
 
                         <details
-                            class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-lg p-4">
+                            class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-lg py-1.5 px-3 sm:p-4">
                             <summary
-                                class="cursor-pointer list-none flex justify-between items-center font-display text-lg text-text-light dark:text-text-dark">
+                                class="cursor-pointer list-none flex justify-between items-center font-display text-sm sm:text-base lg:text-lg text-text-light dark:text-text-dark">
                                 How does EarthwormX choose which species to plant?
                                 <span class="ml-4 text-primary">+</span>
                             </summary>
-                            <div class="mt-3 text-text-muted-light dark:text-text-muted-dark font-handwritten">
+                            <div class="mt-2 text-sm sm:text-base text-text-muted-light dark:text-text-muted-dark font-handwritten">
                                 Every site is surveyed, and only species native to the local region are selected. This
                                 supports biodiversity, ecosystem resilience, and ensures long-term survival of the
                                 forest. Each project is independently designed with a custom mix of canopy, understory,
@@ -572,13 +527,13 @@
                         </details>
 
                         <details
-                            class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-lg p-4">
+                            class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-lg py-1.5 px-3 sm:p-4">
                             <summary
-                                class="cursor-pointer list-none flex justify-between items-center font-display text-lg text-text-light dark:text-text-dark">
+                                class="cursor-pointer list-none flex justify-between items-center font-display text-sm sm:text-base lg:text-lg text-text-light dark:text-text-dark">
                                 How do you restore barren or degraded land?
                                 <span class="ml-4 text-primary">+</span>
                             </summary>
-                            <div class="mt-3 text-text-muted-light dark:text-text-muted-dark font-handwritten">
+                            <div class="mt-2 text-sm sm:text-base text-text-muted-light dark:text-text-muted-dark font-handwritten">
                                 Our process starts with deep soil analysis, organic matter enrichment, and regenerative
                                 preparation using compost, biochar, and other natural amendments. Next, we implement
                                 dense, diverse planting using the Miyawaki or food forest model, rapidly transforming
@@ -587,13 +542,13 @@
                         </details>
 
                         <details
-                            class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-lg p-4">
+                            class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-lg py-1.5 px-3 sm:p-4">
                             <summary
-                                class="cursor-pointer list-none flex justify-between items-center font-display text-lg text-text-light dark:text-text-dark">
+                                class="cursor-pointer list-none flex justify-between items-center font-display text-sm sm:text-base lg:text-lg text-text-light dark:text-text-dark">
                                 What's included in your farm layout and landscape master plans?
                                 <span class="ml-4 text-primary">+</span>
                             </summary>
-                            <div class="mt-3 text-text-muted-light dark:text-text-muted-dark font-handwritten">
+                            <div class="mt-2 text-sm sm:text-base text-text-muted-light dark:text-text-muted-dark font-handwritten">
                                 EarthwormX provides complete eco-friendly designs—landscape analysis, efficient farm
                                 layouts, water management, biodiversity zones, and plant selection, all customized for
                                 productivity and conservation. Our plans balance agriculture, ecosystem health, and
@@ -602,13 +557,13 @@
                         </details>
 
                         <details
-                            class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-lg p-4">
+                            class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-lg py-1.5 px-3 sm:p-4">
                             <summary
-                                class="cursor-pointer list-none flex justify-between items-center font-display text-lg text-text-light dark:text-text-dark">
+                                class="cursor-pointer list-none flex justify-between items-center font-display text-sm sm:text-base lg:text-lg text-text-light dark:text-text-dark">
                                 What maintenance does a Miyawaki or food forest need?
                                 <span class="ml-4 text-primary">+</span>
                             </summary>
-                            <div class="mt-3 text-text-muted-light dark:text-text-muted-dark font-handwritten">
+                            <div class="mt-2 text-sm sm:text-base text-text-muted-light dark:text-text-muted-dark font-handwritten">
                                 After planting, we monitor, water, and weed intensively for about two to three years.
                                 Once established, the forest becomes self-sustaining, requiring minimal human input
                                 beyond basic upkeep and seasonal care.
@@ -616,13 +571,13 @@
                         </details>
 
                         <details
-                            class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-lg p-4">
+                            class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-lg py-1.5 px-3 sm:p-4">
                             <summary
-                                class="cursor-pointer list-none flex justify-between items-center font-display text-lg text-text-light dark:text-text-dark">
+                                class="cursor-pointer list-none flex justify-between items-center font-display text-sm sm:text-base lg:text-lg text-text-light dark:text-text-dark">
                                 How do I know my plantation or project is making an impact?
                                 <span class="ml-4 text-primary">+</span>
                             </summary>
-                            <div class="mt-3 text-text-muted-light dark:text-text-muted-dark font-handwritten">
+                            <div class="mt-2 text-sm sm:text-base text-text-muted-light dark:text-text-muted-dark font-handwritten">
                                 You receive regular progress reports with photos, plant survival rates, and CO₂ offset
                                 estimates. Each project site's transformation is documented and tracked, so you can see
                                 your legacy grow. Many of our clients also visit their forest sites for milestone events
@@ -631,13 +586,13 @@
                         </details>
 
                         <details
-                            class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-lg p-4">
+                            class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-lg py-1.5 px-3 sm:p-4">
                             <summary
-                                class="cursor-pointer list-none flex justify-between items-center font-display text-lg text-text-light dark:text-text-dark">
+                                class="cursor-pointer list-none flex justify-between items-center font-display text-sm sm:text-base lg:text-lg text-text-light dark:text-text-dark">
                                 Does EarthwormX work with individuals, businesses, or landowners?
                                 <span class="ml-4 text-primary">+</span>
                             </summary>
-                            <div class="mt-3 text-text-muted-light dark:text-text-muted-dark font-handwritten">
+                            <div class="mt-2 text-sm sm:text-base text-text-muted-light dark:text-text-muted-dark font-handwritten">
                                 We partner with all—eco-conscious families, farmland owners, CSR teams, and business
                                 investors. Anyone motivated to restore land and create ecological wealth can start a
                                 project with us.
@@ -645,13 +600,13 @@
                         </details>
 
                         <details
-                            class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-lg p-4">
+                            class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-lg py-1.5 px-3 sm:p-4">
                             <summary
-                                class="cursor-pointer list-none flex justify-between items-center font-display text-lg text-text-light dark:text-text-dark">
+                                class="cursor-pointer list-none flex justify-between items-center font-display text-sm sm:text-base lg:text-lg text-text-light dark:text-text-dark">
                                 How soon do you see results after plantation?
                                 <span class="ml-4 text-primary">+</span>
                             </summary>
-                            <div class="mt-3 text-text-muted-light dark:text-text-muted-dark font-handwritten">
+                            <div class="mt-2 text-sm sm:text-base text-text-muted-light dark:text-text-muted-dark font-handwritten">
                                 Miyawaki forests and well-designed food forests rapidly establish themselves. Within
                                 just one to three years, you'll see robust native vegetation, increased biodiversity,
                                 and microclimates that support birds, insects, and soil life.
@@ -659,13 +614,13 @@
                         </details>
 
                         <details
-                            class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-lg p-4">
+                            class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-lg py-1.5 px-3 sm:p-4">
                             <summary
-                                class="cursor-pointer list-none flex justify-between items-center font-display text-lg text-text-light dark:text-text-dark">
+                                class="cursor-pointer list-none flex justify-between items-center font-display text-sm sm:text-base lg:text-lg text-text-light dark:text-text-dark">
                                 What are the benefits of bamboo plantation and propagation?
                                 <span class="ml-4 text-primary">+</span>
                             </summary>
-                            <div class="mt-3 text-text-muted-light dark:text-text-muted-dark font-handwritten">
+                            <div class="mt-2 text-sm sm:text-base text-text-muted-light dark:text-text-muted-dark font-handwritten">
                                 Bamboo restores soil structure, sequesters carbon, prevents erosion, and creates a
                                 sustainable resource for communities and landowners—all with minimal ongoing maintenance
                                 after establishment.
@@ -673,13 +628,13 @@
                         </details>
 
                         <details
-                            class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-lg p-4">
+                            class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-lg py-1.5 px-3 sm:p-4">
                             <summary
-                                class="cursor-pointer list-none flex justify-between items-center font-display text-lg text-text-light dark:text-text-dark">
+                                class="cursor-pointer list-none flex justify-between items-center font-display text-sm sm:text-base lg:text-lg text-text-light dark:text-text-dark">
                                 Can I visit my project site or participate in planting?
                                 <span class="ml-4 text-primary">+</span>
                             </summary>
-                            <div class="mt-3 text-text-muted-light dark:text-text-muted-dark font-handwritten">
+                            <div class="mt-2 text-sm sm:text-base text-text-muted-light dark:text-text-muted-dark font-handwritten">
                                 Absolutely! EarthwormX welcomes partners and supporters for site visits, awareness
                                 events, and hands-on planting days. Community involvement is encouraged to foster a
                                 lifelong connection with your restored landscape.
@@ -690,30 +645,30 @@
 
                 <!-- Irrigation Systems FAQs -->
                 <div class="max-w-4xl mx-auto">
-                    <h3 class="text-2xl font-display font-bold text-primary dark:text-text-dark mb-6 text-center">
+                    <h3 class="text-2xl font-display font-bold text-primary dark:text-text-dark mb-4 text-center">
                         Irrigation Systems</h3>
-                    <div class="space-y-4">
+                    <div class="space-y-2 md:space-y-4">
                         <details
-                            class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-lg p-4">
+                            class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-lg py-1.5 px-3 sm:p-4">
                             <summary
-                                class="cursor-pointer list-none flex justify-between items-center font-display text-lg text-text-light dark:text-text-dark">
+                                class="cursor-pointer list-none flex justify-between items-center font-display text-sm sm:text-base lg:text-lg text-text-light dark:text-text-dark">
                                 What types of irrigation systems do you install?
                                 <span class="ml-4 text-primary">+</span>
                             </summary>
-                            <div class="mt-3 text-text-muted-light dark:text-text-muted-dark font-handwritten">
+                            <div class="mt-2 text-sm sm:text-base text-text-muted-light dark:text-text-muted-dark font-handwritten">
                                 We specialize in drip irrigation, mist and fog systems, pop-up sprinklers, and drip line
                                 setups, customized for each farm's unique needs and crops.
                             </div>
                         </details>
 
                         <details
-                            class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-lg p-4">
+                            class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-lg py-1.5 px-3 sm:p-4">
                             <summary
-                                class="cursor-pointer list-none flex justify-between items-center font-display text-lg text-text-light dark:text-text-dark">
+                                class="cursor-pointer list-none flex justify-between items-center font-display text-sm sm:text-base lg:text-lg text-text-light dark:text-text-dark">
                                 How does drip irrigation differ from sprinkler irrigation?
                                 <span class="ml-4 text-primary">+</span>
                             </summary>
-                            <div class="mt-3 text-text-muted-light dark:text-text-muted-dark font-handwritten">
+                            <div class="mt-2 text-sm sm:text-base text-text-muted-light dark:text-text-muted-dark font-handwritten">
                                 Drip irrigation delivers water slowly and directly to the roots, maximizing efficiency
                                 and reducing evaporation. Sprinklers spray water over the plants and soil, suitable for
                                 large areas but with higher evaporation.
@@ -721,104 +676,104 @@
                         </details>
 
                         <details
-                            class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-lg p-4">
+                            class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-lg py-1.5 px-3 sm:p-4">
                             <summary
-                                class="cursor-pointer list-none flex justify-between items-center font-display text-lg text-text-light dark:text-text-dark">
+                                class="cursor-pointer list-none flex justify-between items-center font-display text-sm sm:text-base lg:text-lg text-text-light dark:text-text-dark">
                                 What is the benefit of mist and fog irrigation?
                                 <span class="ml-4 text-primary">+</span>
                             </summary>
-                            <div class="mt-3 text-text-muted-light dark:text-text-muted-dark font-handwritten">
+                            <div class="mt-2 text-sm sm:text-base text-text-muted-light dark:text-text-muted-dark font-handwritten">
                                 Mist and fog systems are ideal for delicate seedlings and plants needing high humidity,
                                 providing gentle, even water distribution with minimal waste.
                             </div>
                         </details>
 
                         <details
-                            class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-lg p-4">
+                            class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-lg py-1.5 px-3 sm:p-4">
                             <summary
-                                class="cursor-pointer list-none flex justify-between items-center font-display text-lg text-text-light dark:text-text-dark">
+                                class="cursor-pointer list-none flex justify-between items-center font-display text-sm sm:text-base lg:text-lg text-text-light dark:text-text-dark">
                                 How do you ensure my irrigation system uses water efficiently?
                                 <span class="ml-4 text-primary">+</span>
                             </summary>
-                            <div class="mt-3 text-text-muted-light dark:text-text-muted-dark font-handwritten">
+                            <div class="mt-2 text-sm sm:text-base text-text-muted-light dark:text-text-muted-dark font-handwritten">
                                 Our systems use precision delivery, moisture sensors, and smart timers to water only
                                 when needed, drastically reducing water waste compared to traditional systems.
                             </div>
                         </details>
 
                         <details
-                            class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-lg p-4">
+                            class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-lg py-1.5 px-3 sm:p-4">
                             <summary
-                                class="cursor-pointer list-none flex justify-between items-center font-display text-lg text-text-light dark:text-text-dark">
+                                class="cursor-pointer list-none flex justify-between items-center font-display text-sm sm:text-base lg:text-lg text-text-light dark:text-text-dark">
                                 How long does it take to install an irrigation system?
                                 <span class="ml-4 text-primary">+</span>
                             </summary>
-                            <div class="mt-3 text-text-muted-light dark:text-text-muted-dark font-handwritten">
+                            <div class="mt-2 text-sm sm:text-base text-text-muted-light dark:text-text-muted-dark font-handwritten">
                                 Installation timelines vary by project size but typically range from a few days to
                                 weeks, including design, material sourcing, and setup.
                             </div>
                         </details>
 
                         <details
-                            class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-lg p-4">
+                            class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-lg py-1.5 px-3 sm:p-4">
                             <summary
-                                class="cursor-pointer list-none flex justify-between items-center font-display text-lg text-text-light dark:text-text-dark">
+                                class="cursor-pointer list-none flex justify-between items-center font-display text-sm sm:text-base lg:text-lg text-text-light dark:text-text-dark">
                                 Do you offer maintenance services?
                                 <span class="ml-4 text-primary">+</span>
                             </summary>
-                            <div class="mt-3 text-text-muted-light dark:text-text-muted-dark font-handwritten">
+                            <div class="mt-2 text-sm sm:text-base text-text-muted-light dark:text-text-muted-dark font-handwritten">
                                 Yes, we provide ongoing monitoring and maintenance to ensure peak system performance and
                                 longevity.
                             </div>
                         </details>
 
                         <details
-                            class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-lg p-4">
+                            class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-lg py-1.5 px-3 sm:p-4">
                             <summary
-                                class="cursor-pointer list-none flex justify-between items-center font-display text-lg text-text-light dark:text-text-dark">
+                                class="cursor-pointer list-none flex justify-between items-center font-display text-sm sm:text-base lg:text-lg text-text-light dark:text-text-dark">
                                 Can the system be automated?
                                 <span class="ml-4 text-primary">+</span>
                             </summary>
-                            <div class="mt-3 text-text-muted-light dark:text-text-muted-dark font-handwritten">
+                            <div class="mt-2 text-sm sm:text-base text-text-muted-light dark:text-text-muted-dark font-handwritten">
                                 Absolutely. We integrate automation with sensors and timers for hands-free, optimized
                                 watering schedules.
                             </div>
                         </details>
 
                         <details
-                            class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-lg p-4">
+                            class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-lg py-1.5 px-3 sm:p-4">
                             <summary
-                                class="cursor-pointer list-none flex justify-between items-center font-display text-lg text-text-light dark:text-text-dark">
+                                class="cursor-pointer list-none flex justify-between items-center font-display text-sm sm:text-base lg:text-lg text-text-light dark:text-text-dark">
                                 Are your plumbing materials customizable?
                                 <span class="ml-4 text-primary">+</span>
                             </summary>
-                            <div class="mt-3 text-text-muted-light dark:text-text-muted-dark font-handwritten">
+                            <div class="mt-2 text-sm sm:text-base text-text-muted-light dark:text-text-muted-dark font-handwritten">
                                 Yes, we source materials globally to meet client-specific durability, budget, and
                                 project requirements.
                             </div>
                         </details>
 
                         <details
-                            class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-lg p-4">
+                            class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-lg py-1.5 px-3 sm:p-4">
                             <summary
-                                class="cursor-pointer list-none flex justify-between items-center font-display text-lg text-text-light dark:text-text-dark">
+                                class="cursor-pointer list-none flex justify-between items-center font-display text-sm sm:text-base lg:text-lg text-text-light dark:text-text-dark">
                                 Is your irrigation system suitable for all crops?
                                 <span class="ml-4 text-primary">+</span>
                             </summary>
-                            <div class="mt-3 text-text-muted-light dark:text-text-muted-dark font-handwritten">
+                            <div class="mt-2 text-sm sm:text-base text-text-muted-light dark:text-text-muted-dark font-handwritten">
                                 We tailor our systems for a wide range of crops, from orchards and vineyards to food
                                 forests and vegetable farms.
                             </div>
                         </details>
 
                         <details
-                            class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-lg p-4">
+                            class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-lg py-1.5 px-3 sm:p-4">
                             <summary
-                                class="cursor-pointer list-none flex justify-between items-center font-display text-lg text-text-light dark:text-text-dark">
+                                class="cursor-pointer list-none flex justify-between items-center font-display text-sm sm:text-base lg:text-lg text-text-light dark:text-text-dark">
                                 How do I get started?
                                 <span class="ml-4 text-primary">+</span>
                             </summary>
-                            <div class="mt-3 text-text-muted-light dark:text-text-muted-dark font-handwritten">
+                            <div class="mt-2 text-sm sm:text-base text-text-muted-light dark:text-text-muted-dark font-handwritten">
                                 Contact EarthwormX for a site assessment and customized irrigation plan that fits your
                                 farm and sustainability goals.
                             </div>
@@ -827,53 +782,68 @@
                 </div>
             </section>
         </main>
-        <footer class="py-12 border-t-2 border-dashed border-accent-mud/50">
-            <div
-                class="flex flex-col md:flex-row justify-between items-center text-center md:text-left space-y-6 md:space-y-0">
-                <div>
-                    <h3 class="text-2xl font-bold font-display text-primary dark:text-text-dark">EARTHWORMX</h3>
-                    <p class="font-handwritten text-text-muted-light dark:text-text-muted-dark">Regeneration in Action
-                    </p>
-                    <p class="mt-2 text-sm text-text-muted-light dark:text-text-muted-dark font-handwritten">
-                        <a href="mailto:info@earthwormx.com"
-                            class="hover:text-primary transition-colors">info@earthwormx.com</a><br />
-                        <a href="https://wa.me/918891401048" target="_blank"
-                            class="hover:text-primary transition-colors">+91 8891401048</a>
+        <footer class="py-8 lg:py-12 border-t-2 border-dashed border-accent-mud/50">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-6 lg:gap-8 text-center md:text-left max-w-6xl mx-auto px-4">
+                <!-- Column 1: Brand & Contact -->
+                <div class="col-span-2 md:col-span-1 space-y-4">
+                    <div class="flex items-center justify-center md:justify-start">
+                        <span class="text-2xl font-bold font-display text-primary dark:text-text-dark">Earthworm</span>
+                        <img src="../Logos-PNG/Earthwormx_Logo_-07.png"
+                             alt="X"
+                             class="h-6 w-auto -ml-1 transform translate-y-[4px]"
+                             id="footer-logo-icon" />
+                    </div>
+                    <p class="font-handwritten text-text-muted-light dark:text-text-muted-dark">Regeneration in Action</p>
+                    <p class="text-sm text-text-muted-light dark:text-text-muted-dark font-handwritten space-y-1">
+                        <span class="block">
+                            <a href="mailto:earthwormx.india@gmail.com" class="hover:text-primary transition-colors flex items-center justify-center md:justify-start gap-2">
+                                <i class="fas fa-envelope text-primary"></i> earthwormx.india@gmail.com
+                            </a>
+                        </span>
+                        <span class="block">
+                            <a href="https://wa.me/918891401048" target="_blank" class="hover:text-primary transition-colors flex items-center justify-center md:justify-start gap-2">
+                                <i class="fab fa-whatsapp text-primary"></i> +91 8891401048
+                            </a>
+                        </span>
                     </p>
                 </div>
-                <div class="flex flex-col items-center space-y-3">
+
+                <!-- Column 2: Instagram Links -->
+                <div class="col-span-1 md:col-span-1 space-y-3">
                     <p class="font-handwritten text-text-light dark:text-text-dark font-semibold">Follow Our Journey</p>
-                    <div class="flex space-x-4">
-                        <a class="text-text-light dark:text-text-dark hover:text-primary transition-colors transform hover:scale-110"
-                            href="https://instagram.com/earthwormx" target="_blank" rel="noopener noreferrer"
-                            aria-label="Instagram">
-                            <i class="fab fa-instagram fa-2x"></i>
-                        </a>
-                        <a class="text-text-light dark:text-text-dark hover:text-primary transition-colors transform hover:scale-110"
-                            href="https://facebook.com/earthwormx" target="_blank" rel="noopener noreferrer"
-                            aria-label="Facebook">
-                            <i class="fab fa-facebook fa-2x"></i>
-                        </a>
-                        <a class="text-text-light dark:text-text-dark hover:text-primary transition-colors transform hover:scale-110"
-                            href="https://linkedin.com/company/earthwormx" target="_blank" rel="noopener noreferrer"
-                            aria-label="LinkedIn">
-                            <i class="fab fa-linkedin fa-2x"></i>
-                        </a>
-                        <a class="text-text-light dark:text-text-dark hover:text-primary transition-colors transform hover:scale-110"
-                            href="https://twitter.com/earthwormx" target="_blank" rel="noopener noreferrer"
-                            aria-label="Twitter">
-                            <i class="fab fa-twitter fa-2x"></i>
+                    <div class="flex flex-col space-y-2 text-sm font-handwritten text-text-muted-light dark:text-text-muted-dark items-center md:items-start">
+                        <a class="hover:text-primary transition-colors flex items-center gap-2"
+                            href="https://www.instagram.com/earthworm.x?igsh=MTJhYjBkYnJld21sdg%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-instagram fa-lg text-primary"></i> @earthworm.x
                         </a>
                     </div>
                 </div>
-                <div class="text-center md:text-right">
-                    <p class="text-sm text-text-muted-light dark:text-text-muted-dark font-handwritten mb-2">
+
+                <!-- Column 3: Addresses -->
+                <div class="col-span-1 md:col-span-1 space-y-3">
+                    <p class="font-handwritten text-text-light dark:text-text-dark font-semibold">Our Offices</p>
+                    <div class="text-xs text-text-muted-light dark:text-text-muted-dark font-handwritten space-y-3 leading-relaxed">
+                        <div>
+                            <span class="block font-bold text-primary dark:text-text-dark">Office Address</span>
+                            <span>Shoolagiri, Tamilnadu</span>
+                        </div>
+                        <div>
+                            <span class="block font-bold text-primary dark:text-text-dark">Kerala Address</span>
+                            <span>Perumthuruthi, Thrissur, Kerala</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 4: Links & Copyright -->
+                <div class="col-span-2 md:col-span-1 space-y-4 flex flex-col justify-between items-center md:items-end">
+                    <div class="text-sm text-text-muted-light dark:text-text-muted-dark font-handwritten space-x-2">
                         <a href="index.html" class="hover:text-primary transition-colors">Home</a> •
                         <a href="about.html" class="hover:text-primary transition-colors">About</a> •
                         <a href="index.html#contact" class="hover:text-primary transition-colors">Contact</a>
+                    </div>
+                    <p class="text-xs text-text-muted-light dark:text-text-muted-dark text-center md:text-right">
+                        © 2025 EARTHWORMX.<br/>All Rights Reserved.
                     </p>
-                    <p class="text-sm text-text-muted-light dark:text-text-muted-dark">© 2025 EARTHWORMX. All Rights
-                        Reserved.</p>
                 </div>
             </div>
         </footer>

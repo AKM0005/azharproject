@@ -31,6 +31,7 @@
         rel="stylesheet" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script>
         tailwind.config = {
             darkMode: "class",
@@ -106,14 +107,31 @@
                 min-height: 44px;
             }
         }
+
+        /* Scrollbar hiding utility */
+        .scrollbar-none::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollbar-none {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
     </style>
 </head>
 
 <body class="bg-background-light dark:bg-background-dark font-body text-text-light dark:text-text-dark">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <header class="py-8">
+        <header class="py-4 sm:py-6 lg:py-8">
             <div class="flex justify-between items-center">
-                <h1 class="text-3xl font-bold font-display text-primary dark:text-text-dark">EARTHWORMX</h1>
+                <h1 class="flex items-center">
+                    <a href="index.html" aria-label="EarthwormX Home" class="flex items-center hover:opacity-80 transition-opacity">
+                        <span class="text-3xl font-bold font-display text-primary dark:text-text-dark">Earthworm</span>
+                        <img src="../Logos-PNG/Earthwormx_Logo_-07.png"
+                             alt="X"
+                             class="h-10 w-auto -ml-2 transform translate-y-[2px]"
+                             id="logo-icon" />
+                    </a>
+                </h1>
                 <!-- Desktop Navigation -->
                 <nav class="hidden md:flex items-center space-x-10 font-handwritten text-lg">
                     <a class="text-text-light dark:text-text-dark hover:text-primary transition-colors"
@@ -121,7 +139,7 @@
                     <a class="text-text-light dark:text-text-dark hover:text-primary transition-colors"
                         href="about.html">About</a>
                     <a class="text-text-light dark:text-text-dark hover:text-primary transition-colors"
-                        href="#services">Services</a>
+                        href="about.html#services">Services</a>
                     <a class="text-text-light dark:text-text-dark hover:text-primary transition-colors"
                         href="#contact">Contact</a>
                 </nav>
@@ -150,7 +168,7 @@
                     <a class="text-text-light dark:text-text-dark hover:text-primary transition-colors py-2"
                         href="about.html">About</a>
                     <a class="text-text-light dark:text-text-dark hover:text-primary transition-colors py-2"
-                        href="#services">Services</a>
+                        href="about.html#services">Services</a>
                     <a class="text-text-light dark:text-text-dark hover:text-primary transition-colors py-2"
                         href="#contact">Contact</a>
                     <a href="https://wa.me/918891401048" target="_blank" class="inline-block">
@@ -163,62 +181,66 @@
             </nav>
         </header>
         <main>
-            <section class="grid md:grid-cols-2 gap-12 items-center py-12 md:py-20" id="home">
-                <div class="space-y-6">
+            <section class="grid md:grid-cols-2 gap-8 lg:gap-12 items-center py-8 sm:py-12 lg:py-20" id="home">
+                <div class="space-y-4 sm:space-y-6">
                     <h2
-                        class="text-5xl md:text-6xl font-display font-bold leading-tight text-primary dark:text-text-dark">
+                        class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold leading-tight text-primary dark:text-text-dark">
                         Restoring Earth.<br /> Root by Root.
                     </h2>
-                    <p class="text-xl text-text-muted-light dark:text-text-muted-dark font-handwritten">
+                    <p class="text-base sm:text-lg lg:text-xl text-text-muted-light dark:text-text-muted-dark font-handwritten">
                         EarthwormX transforms barren lands into thriving ecosystems. We specialize in Miyawaki and food
                         forests, soil regeneration, and sustainable farm landscapes—reviving degraded land while
                         building climate resilience.
                     </p>
                     <a href="about.html"><button
-                            class="bg-primary text-white px-8 py-3 rounded-lg font-handwritten text-xl shadow-lg hover:bg-opacity-90 transition-transform hover:scale-105">
+                            class="bg-primary text-white px-6 py-2.5 sm:px-8 sm:py-3 rounded-lg font-handwritten text-lg lg:text-xl shadow-lg hover:bg-opacity-90 transition-transform hover:scale-105">
                             Discover Our Story
                         </button></a>
                     <!-- Impact Stats with Nature Icons -->
-                    <div class="mt-10 pt-8 border-t border-card-light dark:border-card-dark">
-                        <div class="grid grid-cols-3 gap-6">
+                    <div class="mt-8 pt-6 lg:mt-10 lg:pt-8 border-t border-card-light dark:border-card-dark">
+                        <div class="grid grid-cols-3 gap-4 lg:gap-6">
                             <div class="text-center">
-                                <div class="text-4xl mb-2">🌱</div>
-                                <p class="text-3xl font-display font-bold text-primary dark:text-text-dark">10,000+</p>
+                                <div class="text-2xl sm:text-3xl lg:text-4xl mb-1 lg:mb-2">🌱</div>
+                                <p class="text-xl sm:text-2xl lg:text-3xl font-display font-bold text-primary dark:text-text-dark">10,000+</p>
                                 <p
-                                    class="text-xs font-handwritten text-text-muted-light dark:text-text-muted-dark mt-1">
+                                    class="text-[10px] sm:text-xs font-handwritten text-text-muted-light dark:text-text-muted-dark mt-1">
                                     Native Trees</p>
                             </div>
                             <div class="text-center">
-                                <div class="text-4xl mb-2">🌳</div>
-                                <p class="text-3xl font-display font-bold text-primary dark:text-text-dark">20+</p>
+                                <div class="text-2xl sm:text-3xl lg:text-4xl mb-1 lg:mb-2">🌳</div>
+                                <p class="text-xl sm:text-2xl lg:text-3xl font-display font-bold text-primary dark:text-text-dark">20+</p>
                                 <p
-                                    class="text-xs font-handwritten text-text-muted-light dark:text-text-muted-dark mt-1">
+                                    class="text-[10px] sm:text-xs font-handwritten text-text-muted-light dark:text-text-muted-dark mt-1">
                                     Miyawaki Forests</p>
                             </div>
                             <div class="text-center">
-                                <div class="text-4xl mb-2">🌍</div>
-                                <p class="text-3xl font-display font-bold text-primary dark:text-text-dark">Tons</p>
+                                <div class="text-2xl sm:text-3xl lg:text-4xl mb-1 lg:mb-2">🌍</div>
+                                <p class="text-xl sm:text-2xl lg:text-3xl font-display font-bold text-primary dark:text-text-dark">Tons</p>
                                 <p
-                                    class="text-xs font-handwritten text-text-muted-light dark:text-text-muted-dark mt-1">
+                                    class="text-[10px] sm:text-xs font-handwritten text-text-muted-light dark:text-text-muted-dark mt-1">
                                     CO₂ Offset</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="relative" id="hero-slider">
-                    <div class="relative overflow-hidden rounded-xl shadow-2xl z-10">
-                        <img alt="Dense Miyawaki forest with lush native plants and trees - EarthwormX restoration project showcasing biodiversity and green growth"
-                            class="w-full h-auto block rounded-xl"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBS3qmiVA14KLjPNxeNIxm_1bImCwmTnEytj39YGl6Zoo7Q-1lG0LPGCsy1rILKdcCo-B22gJmUAqxo2ySEjMo06qyKyH6gzNLt6IUxQZeHOWLXh20RbKnLuIIsZiy5fwpDVMC60FYau25pNuubOPoWiAVz1-WMFTjxBCyEz1T1ZcRdWGH96g4aqMwWfAi6MGrcvEOrfTM3wtWyiJBlGVoI_rkNk4VUahU9hYC8p2Wu5lILT0OhTXykonJ-_PN6FyTwQnh9Mgn86ME"
+                <div class="relative max-w-[280px] sm:max-w-[340px] lg:max-w-[400px] mx-auto w-full mt-8 md:mt-0" id="hero-slider">
+                    <div class="relative aspect-[4/5] w-full overflow-hidden rounded-xl shadow-2xl z-10">
+                        <img alt="Beautiful lush Miyawaki forest - EarthwormX restoration project"
+                            class="absolute inset-0 w-full h-full object-cover rounded-xl transition-opacity duration-700"
+                            src="../Images/heroimage.PNG"
                             data-slide="0" loading="eager" />
-                        <img alt="Native wildflower meadow and grassland ecosystem created through sustainable land restoration and native species planting"
-                            class="w-full h-auto block rounded-xl absolute inset-0 opacity-0 transition-opacity duration-700"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxlOF5I9SAkAfvgcaYPyWIXzRdySrGSyFCk3k6Kc3viY_8ffDrbN2Pr9U0oEGByJtr4xci2RwANmK5L8EhyNyyFT1zrFTX6tTW8R2z5P8DFeFHWjGDwIJh13BY0gJuFI5_bhx5GE-knmfytRLqSmsK35p6uTbQ2tbNOXpuDiV2K92yt2rz486QhMRqpBQd2MxMMY2Mf3b6RT5tIU-oFWWigISIV-kCkqls6umNVT4yXOKsvDLl8qVXRPMhnGajNYDeihLJ8-_xnnU"
+                        <img alt="Native vegetation and land regeneration showcase"
+                            class="absolute inset-0 w-full h-full object-cover rounded-xl transition-opacity duration-700 opacity-0"
+                            src="../Images/h1.PNG"
                             data-slide="1" loading="lazy" />
-                        <img alt="Sustainable farm landscape with diverse native vegetation and green infrastructure designed by EarthwormX"
-                            class="w-full h-auto block rounded-xl absolute inset-0 opacity-0 transition-opacity duration-700"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwSn9rRRoezM8ZrmtH0sIvNIRLxOCipEakmFrpDnzGOckX_kHyFKICrMvLEx6zxIU5SIUSEMjVD7kA-aREhrTSYMKJA9zGmn0iBB5YfjPMG17pfqH13wZXPr8Hxls9J3t1wBwqkrr8AehDIwOb2cE9-fWHKwby44e6th9mjr_EGVSnzd06BEXEnYjumyr7MDUvW-GAkapF1f-90BsqUf66n8_x8wF4uHd9bNj45B84On3kdV2-c0pi7p6oFmJIVtO_caEDXK3PDWA"
+                        <img alt="Sustainable farm landscaping design and implementation"
+                            class="absolute inset-0 w-full h-full object-cover rounded-xl transition-opacity duration-700 opacity-0"
+                            src="../Images/h2.PNG"
                             data-slide="2" loading="lazy" />
+                        <img alt="Thriving biodiverse ecosystem restoration"
+                            class="absolute inset-0 w-full h-full object-cover rounded-xl transition-opacity duration-700 opacity-0"
+                            src="../Images/h3.PNG"
+                            data-slide="3" loading="lazy" />
                     </div>
                     <div
                         class="absolute -top-4 -left-4 w-full h-full bg-card-light dark:bg-card-dark rounded-xl transform rotate-[-3deg]">
@@ -230,175 +252,450 @@
                             aria-label="Slide 2" data-dot="1"></button>
                         <button class="w-2.5 h-2.5 rounded-full bg-white/50 hover:bg-white/80 ring-2 ring-transparent"
                             aria-label="Slide 3" data-dot="2"></button>
+                        <button class="w-2.5 h-2.5 rounded-full bg-white/50 hover:bg-white/80 ring-2 ring-transparent"
+                            aria-label="Slide 4" data-dot="3"></button>
                     </div>
                 </div>
             </section>
 
-            <section class="py-16 md:py-24 text-center" id="services">
+            <section class="py-10 sm:py-16 lg:py-24 text-center" id="services">
                 <h2
-                    class="text-4xl font-display font-bold text-primary dark:text-text-dark inline-block mb-4 wavy-underline">
+                    class="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-primary dark:text-text-dark inline-block mb-4 wavy-underline">
                     Our Services</h2>
                 <p
-                    class="text-lg text-text-muted-light dark:text-text-muted-dark max-w-3xl mx-auto font-handwritten mb-12">
+                    class="text-base lg:text-lg text-text-muted-light dark:text-text-muted-dark max-w-3xl mx-auto font-handwritten mb-6 sm:mb-8 lg:mb-12">
                     From Miyawaki forests to sustainable farm design—regenerating land, restoring ecosystems.</p>
-                <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-10">
-                    <div class="p-6">
-                        <div class="text-5xl mb-4">🌳</div>
-                        <h3 class="text-2xl font-display font-bold text-primary dark:text-text-dark">Miyawaki Forest
-                            Creation</h3>
-                        <p class="mt-2 text-text-muted-light dark:text-text-muted-dark font-handwritten">Dense,
-                            fast-growing native forests in 1/10th the time.</p>
+                <div class="mt-6 sm:mt-10 lg:mt-12 grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-8 lg:gap-10 max-w-5xl mx-auto">
+                    <div class="flex flex-row md:flex-col items-start md:items-center gap-4 md:gap-0 p-4 sm:p-6 text-left md:text-center">
+                        <div class="text-3xl md:text-5xl md:mb-4 flex-shrink-0">🌳</div>
+                        <div>
+                            <h3 class="text-lg sm:text-xl lg:text-2xl font-display font-bold text-primary dark:text-text-dark">Miyawaki Forest Creation</h3>
+                            <p class="mt-1 md:mt-2 text-text-muted-light dark:text-text-muted-dark font-handwritten text-sm lg:text-base">Dense, fast-growing native forests in 1/10th the time.</p>
+                        </div>
                     </div>
-                    <div class="p-6">
-                        <div class="text-5xl mb-4">🍎</div>
-                        <h3 class="text-2xl font-display font-bold text-primary dark:text-text-dark">Food Forest
-                            Development</h3>
-                        <p class="mt-2 text-text-muted-light dark:text-text-muted-dark font-handwritten">Layered edible
-                            ecosystems that restore fertility and capture carbon.</p>
+                    <div class="flex flex-row md:flex-col items-start md:items-center gap-4 md:gap-0 p-4 sm:p-6 text-left md:text-center">
+                        <div class="text-3xl md:text-5xl md:mb-4 flex-shrink-0">🍎</div>
+                        <div>
+                            <h3 class="text-lg sm:text-xl lg:text-2xl font-display font-bold text-primary dark:text-text-dark">Food Forest Development</h3>
+                            <p class="mt-1 md:mt-2 text-text-muted-light dark:text-text-muted-dark font-handwritten text-sm lg:text-base">Layered edible ecosystems that restore fertility and capture carbon.</p>
+                        </div>
                     </div>
-                    <div class="p-6">
-                        <div class="text-5xl mb-4">🪱</div>
-                        <h3 class="text-2xl font-display font-bold text-primary dark:text-text-dark">Soil Regeneration
-                        </h3>
-                        <p class="mt-2 text-text-muted-light dark:text-text-muted-dark font-handwritten">
-                            Vermicomposting, biochar, and microbial restoration.</p>
+                    <div class="flex flex-row md:flex-col items-start md:items-center gap-4 md:gap-0 p-4 sm:p-6 text-left md:text-center">
+                        <div class="text-3xl md:text-5xl md:mb-4 flex-shrink-0">🪱</div>
+                        <div>
+                            <h3 class="text-lg sm:text-xl lg:text-2xl font-display font-bold text-primary dark:text-text-dark">Soil Regeneration</h3>
+                            <p class="mt-1 md:mt-2 text-text-muted-light dark:text-text-muted-dark font-handwritten text-sm lg:text-base">Vermicomposting, biochar, and microbial restoration.</p>
+                        </div>
                     </div>
-                    <div class="p-6">
-                        <div class="text-5xl mb-4">🗺️</div>
-                        <h3 class="text-2xl font-display font-bold text-primary dark:text-text-dark">Farm Master
-                            Planning</h3>
-                        <p class="mt-2 text-text-muted-light dark:text-text-muted-dark font-handwritten">Sustainable
-                            layouts with rainwater harvesting and agroforestry.</p>
+                    <div class="flex flex-row md:flex-col items-start md:items-center gap-4 md:gap-0 p-4 sm:p-6 text-left md:text-center">
+                        <div class="text-3xl md:text-5xl md:mb-4 flex-shrink-0">🗺️</div>
+                        <div>
+                            <h3 class="text-lg sm:text-xl lg:text-2xl font-display font-bold text-primary dark:text-text-dark">Farm Master Planning</h3>
+                            <p class="mt-1 md:mt-2 text-text-muted-light dark:text-text-muted-dark font-handwritten text-sm lg:text-base">Sustainable layouts with rainwater harvesting and agroforestry.</p>
+                        </div>
                     </div>
-                    <div class="p-6">
-                        <div class="text-5xl mb-4">💧</div>
-                        <h3 class="text-2xl font-display font-bold text-primary dark:text-text-dark">Smart Irrigation
-                            Systems</h3>
-                        <p class="mt-2 text-text-muted-light dark:text-text-muted-dark font-handwritten">Precision drip,
-                            mist, and fog setups with 90% water efficiency.</p>
+                    <div class="flex flex-row md:flex-col items-start md:items-center gap-4 md:gap-0 p-4 sm:p-6 text-left md:text-center">
+                        <div class="text-3xl md:text-5xl md:mb-4 flex-shrink-0">💧</div>
+                        <div>
+                            <h3 class="text-lg sm:text-xl lg:text-2xl font-display font-bold text-primary dark:text-text-dark">Smart Irrigation Systems</h3>
+                            <p class="mt-1 md:mt-2 text-text-muted-light dark:text-text-muted-dark font-handwritten text-sm lg:text-base">Precision drip, mist, and fog setups with 90% water efficiency.</p>
+                        </div>
                     </div>
-                    <div class="p-6">
-                        <div class="text-5xl mb-4">🎋</div>
-                        <h3 class="text-2xl font-display font-bold text-primary dark:text-text-dark">Bamboo Plantations
-                        </h3>
-                        <p class="mt-2 text-text-muted-light dark:text-text-muted-dark font-handwritten">Carbon storage,
-                            erosion control, and sustainable livelihoods.</p>
+                    <div class="flex flex-row md:flex-col items-start md:items-center gap-4 md:gap-0 p-4 sm:p-6 text-left md:text-center">
+                        <div class="text-3xl md:text-5xl md:mb-4 flex-shrink-0">🎋</div>
+                        <div>
+                            <h3 class="text-lg sm:text-xl lg:text-2xl font-display font-bold text-primary dark:text-text-dark">Bamboo Plantations</h3>
+                            <p class="mt-1 md:mt-2 text-text-muted-light dark:text-text-muted-dark font-handwritten text-sm lg:text-base">Carbon storage, erosion control, and sustainable livelihoods.</p>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <section class="py-16 md:py-24">
-                <div class="text-center mb-12">
+            <section class="py-10 sm:py-16 lg:py-24">
+                <div class="text-center mb-8 lg:mb-12">
                     <h2
-                        class="text-4xl font-display font-bold text-primary dark:text-text-dark inline-block wavy-underline">
+                        class="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-primary dark:text-text-dark inline-block wavy-underline">
                         Our Process</h2>
-                    <p class="mt-4 text-lg text-text-muted-light dark:text-text-muted-dark font-handwritten">From
+                    <p class="mt-3 lg:mt-4 text-base lg:text-lg text-text-muted-light dark:text-text-muted-dark font-handwritten">From
                         assessment to self-sustaining forest</p>
                 </div>
-                <div class="max-w-5xl mx-auto">
-                    <div class="grid md:grid-cols-5 gap-8">
-                        <div class="text-center">
+                <div class="max-w-5xl mx-auto relative px-4">
+                    <!-- Vertical Timeline Line for Mobile/Tablet -->
+                    <div class="absolute left-12 top-12 bottom-12 w-0.5 bg-primary/20 md:hidden"></div>
+                    <div class="flex flex-col md:grid md:grid-cols-5 gap-6 md:gap-8">
+                        <div class="flex flex-row md:flex-col items-start md:items-center gap-6 md:gap-0 text-left md:text-center relative z-10 py-4 md:py-0">
                             <div
-                                class="w-20 h-20 mx-auto mb-4 rounded-full border-4 border-primary flex items-center justify-center bg-background-light dark:bg-background-dark">
-                                <span class="text-2xl font-display font-bold text-primary">1</span>
+                                class="w-16 h-16 md:w-20 md:h-20 mx-0 md:mx-auto mb-0 md:mb-4 rounded-full border-4 border-primary flex items-center justify-center bg-background-light dark:bg-background-dark flex-shrink-0">
+                                <span class="text-xl md:text-2xl font-display font-bold text-primary">1</span>
                             </div>
-                            <h3 class="font-display font-bold text-primary dark:text-text-dark mb-2">Assess</h3>
-                            <p class="text-sm text-text-muted-light dark:text-text-muted-dark font-handwritten">Soil,
-                                terrain & ecology analysis</p>
+                            <div class="mt-1 md:mt-0">
+                                <h3 class="font-display font-bold text-primary dark:text-text-dark mb-1 md:mb-2 text-base md:text-lg">Assess</h3>
+                                <p class="text-xs md:text-sm text-text-muted-light dark:text-text-muted-dark font-handwritten">Soil,
+                                    terrain & ecology analysis</p>
+                            </div>
                         </div>
                         <div class="hidden md:flex items-center justify-center">
                             <div class="w-full h-0.5 bg-card-light dark:bg-card-dark"></div>
                         </div>
-                        <div class="text-center">
+                        <div class="flex flex-row md:flex-col items-start md:items-center gap-6 md:gap-0 text-left md:text-center relative z-10 py-4 md:py-0">
                             <div
-                                class="w-20 h-20 mx-auto mb-4 rounded-full border-4 border-primary flex items-center justify-center bg-background-light dark:bg-background-dark">
-                                <span class="text-2xl font-display font-bold text-primary">2</span>
+                                class="w-16 h-16 md:w-20 md:h-20 mx-0 md:mx-auto mb-0 md:mb-4 rounded-full border-4 border-primary flex items-center justify-center bg-background-light dark:bg-background-dark flex-shrink-0">
+                                <span class="text-xl md:text-2xl font-display font-bold text-primary">2</span>
                             </div>
-                            <h3 class="font-display font-bold text-primary dark:text-text-dark mb-2">Design</h3>
-                            <p class="text-sm text-text-muted-light dark:text-text-muted-dark font-handwritten">Custom
-                                native forest layouts</p>
+                            <div class="mt-1 md:mt-0">
+                                <h3 class="font-display font-bold text-primary dark:text-text-dark mb-1 md:mb-2 text-base md:text-lg">Design</h3>
+                                <p class="text-xs md:text-sm text-text-muted-light dark:text-text-muted-dark font-handwritten">Custom
+                                    native forest layouts</p>
+                            </div>
                         </div>
                         <div class="hidden md:flex items-center justify-center">
                             <div class="w-full h-0.5 bg-card-light dark:bg-card-dark"></div>
                         </div>
-                        <div class="text-center">
+                        <div class="flex flex-row md:flex-col items-start md:items-center gap-6 md:gap-0 text-left md:text-center relative z-10 py-4 md:py-0">
                             <div
-                                class="w-20 h-20 mx-auto mb-4 rounded-full border-4 border-primary flex items-center justify-center bg-background-light dark:bg-background-dark">
-                                <span class="text-2xl font-display font-bold text-primary">3</span>
+                                class="w-16 h-16 md:w-20 md:h-20 mx-0 md:mx-auto mb-0 md:mb-4 rounded-full border-4 border-primary flex items-center justify-center bg-background-light dark:bg-background-dark flex-shrink-0">
+                                <span class="text-xl md:text-2xl font-display font-bold text-primary">3</span>
                             </div>
-                            <h3 class="font-display font-bold text-primary dark:text-text-dark mb-2">Regenerate</h3>
-                            <p class="text-sm text-text-muted-light dark:text-text-muted-dark font-handwritten">Restore
-                                soil vitality</p>
+                            <div class="mt-1 md:mt-0">
+                                <h3 class="font-display font-bold text-primary dark:text-text-dark mb-1 md:mb-2 text-base md:text-lg">Regenerate</h3>
+                                <p class="text-xs md:text-sm text-text-muted-light dark:text-text-muted-dark font-handwritten">Restore
+                                    soil vitality</p>
+                            </div>
                         </div>
                         <div class="hidden md:flex items-center justify-center">
                             <div class="w-full h-0.5 bg-card-light dark:bg-card-dark"></div>
                         </div>
-                        <div class="text-center">
+                        <div class="flex flex-row md:flex-col items-start md:items-center gap-6 md:gap-0 text-left md:text-center relative z-10 py-4 md:py-0">
                             <div
-                                class="w-20 h-20 mx-auto mb-4 rounded-full border-4 border-primary flex items-center justify-center bg-background-light dark:bg-background-dark">
-                                <span class="text-2xl font-display font-bold text-primary">4</span>
+                                class="w-16 h-16 md:w-20 md:h-20 mx-0 md:mx-auto mb-0 md:mb-4 rounded-full border-4 border-primary flex items-center justify-center bg-background-light dark:bg-background-dark flex-shrink-0">
+                                <span class="text-xl md:text-2xl font-display font-bold text-primary">4</span>
                             </div>
-                            <h3 class="font-display font-bold text-primary dark:text-text-dark mb-2">Plant</h3>
-                            <p class="text-sm text-text-muted-light dark:text-text-muted-dark font-handwritten">
-                                Multi-layer native species</p>
+                            <div class="mt-1 md:mt-0">
+                                <h3 class="font-display font-bold text-primary dark:text-text-dark mb-1 md:mb-2 text-base md:text-lg">Plant</h3>
+                                <p class="text-xs md:text-sm text-text-muted-light dark:text-text-muted-dark font-handwritten">
+                                    Multi-layer native species</p>
+                            </div>
                         </div>
                         <div class="hidden md:flex items-center justify-center">
                             <div class="w-full h-0.5 bg-card-light dark:bg-card-dark"></div>
                         </div>
-                        <div class="text-center">
+                        <div class="flex flex-row md:flex-col items-start md:items-center gap-6 md:gap-0 text-left md:text-center relative z-10 py-4 md:py-0">
                             <div
-                                class="w-20 h-20 mx-auto mb-4 rounded-full border-4 border-primary flex items-center justify-center bg-background-light dark:bg-background-dark">
-                                <span class="text-2xl font-display font-bold text-primary">5</span>
+                                class="w-16 h-16 md:w-20 md:h-20 mx-0 md:mx-auto mb-0 md:mb-4 rounded-full border-4 border-primary flex items-center justify-center bg-background-light dark:bg-background-dark flex-shrink-0">
+                                <span class="text-xl md:text-2xl font-display font-bold text-primary">5</span>
                             </div>
-                            <h3 class="font-display font-bold text-primary dark:text-text-dark mb-2">Thrive</h3>
-                            <p class="text-sm text-text-muted-light dark:text-text-muted-dark font-handwritten">
-                                Self-sustaining growth</p>
+                            <div class="mt-1 md:mt-0">
+                                <h3 class="font-display font-bold text-primary dark:text-text-dark mb-1 md:mb-2 text-base md:text-lg">Thrive</h3>
+                                <p class="text-xs md:text-sm text-text-muted-light dark:text-text-muted-dark font-handwritten">
+                                    Self-sustaining growth</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="py-16 md:py-24" id="gallery">
-                <div class="text-center mb-12">
-                    <h2 class="text-4xl font-display font-bold text-primary dark:text-text-dark">Projects</h2>
-                    <p class="mt-2 text-lg text-text-muted-light dark:text-text-muted-dark font-handwritten">From barren
-                        to bountiful</p>
+            <section class="py-10 sm:py-16 lg:py-24" id="gallery">
+                <div class="text-center mb-8 lg:mb-12">
+                    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-primary dark:text-text-dark">Projects</h2>
+                    <p class="mt-2 text-base lg:text-lg text-text-muted-light dark:text-text-muted-dark font-handwritten">From barren to bountiful — drag the slider to see the transformation</p>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div
-                        class="bg-white dark:bg-background-dark rounded-lg overflow-hidden shadow-lg border-4 border-card-light dark:border-card-dark transform hover:rotate-2 hover:scale-105 transition-transform duration-300">
-                        <img alt="Lush green fairway on a sunny day" class="w-full h-56 object-cover"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxlOF5I9SAkAfvgcaYPyWIXzRdySrGSyFCk3k6Kc3viY_8ffDrbN2Pr9U0oEGByJtr4xci2RwANmK5L8EhyNyyFT1zrFTX6tTW8R2z5P8DFeFHWjGDwIJh13BY0gJuFI5_bhx5GE-knmfytRLqSmsK35p6uTbQ2tbNOXpuDiV2K92yt2rz486QhMRqpBQd2MxMMY2Mf3b6RT5tIU-oFWWigISIV-kCkqls6umNVT4yXOKsvDLl8qVXRPMhnGajNYDeihLJ8-_xnnU" />
-                        <div class="p-6">
-                            <h3 class="text-xl font-display font-bold text-primary dark:text-text-dark mb-2">Urban
-                                Rooftop Oasis</h3>
-                            <p class="text-text-muted-light dark:text-text-muted-dark font-handwritten">From concrete to
-                                canopy, a city rooftop finds its wild heart.</p>
+
+                <!-- Featured Timeline: Forest Evolution (b17 to b20) -->
+                <div class="max-w-6xl mx-auto px-4 mb-10 sm:mb-16 lg:mb-20">
+                    <div class="text-center mb-6 sm:mb-10">
+                        <span class="text-accent-mud font-handwritten text-base lg:text-lg font-bold">Evolution Journey</span>
+                        <h3 class="text-xl sm:text-2xl lg:text-3xl font-display font-bold text-primary dark:text-text-dark mt-1">Featured: Miyawaki Forest Growth Stages</h3>
+                    </div>
+                    
+                    <div class="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-4 scrollbar-none sm:grid sm:grid-cols-2 lg:grid-cols-4 sm:gap-6">
+                        <!-- Stage 1 -->
+                        <div class="w-[280px] xs:w-[320px] sm:w-auto flex-shrink-0 snap-center bg-white dark:bg-background-dark rounded-xl overflow-hidden shadow-lg border-4 border-card-light dark:border-card-dark group hover:border-primary transition-all duration-300">
+                            <div class="relative aspect-[4/3] overflow-hidden">
+                                <img src="../BA/b17.JPG" alt="Stage 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                                <span class="absolute bottom-3 left-3 bg-primary text-white text-xs px-3 py-1 rounded font-bold shadow-md">STAGE 1</span>
+                            </div>
+                        </div>
+
+                        <!-- Stage 2 -->
+                        <div class="w-[280px] xs:w-[320px] sm:w-auto flex-shrink-0 snap-center bg-white dark:bg-background-dark rounded-xl overflow-hidden shadow-lg border-4 border-card-light dark:border-card-dark group hover:border-primary transition-all duration-300">
+                            <div class="relative aspect-[4/3] overflow-hidden">
+                                <img src="../BA/b18.JPG" alt="Stage 2" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                                <span class="absolute bottom-3 left-3 bg-primary text-white text-xs px-3 py-1 rounded font-bold shadow-md">STAGE 2</span>
+                            </div>
+                        </div>
+
+                        <!-- Stage 3 -->
+                        <div class="w-[280px] xs:w-[320px] sm:w-auto flex-shrink-0 snap-center bg-white dark:bg-background-dark rounded-xl overflow-hidden shadow-lg border-4 border-card-light dark:border-card-dark group hover:border-primary transition-all duration-300">
+                            <div class="relative aspect-[4/3] overflow-hidden">
+                                <img src="../BA/b19.JPG" alt="Stage 3" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                                <span class="absolute bottom-3 left-3 bg-primary text-white text-xs px-3 py-1 rounded font-bold shadow-md">STAGE 3</span>
+                            </div>
+                        </div>
+
+                        <!-- Stage 4 -->
+                        <div class="w-[280px] xs:w-[320px] sm:w-auto flex-shrink-0 snap-center bg-white dark:bg-background-dark rounded-xl overflow-hidden shadow-lg border-4 border-card-light dark:border-card-dark group hover:border-primary transition-all duration-300">
+                            <div class="relative aspect-[4/3] overflow-hidden">
+                                <img src="../BA/b20.JPG" alt="Stage 4" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                                <span class="absolute bottom-3 left-3 bg-accent-mud text-white text-xs px-3 py-1 rounded font-bold shadow-md">STAGE 4</span>
+                            </div>
                         </div>
                     </div>
-                    <div
-                        class="bg-white dark:bg-background-dark rounded-lg overflow-hidden shadow-lg border-4 border-card-light dark:border-card-dark mt-0 md:mt-8 transform hover:-rotate-2 hover:scale-105 transition-transform duration-300">
-                        <img alt="Resort swimming pool with lounge chairs" class="w-full h-56 object-cover"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDf5rpAkZJqE4r7ctkFoKUo7AhOAYmegwRobtIDWlNB-Az4qq6xXwVJjCPGcwx1tzEFO7vlxXE95bs8Sl5TEcjEZ48M9HERszEeagULM8OM2e8lYbePz_kSAeRGX0mOZl6v8mHjLx6h8ir7Aiu_jZKelYsnDtS9vqBBeLdGMEr2iVNxHPcWW4PIpIqYjdGuqHK6yJOZBuw2K00cbjF_L7K46O6Stox2NsVGYGwRD90APhSq5vx__Yp8mpkgTHA-Ux7pW_ZgFyEhJSs" />
-                        <div class="p-6">
-                            <h3 class="text-xl font-display font-bold text-primary dark:text-text-dark mb-2">Corporate
-                                Campus Greenspace</h3>
-                            <p class="text-text-muted-light dark:text-text-muted-dark font-handwritten">A corporate
-                                space re-energized with natural corridors and quiet groves.</p>
+                </div>
+
+                <div class="text-center mb-6 sm:mb-10">
+                    <h3 class="text-xl sm:text-2xl font-display font-bold text-primary dark:text-text-dark">Before/After Transformations</h3>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 max-w-6xl mx-auto px-4">
+                    <!-- Project 1: Miyawaki Forest Transformation - Site 1 -->
+                    <div class="bg-white dark:bg-background-dark rounded-xl overflow-hidden shadow-lg border-4 border-card-light dark:border-card-dark transition-all duration-300">
+                        <div class="relative w-full aspect-[4/3] overflow-hidden before-after-slider select-none">
+                            <!-- After Image -->
+                            <img src="../BA/b2.JPG" alt="After restoration" class="absolute inset-0 w-full h-full object-cover pointer-events-none" />
+                            
+                            <!-- Before Image inside clip-path div -->
+                            <div class="before-container absolute inset-0 w-full h-full overflow-hidden pointer-events-none" style="clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);">
+                                <img src="../BA/b1.JPG" alt="Before restoration" class="absolute inset-0 w-full h-full object-cover pointer-events-none" />
+                            </div>
+                            
+                            <!-- Slider Handle -->
+                            <div class="slider-handle absolute top-0 bottom-0 w-1 bg-white cursor-ew-resize flex items-center justify-center -translate-x-1/2" style="left: 50%;">
+                                <div class="w-8 h-8 rounded-full bg-white text-primary flex items-center justify-center shadow-lg border border-primary/20">
+                                    <i class="fas fa-arrows-alt-h text-primary"></i>
+                                </div>
+                            </div>
+                            
+                            <!-- Slider Input Control -->
+                            <input type="range" min="0" max="100" value="50" class="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-20" aria-label="Before after slide comparison" />
+                            
+                            <!-- Badges -->
+                            <span class="absolute bottom-3 left-3 bg-black/60 text-white text-[10px] px-2 py-0.5 rounded font-bold tracking-wider z-10 pointer-events-none">BEFORE</span>
+                            <span class="absolute bottom-3 right-3 bg-accent-mud text-white text-[10px] px-2 py-0.5 rounded font-bold tracking-wider z-10 pointer-events-none">AFTER</span>
+                        </div>
+                        <div class="p-4 sm:p-6">
+                            <h3 class="text-lg lg:text-xl font-display font-bold text-primary dark:text-text-dark mb-2">Miyawaki Forest Transformation - Site 1</h3>
+                            <p class="text-text-muted-light dark:text-text-muted-dark font-handwritten text-sm">Barren, degraded soil revived into a dense, self-sustaining Miyawaki native forest ecosystem.</p>
                         </div>
                     </div>
-                    <div
-                        class="bg-white dark:bg-background-dark rounded-lg overflow-hidden shadow-lg border-4 border-card-light dark:border-card-dark transform hover:rotate-1 hover:scale-105 transition-transform duration-300">
-                        <img alt="The clubhouse exterior with a vibrant garden" class="w-full h-56 object-cover"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwSn9rRRoezM8ZrmtH0sIvNIRLxOCipEakmFrpDnzGOckX_kHyFKICrMvLEx6zxIU5SIUSEMjVD7kA-aREhrTSYMKJA9zGmn0iBB5YfjPMG17pfqH13wZXPr8Hxls9J3t1wBwqkrr8AehDIwOb2cE9-fWHKwby44e6th9mjr_EGVSnzd06BEXEnYjumyr7MDUvW-GAkapF1f-90BsqUf66n8_x8wF4uHd9bNj45B84On3kdV2-c0pi7p6oFmJIVtO_caEDXK3PDWA" />
-                        <div class="p-6">
-                            <h3 class="text-xl font-display font-bold text-primary dark:text-text-dark mb-2">Residential
-                                Eco-Lawn</h3>
-                            <p class="text-text-muted-light dark:text-text-muted-dark font-handwritten">A family's yard
-                                transformed into a biodiverse haven for pollinators and play.</p>
+
+                    <!-- Project 2: Miyawaki Forest Transformation - Site 2 -->
+                    <div class="bg-white dark:bg-background-dark rounded-xl overflow-hidden shadow-lg border-4 border-card-light dark:border-card-dark transition-all duration-300">
+                        <div class="relative w-full aspect-[4/3] overflow-hidden before-after-slider select-none">
+                            <!-- After Image -->
+                            <img src="../BA/b4.JPG" alt="After restoration" class="absolute inset-0 w-full h-full object-cover pointer-events-none" />
+                            
+                            <!-- Before Image inside clip-path div -->
+                            <div class="before-container absolute inset-0 w-full h-full overflow-hidden pointer-events-none" style="clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);">
+                                <img src="../BA/b3.jpg" alt="Before restoration" class="absolute inset-0 w-full h-full object-cover pointer-events-none" />
+                            </div>
+                            
+                            <!-- Slider Handle -->
+                            <div class="slider-handle absolute top-0 bottom-0 w-1 bg-white cursor-ew-resize flex items-center justify-center -translate-x-1/2" style="left: 50%;">
+                                <div class="w-8 h-8 rounded-full bg-white text-primary flex items-center justify-center shadow-lg border border-primary/20">
+                                    <i class="fas fa-arrows-alt-h text-primary"></i>
+                                </div>
+                            </div>
+                            
+                            <!-- Slider Input Control -->
+                            <input type="range" min="0" max="100" value="50" class="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-20" aria-label="Before after slide comparison" />
+                            
+                            <!-- Badges -->
+                            <span class="absolute bottom-3 left-3 bg-black/60 text-white text-[10px] px-2 py-0.5 rounded font-bold tracking-wider z-10 pointer-events-none">BEFORE</span>
+                            <span class="absolute bottom-3 right-3 bg-accent-mud text-white text-[10px] px-2 py-0.5 rounded font-bold tracking-wider z-10 pointer-events-none">AFTER</span>
+                        </div>
+                        <div class="p-4 sm:p-6">
+                            <h3 class="text-lg lg:text-xl font-display font-bold text-primary dark:text-text-dark mb-2">Miyawaki Forest Transformation - Site 2</h3>
+                            <p class="text-text-muted-light dark:text-text-muted-dark font-handwritten text-sm">Accelerated growth of native trees forming a tight canopy layer to restore local climate resilience.</p>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: Miyawaki Forest Transformation - Site 3 -->
+                    <div class="bg-white dark:bg-background-dark rounded-xl overflow-hidden shadow-lg border-4 border-card-light dark:border-card-dark transition-all duration-300">
+                        <div class="relative w-full aspect-[4/3] overflow-hidden before-after-slider select-none">
+                            <!-- After Image -->
+                            <img src="../BA/b6.JPG" alt="After restoration" class="absolute inset-0 w-full h-full object-cover pointer-events-none" />
+                            
+                            <!-- Before Image inside clip-path div -->
+                            <div class="before-container absolute inset-0 w-full h-full overflow-hidden pointer-events-none" style="clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);">
+                                <img src="../BA/b5.jpg" alt="Before restoration" class="absolute inset-0 w-full h-full object-cover pointer-events-none" />
+                            </div>
+                            
+                            <!-- Slider Handle -->
+                            <div class="slider-handle absolute top-0 bottom-0 w-1 bg-white cursor-ew-resize flex items-center justify-center -translate-x-1/2" style="left: 50%;">
+                                <div class="w-8 h-8 rounded-full bg-white text-primary flex items-center justify-center shadow-lg border border-primary/20">
+                                    <i class="fas fa-arrows-alt-h text-primary"></i>
+                                </div>
+                            </div>
+                            
+                            <!-- Slider Input Control -->
+                            <input type="range" min="0" max="100" value="50" class="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-20" aria-label="Before after slide comparison" />
+                            
+                            <!-- Badges -->
+                            <span class="absolute bottom-3 left-3 bg-black/60 text-white text-[10px] px-2 py-0.5 rounded font-bold tracking-wider z-10 pointer-events-none">BEFORE</span>
+                            <span class="absolute bottom-3 right-3 bg-accent-mud text-white text-[10px] px-2 py-0.5 rounded font-bold tracking-wider z-10 pointer-events-none">AFTER</span>
+                        </div>
+                        <div class="p-4 sm:p-6">
+                            <h3 class="text-lg lg:text-xl font-display font-bold text-primary dark:text-text-dark mb-2">Miyawaki Forest Transformation - Site 3</h3>
+                            <p class="text-text-muted-light dark:text-text-muted-dark font-handwritten text-sm">High-density planting showing natural layers of native canopy, sub-canopy, and shrub layers thriving.</p>
+                        </div>
+                    </div>
+
+                    <!-- Project 4: Miyawaki Forest Transformation - Site 4 -->
+                    <div class="bg-white dark:bg-background-dark rounded-xl overflow-hidden shadow-lg border-4 border-card-light dark:border-card-dark transition-all duration-300">
+                        <div class="relative w-full aspect-[4/3] overflow-hidden before-after-slider select-none">
+                            <!-- After Image -->
+                            <img src="../BA/b8.jpg" alt="After restoration" class="absolute inset-0 w-full h-full object-cover pointer-events-none" />
+                            
+                            <!-- Before Image inside clip-path div -->
+                            <div class="before-container absolute inset-0 w-full h-full overflow-hidden pointer-events-none" style="clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);">
+                                <img src="../BA/b7.jpg" alt="Before restoration" class="absolute inset-0 w-full h-full object-cover pointer-events-none" />
+                            </div>
+                            
+                            <!-- Slider Handle -->
+                            <div class="slider-handle absolute top-0 bottom-0 w-1 bg-white cursor-ew-resize flex items-center justify-center -translate-x-1/2" style="left: 50%;">
+                                <div class="w-8 h-8 rounded-full bg-white text-primary flex items-center justify-center shadow-lg border border-primary/20">
+                                    <i class="fas fa-arrows-alt-h text-primary"></i>
+                                </div>
+                            </div>
+                            
+                            <!-- Slider Input Control -->
+                            <input type="range" min="0" max="100" value="50" class="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-20" aria-label="Before after slide comparison" />
+                            
+                            <!-- Badges -->
+                            <span class="absolute bottom-3 left-3 bg-black/60 text-white text-[10px] px-2 py-0.5 rounded font-bold tracking-wider z-10 pointer-events-none">BEFORE</span>
+                            <span class="absolute bottom-3 right-3 bg-accent-mud text-white text-[10px] px-2 py-0.5 rounded font-bold tracking-wider z-10 pointer-events-none">AFTER</span>
+                        </div>
+                        <div class="p-4 sm:p-6">
+                            <h3 class="text-lg lg:text-xl font-display font-bold text-primary dark:text-text-dark mb-2">Miyawaki Forest Transformation - Site 4</h3>
+                            <p class="text-text-muted-light dark:text-text-muted-dark font-handwritten text-sm">Barren land completely transformed into a self-maintaining native micro-forest in record time.</p>
+                        </div>
+                    </div>
+
+                    <!-- Project 5: Miyawaki Forest Transformation - Site 5 -->
+                    <div class="bg-white dark:bg-background-dark rounded-xl overflow-hidden shadow-lg border-4 border-card-light dark:border-card-dark transition-all duration-300">
+                        <div class="relative w-full aspect-[4/3] overflow-hidden before-after-slider select-none">
+                            <!-- After Image -->
+                            <img src="../BA/b10.JPG" alt="After restoration" class="absolute inset-0 w-full h-full object-cover pointer-events-none" />
+                            
+                            <!-- Before Image inside clip-path div -->
+                            <div class="before-container absolute inset-0 w-full h-full overflow-hidden pointer-events-none" style="clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);">
+                                <img src="../BA/b9.jpg" alt="Before restoration" class="absolute inset-0 w-full h-full object-cover pointer-events-none" />
+                            </div>
+                            
+                            <!-- Slider Handle -->
+                            <div class="slider-handle absolute top-0 bottom-0 w-1 bg-white cursor-ew-resize flex items-center justify-center -translate-x-1/2" style="left: 50%;">
+                                <div class="w-8 h-8 rounded-full bg-white text-primary flex items-center justify-center shadow-lg border border-primary/20">
+                                    <i class="fas fa-arrows-alt-h text-primary"></i>
+                                </div>
+                            </div>
+                            
+                            <!-- Slider Input Control -->
+                            <input type="range" min="0" max="100" value="50" class="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-20" aria-label="Before after slide comparison" />
+                            
+                            <!-- Badges -->
+                            <span class="absolute bottom-3 left-3 bg-black/60 text-white text-[10px] px-2 py-0.5 rounded font-bold tracking-wider z-10 pointer-events-none">BEFORE</span>
+                            <span class="absolute bottom-3 right-3 bg-accent-mud text-white text-[10px] px-2 py-0.5 rounded font-bold tracking-wider z-10 pointer-events-none">AFTER</span>
+                        </div>
+                        <div class="p-4 sm:p-6">
+                            <h3 class="text-lg lg:text-xl font-display font-bold text-primary dark:text-text-dark mb-2">Miyawaki Forest Transformation - Site 5</h3>
+                            <p class="text-text-muted-light dark:text-text-muted-dark font-handwritten text-sm">Degraded plot restored with a rich species mix, establishing a productive microclimate.</p>
+                        </div>
+                    </div>
+
+                    <!-- Project 6: Miyawaki Forest Transformation - Site 6 -->
+                    <div class="bg-white dark:bg-background-dark rounded-xl overflow-hidden shadow-lg border-4 border-card-light dark:border-card-dark transition-all duration-300">
+                        <div class="relative w-full aspect-[4/3] overflow-hidden before-after-slider select-none">
+                            <!-- After Image -->
+                            <img src="../BA/b12.JPG" alt="After restoration" class="absolute inset-0 w-full h-full object-cover pointer-events-none" />
+                            
+                            <!-- Before Image inside clip-path div -->
+                            <div class="before-container absolute inset-0 w-full h-full overflow-hidden pointer-events-none" style="clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);">
+                                <img src="../BA/b11.jpg" alt="Before restoration" class="absolute inset-0 w-full h-full object-cover pointer-events-none" />
+                            </div>
+                            
+                            <!-- Slider Handle -->
+                            <div class="slider-handle absolute top-0 bottom-0 w-1 bg-white cursor-ew-resize flex items-center justify-center -translate-x-1/2" style="left: 50%;">
+                                <div class="w-8 h-8 rounded-full bg-white text-primary flex items-center justify-center shadow-lg border border-primary/20">
+                                    <i class="fas fa-arrows-alt-h text-primary"></i>
+                                </div>
+                            </div>
+                            
+                            <!-- Slider Input Control -->
+                            <input type="range" min="0" max="100" value="50" class="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-20" aria-label="Before after slide comparison" />
+                            
+                            <!-- Badges -->
+                            <span class="absolute bottom-3 left-3 bg-black/60 text-white text-[10px] px-2 py-0.5 rounded font-bold tracking-wider z-10 pointer-events-none">BEFORE</span>
+                            <span class="absolute bottom-3 right-3 bg-accent-mud text-white text-[10px] px-2 py-0.5 rounded font-bold tracking-wider z-10 pointer-events-none">AFTER</span>
+                        </div>
+                        <div class="p-4 sm:p-6">
+                            <h3 class="text-lg lg:text-xl font-display font-bold text-primary dark:text-text-dark mb-2">Miyawaki Forest Transformation - Site 6</h3>
+                            <p class="text-text-muted-light dark:text-text-muted-dark font-handwritten text-sm">Barren field transformed into a mature, dense green forest canopy capturing carbon.</p>
+                        </div>
+                    </div>
+
+                    <!-- Project 7: Miyawaki Forest Transformation - Site 7 -->
+                    <div class="bg-white dark:bg-background-dark rounded-xl overflow-hidden shadow-lg border-4 border-card-light dark:border-card-dark transition-all duration-300">
+                        <div class="relative w-full aspect-[4/3] overflow-hidden before-after-slider select-none">
+                            <!-- After Image -->
+                            <img src="../BA/b14.JPG" alt="After restoration" class="absolute inset-0 w-full h-full object-cover pointer-events-none" />
+                            
+                            <!-- Before Image inside clip-path div -->
+                            <div class="before-container absolute inset-0 w-full h-full overflow-hidden pointer-events-none" style="clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);">
+                                <img src="../BA/b13.JPG" alt="Before restoration" class="absolute inset-0 w-full h-full object-cover pointer-events-none" />
+                            </div>
+                            
+                            <!-- Slider Handle -->
+                            <div class="slider-handle absolute top-0 bottom-0 w-1 bg-white cursor-ew-resize flex items-center justify-center -translate-x-1/2" style="left: 50%;">
+                                <div class="w-8 h-8 rounded-full bg-white text-primary flex items-center justify-center shadow-lg border border-primary/20">
+                                    <i class="fas fa-arrows-alt-h text-primary"></i>
+                                </div>
+                            </div>
+                            
+                            <!-- Slider Input Control -->
+                            <input type="range" min="0" max="100" value="50" class="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-20" aria-label="Before after slide comparison" />
+                            
+                            <!-- Badges -->
+                            <span class="absolute bottom-3 left-3 bg-black/60 text-white text-[10px] px-2 py-0.5 rounded font-bold tracking-wider z-10 pointer-events-none">BEFORE</span>
+                            <span class="absolute bottom-3 right-3 bg-accent-mud text-white text-[10px] px-2 py-0.5 rounded font-bold tracking-wider z-10 pointer-events-none">AFTER</span>
+                        </div>
+                        <div class="p-4 sm:p-6">
+                            <h3 class="text-lg lg:text-xl font-display font-bold text-primary dark:text-text-dark mb-2">Miyawaki Forest Transformation - Site 7</h3>
+                            <p class="text-text-muted-light dark:text-text-muted-dark font-handwritten text-sm">Restoring native ecosystem balance and soil biodiversity on degraded hillsides.</p>
+                        </div>
+                    </div>
+
+                    <!-- Project 8: Miyawaki Forest Transformation - Site 8 -->
+                    <div class="bg-white dark:bg-background-dark rounded-xl overflow-hidden shadow-lg border-4 border-card-light dark:border-card-dark transition-all duration-300">
+                        <div class="relative w-full aspect-[4/3] overflow-hidden before-after-slider select-none">
+                            <!-- After Image -->
+                            <img src="../BA/b16.JPG" alt="After restoration" class="absolute inset-0 w-full h-full object-cover pointer-events-none" />
+                            
+                            <!-- Before Image inside clip-path div -->
+                            <div class="before-container absolute inset-0 w-full h-full overflow-hidden pointer-events-none" style="clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);">
+                                <img src="../BA/b15.JPG" alt="Before restoration" class="absolute inset-0 w-full h-full object-cover pointer-events-none" />
+                            </div>
+                            
+                            <!-- Slider Handle -->
+                            <div class="slider-handle absolute top-0 bottom-0 w-1 bg-white cursor-ew-resize flex items-center justify-center -translate-x-1/2" style="left: 50%;">
+                                <div class="w-8 h-8 rounded-full bg-white text-primary flex items-center justify-center shadow-lg border border-primary/20">
+                                    <i class="fas fa-arrows-alt-h text-primary"></i>
+                                </div>
+                            </div>
+                            
+                            <!-- Slider Input Control -->
+                            <input type="range" min="0" max="100" value="50" class="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-20" aria-label="Before after slide comparison" />
+                            
+                            <!-- Badges -->
+                            <span class="absolute bottom-3 left-3 bg-black/60 text-white text-[10px] px-2 py-0.5 rounded font-bold tracking-wider z-10 pointer-events-none">BEFORE</span>
+                            <span class="absolute bottom-3 right-3 bg-accent-mud text-white text-[10px] px-2 py-0.5 rounded font-bold tracking-wider z-10 pointer-events-none">AFTER</span>
+                        </div>
+                        <div class="p-4 sm:p-6">
+                            <h3 class="text-lg lg:text-xl font-display font-bold text-primary dark:text-text-dark mb-2">Miyawaki Forest Transformation - Site 8</h3>
+                            <p class="text-text-muted-light dark:text-text-muted-dark font-handwritten text-sm">Rapid growth of native flora establishing a sustainable, lush micro-ecosystem.</p>
                         </div>
                     </div>
                 </div>
             </section>
+            <!-- Client Testimonials section commented out as requested
             <section class="py-16 md:py-24">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
                     <div class="space-y-8">
@@ -432,158 +729,157 @@
                     </div>
                 </div>
             </section>
-            <section class="py-16 md:py-24" id="faq">
-                <div class="text-center mb-10">
-                    <h2 class="text-4xl font-display font-bold text-primary dark:text-text-dark">Frequently Asked
+            -->
+            <section class="py-10 sm:py-16 lg:py-24" id="faq">
+                <div class="text-center mb-8 lg:mb-10">
+                    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-primary dark:text-text-dark">Frequently Asked
                         Questions</h2>
-                    <p class="mt-2 text-lg text-text-muted-light dark:text-text-muted-dark font-handwritten">Answers to
+                    <p class="mt-2 text-base lg:text-lg text-text-muted-light dark:text-text-muted-dark font-handwritten">Answers to
                         common questions about our process and services.</p>
                 </div>
-                <div class="max-w-3xl mx-auto space-y-4">
+                <div class="max-w-3xl mx-auto space-y-2 md:space-y-4">
                     <details
-                        class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-lg p-4">
+                        class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-lg py-1.5 px-3 sm:p-4">
                         <summary
-                            class="cursor-pointer list-none flex justify-between items-center font-display text-lg text-text-light dark:text-text-dark">
+                            class="cursor-pointer list-none flex justify-between items-center font-display text-sm sm:text-base lg:text-lg text-text-light dark:text-text-dark">
                             What areas do you serve?<span class="ml-4 text-primary">+</span></summary>
-                        <div class="mt-3 text-text-muted-light dark:text-text-muted-dark font-handwritten">We primarily
+                        <div class="mt-2 text-sm sm:text-base text-text-muted-light dark:text-text-muted-dark font-handwritten">We primarily
                             serve the city and surrounding regions. For larger projects, we travel further—tell us about
                             your site and we’ll confirm.</div>
                     </details>
                     <details
-                        class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-lg p-4">
+                        class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-lg py-1.5 px-3 sm:p-4">
                         <summary
-                            class="cursor-pointer list-none flex justify-between items-center font-display text-lg text-text-light dark:text-text-dark">
+                            class="cursor-pointer list-none flex justify-between items-center font-display text-sm sm:text-base lg:text-lg text-text-light dark:text-text-dark">
                             Do you use native plants?<span class="ml-4 text-primary">+</span></summary>
-                        <div class="mt-3 text-text-muted-light dark:text-text-muted-dark font-handwritten">Yes. We
+                        <div class="mt-2 text-sm sm:text-base text-text-muted-light dark:text-text-muted-dark font-handwritten">Yes. We
                             prioritize native, climate-appropriate species for resilience, biodiversity, and low
                             maintenance.</div>
                     </details>
                     <details
-                        class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-lg p-4">
+                        class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-lg py-1.5 px-3 sm:p-4">
                         <summary
-                            class="cursor-pointer list-none flex justify-between items-center font-display text-lg text-text-light dark:text-text-dark">
+                            class="cursor-pointer list-none flex justify-between items-center font-display text-sm sm:text-base lg:text-lg text-text-light dark:text-text-dark">
                             How long does a project take?<span class="ml-4 text-primary">+</span></summary>
-                        <div class="mt-3 text-text-muted-light dark:text-text-muted-dark font-handwritten">Small
+                        <div class="mt-2 text-sm sm:text-base text-text-muted-light dark:text-text-muted-dark font-handwritten">Small
                             installations can be completed in a few days. Full landscape transformations typically take
                             2–8 weeks depending on scope and season.</div>
                     </details>
                     <details
-                        class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-lg p-4">
+                        class="group bg-white dark:bg-background-dark border border-card-light dark:border-card-dark rounded-lg py-1.5 px-3 sm:p-4">
                         <summary
-                            class="cursor-pointer list-none flex justify-between items-center font-display text-lg text-text-light dark:text-text-dark">
+                            class="cursor-pointer list-none flex justify-between items-center font-display text-sm sm:text-base lg:text-lg text-text-light dark:text-text-dark">
                             Do you provide maintenance?<span class="ml-4 text-primary">+</span></summary>
-                        <div class="mt-3 text-text-muted-light dark:text-text-muted-dark font-handwritten">We offer
+                        <div class="mt-2 text-sm sm:text-base text-text-muted-light dark:text-text-muted-dark font-handwritten">We offer
                             ongoing care plans and seasonal tune-ups to keep your landscape thriving.</div>
                     </details>
                 </div>
             </section>
-            <section class="py-16 md:py-24" id="contact">
-                <div class="text-center">
-                    <h2 class="text-4xl font-display font-bold text-primary dark:text-text-dark wavy-underline">Contact
-                        Us</h2>
-                    <p
-                        class="mt-4 text-lg text-text-muted-light dark:text-text-muted-dark max-w-2xl mx-auto font-handwritten">
+            <section class="py-10 sm:py-16 lg:py-24 overflow-hidden" id="contact">
+                <div class="text-center mb-8 lg:mb-10">
+                    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-primary dark:text-text-dark wavy-underline">Contact Us</h2>
+                    <p class="mt-2 sm:mt-4 text-base lg:text-lg text-text-muted-light dark:text-text-muted-dark max-w-2xl mx-auto font-handwritten">
                         Ready to restore your land? Let's create a thriving ecosystem together.
                     </p>
                 </div>
-                <div class="mt-12 max-w-lg mx-auto">
-                    <form id="contact-form" class="space-y-6 font-handwritten">
-                        <div>
-                            <label class="block text-sm font-bold text-text-light dark:text-text-dark"
-                                for="full-name">Your Name</label>
-                            <div class="mt-1">
-                                <input
-                                    class="py-3 px-4 block w-full shadow-sm focus:ring-primary focus:border-primary border-accent-mud/50 rounded-lg bg-white dark:bg-background-dark text-text-light dark:text-text-dark text-lg"
-                                    id="full-name" name="name" type="text" required />
-                            </div>
+                <div class="relative max-w-lg mx-auto px-4 z-10">
+                    <!-- Main Card Container -->
+                    <div class="relative bg-white dark:bg-background-dark rounded-xl border-4 border-card-light dark:border-card-dark p-5 sm:p-8 text-center space-y-3 sm:space-y-4 z-10 shadow-lg">
+                        <!-- Header Icon -->
+                        <div class="w-10 h-10 lg:w-12 lg:h-12 bg-[#25D366]/10 text-[#25D366] rounded-full flex items-center justify-center mx-auto text-xl lg:text-2xl border-2 border-[#25D366] shadow-sm">
+                            <i class="fab fa-whatsapp"></i>
                         </div>
-                        <div>
-                            <label class="block text-sm font-bold text-text-light dark:text-text-dark" for="email">Your
-                                Email</label>
-                            <div class="mt-1">
-                                <input
-                                    class="py-3 px-4 block w-full shadow-sm focus:ring-primary focus:border-primary border-accent-mud/50 rounded-lg bg-white dark:bg-background-dark text-text-light dark:text-text-dark text-lg"
-                                    id="email" name="email" type="email" required />
-                            </div>
+                        
+                        <!-- Title & Subtitle -->
+                        <h3 class="text-base sm:text-lg lg:text-xl font-display font-bold text-primary dark:text-text-dark">Start Your Project Directly on WhatsApp</h3>
+                        <p class="text-text-muted-light dark:text-text-muted-dark font-handwritten text-xs sm:text-sm lg:text-base leading-relaxed">
+                            Connect directly with our founder Azhar Shah to discuss soil regeneration, Miyawaki forest designs, water harvesting, or custom agroforestry solutions.
+                        </p>
+                        
+                        <!-- Premium Action Button -->
+                        <div class="pt-1">
+                            <a href="https://wa.me/918891401048" target="_blank" rel="noopener noreferrer" 
+                               class="inline-flex items-center justify-center gap-2 px-5 py-2.5 lg:px-6 lg:py-3 bg-accent-mud hover:bg-primary text-white rounded-lg text-sm sm:text-base lg:text-lg font-handwritten shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 font-bold">
+                                <i class="fab fa-whatsapp text-xl"></i> Chat on WhatsApp
+                            </a>
                         </div>
-                        <div>
-                            <label class="block text-sm font-bold text-text-light dark:text-text-dark" for="phone">Your
-                                Phone (Optional)</label>
-                            <div class="mt-1">
-                                <input
-                                    class="py-3 px-4 block w-full shadow-sm focus:ring-primary focus:border-primary border-accent-mud/50 rounded-lg bg-white dark:bg-background-dark text-text-light dark:text-text-dark text-lg"
-                                    id="phone" name="phone" type="tel" />
-                            </div>
+                        
+                        <!-- Divider Line -->
+                        <div class="w-full h-0.5 bg-card-light dark:bg-card-dark my-3"></div>
+                        
+                        <!-- Footer Email Address -->
+                        <div class="text-xs sm:text-sm text-text-muted-light dark:text-text-muted-dark font-handwritten">
+                            Or email us at <a href="mailto:earthwormx.india@gmail.com" class="text-primary hover:text-accent-mud transition-colors font-bold">earthwormx.india@gmail.com</a>
                         </div>
-                        <div>
-                            <label class="block text-sm font-bold text-text-light dark:text-text-dark"
-                                for="message">Your Message</label>
-                            <div class="mt-1">
-                                <textarea
-                                    class="py-3 px-4 block w-full shadow-sm focus:ring-primary focus:border-primary border border-accent-mud/50 rounded-lg bg-white dark:bg-background-dark text-text-light dark:text-text-dark text-lg"
-                                    id="message" name="message" placeholder="Tell us about your dream garden..."
-                                    rows="4" required></textarea>
-                            </div>
-                        </div>
-                        <div id="form-status" class="hidden text-center font-handwritten"></div>
-                        <div>
-                            <button
-                                class="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-lg shadow-sm text-xl font-medium text-white bg-primary hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-                                type="submit" id="submit-btn">
-                                Send Message
-                            </button>
-                        </div>
-                    </form>
+                    </div>
+                    
+                    <!-- Rotated Background Card for Organic Feel -->
+                    <div class="absolute -top-2 -left-2 w-full h-full bg-card-light dark:bg-card-dark rounded-xl transform rotate-[-1.5deg] z-0 shadow-md"></div>
                 </div>
             </section>
         </main>
-        <footer class="py-12 border-t-2 border-dashed border-accent-mud/50">
-            <div
-                class="flex flex-col md:flex-row justify-between items-center text-center md:text-left space-y-6 md:space-y-0">
-                <div>
-                    <h3 class="text-2xl font-bold font-display text-primary dark:text-text-dark">EARTHWORMX</h3>
-                    <p class="font-handwritten text-text-muted-light dark:text-text-muted-dark">Regeneration in Action
-                    </p>
-                    <p class="mt-2 text-sm text-text-muted-light dark:text-text-muted-dark font-handwritten">
-                        <a href="mailto:info@earthwormx.com"
-                            class="hover:text-primary transition-colors">info@earthwormx.com</a><br />
-                        <a href="https://wa.me/918891401048" target="_blank"
-                            class="hover:text-primary transition-colors">+91 8891401048</a>
+        <footer class="py-8 lg:py-12 border-t-2 border-dashed border-accent-mud/50">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-6 lg:gap-8 text-center md:text-left max-w-6xl mx-auto px-4">
+                <!-- Column 1: Brand & Contact -->
+                <div class="col-span-2 md:col-span-1 space-y-4">
+                    <div class="flex items-center justify-center md:justify-start">
+                        <span class="text-2xl font-bold font-display text-primary dark:text-text-dark">Earthworm</span>
+                        <img src="../Logos-PNG/Earthwormx_Logo_-07.png"
+                             alt="X"
+                             class="h-6 w-auto -ml-1 transform translate-y-[4px]"
+                             id="footer-logo-icon" />
+                    </div>
+                    <p class="font-handwritten text-text-muted-light dark:text-text-muted-dark">Regeneration in Action</p>
+                    <p class="text-sm text-text-muted-light dark:text-text-muted-dark font-handwritten space-y-1">
+                        <span class="block">
+                            <a href="mailto:earthwormx.india@gmail.com" class="hover:text-primary transition-colors flex items-center justify-center md:justify-start gap-2">
+                                <i class="fas fa-envelope text-primary"></i> earthwormx.india@gmail.com
+                            </a>
+                        </span>
+                        <span class="block">
+                            <a href="https://wa.me/918891401048" target="_blank" class="hover:text-primary transition-colors flex items-center justify-center md:justify-start gap-2">
+                                <i class="fab fa-whatsapp text-primary"></i> +91 8891401048
+                            </a>
+                        </span>
                     </p>
                 </div>
-                <div class="flex flex-col items-center space-y-3">
+
+                <!-- Column 2: Instagram Links -->
+                <div class="col-span-1 md:col-span-1 space-y-3">
                     <p class="font-handwritten text-text-light dark:text-text-dark font-semibold">Follow Our Journey</p>
-                    <div class="flex space-x-4">
-                        <a class="text-text-light dark:text-text-dark hover:text-primary transition-colors transform hover:scale-110"
-                            href="https://instagram.com/earthwormx" target="_blank" rel="noopener noreferrer"
-                            aria-label="Instagram">
-                            <i class="fab fa-instagram fa-2x"></i>
-                        </a>
-                        <a class="text-text-light dark:text-text-dark hover:text-primary transition-colors transform hover:scale-110"
-                            href="https://facebook.com/earthwormx" target="_blank" rel="noopener noreferrer"
-                            aria-label="Facebook">
-                            <i class="fab fa-facebook fa-2x"></i>
-                        </a>
-                        <a class="text-text-light dark:text-text-dark hover:text-primary transition-colors transform hover:scale-110"
-                            href="https://linkedin.com/company/earthwormx" target="_blank" rel="noopener noreferrer"
-                            aria-label="LinkedIn">
-                            <i class="fab fa-linkedin fa-2x"></i>
-                        </a>
-                        <a class="text-text-light dark:text-text-dark hover:text-primary transition-colors transform hover:scale-110"
-                            href="https://twitter.com/earthwormx" target="_blank" rel="noopener noreferrer"
-                            aria-label="Twitter">
-                            <i class="fab fa-twitter fa-2x"></i>
+                    <div class="flex flex-col space-y-2 text-sm font-handwritten text-text-muted-light dark:text-text-muted-dark items-center md:items-start">
+                        <a class="hover:text-primary transition-colors flex items-center gap-2"
+                            href="https://www.instagram.com/earthworm.x?igsh=MTJhYjBkYnJld21sdg%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-instagram fa-lg text-primary"></i> @earthworm.x
                         </a>
                     </div>
                 </div>
-                <div class="text-center md:text-right">
-                    <p class="text-sm text-text-muted-light dark:text-text-muted-dark font-handwritten mb-2">
+
+                <!-- Column 3: Addresses -->
+                <div class="col-span-1 md:col-span-1 space-y-3">
+                    <p class="font-handwritten text-text-light dark:text-text-dark font-semibold">Our Offices</p>
+                    <div class="text-xs text-text-muted-light dark:text-text-muted-dark font-handwritten space-y-3 leading-relaxed">
+                        <div>
+                            <span class="block font-bold text-primary dark:text-text-dark">Office Address</span>
+                            <span>Shoolagiri, Tamilnadu</span>
+                        </div>
+                        <div>
+                            <span class="block font-bold text-primary dark:text-text-dark">Kerala Address</span>
+                            <span>Perumthuruthi, Thrissur, Kerala</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 4: Links & Copyright -->
+                <div class="col-span-2 md:col-span-1 space-y-4 flex flex-col justify-between items-center md:items-end">
+                    <div class="text-sm text-text-muted-light dark:text-text-muted-dark font-handwritten space-x-2">
                         <a href="#home" class="hover:text-primary transition-colors">Home</a> •
                         <a href="about.html" class="hover:text-primary transition-colors">About</a> •
                         <a href="#contact" class="hover:text-primary transition-colors">Contact</a>
+                    </div>
+                    <p class="text-xs text-text-muted-light dark:text-text-muted-dark text-center md:text-right">
+                        © 2025 EARTHWORMX.<br/>All Rights Reserved.
                     </p>
-                    <p class="text-sm text-text-muted-light dark:text-text-muted-dark">© 2025 EARTHWORMX. All Rights
-                        Reserved.</p>
                 </div>
             </div>
         </footer>
@@ -631,6 +927,30 @@
             show(0);
         })();
 
+        // Before/After Image Sliders
+        (function () {
+            var sliders = document.querySelectorAll('.before-after-slider');
+            sliders.forEach(function (slider) {
+                var range = slider.querySelector('input[type="range"]');
+                var beforeContainer = slider.querySelector('.before-container');
+                var handle = slider.querySelector('.slider-handle');
+
+                if (range && beforeContainer && handle) {
+                    var updateSlider = function (value) {
+                        beforeContainer.style.clipPath = 'polygon(0 0, ' + value + '% 0, ' + value + '% 100%, 0 100%)';
+                        handle.style.left = value + '%';
+                    };
+
+                    range.addEventListener('input', function (e) {
+                        updateSlider(e.target.value);
+                    });
+
+                    // Set initial state
+                    updateSlider(range.value);
+                }
+            });
+        })();
+
         // Mobile Menu Toggle
         (function () {
             var menuButton = document.getElementById('mobile-menu-button');
@@ -651,7 +971,7 @@
             }
         })();
 
-        // Form Submission Handling
+        /* Form Submission Handling commented out since form was replaced by direct WhatsApp CTA
         (function () {
             var form = document.querySelector('form');
             var submitBtn = document.getElementById('submit-btn');
@@ -682,6 +1002,7 @@
                 });
             }
         })();
+        */
 
         // Smooth Scroll for Navigation
         document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
