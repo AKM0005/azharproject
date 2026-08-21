@@ -141,6 +141,8 @@
                     <a class="text-text-light dark:text-text-dark hover:text-primary transition-colors"
                         href="about.html#services">Services</a>
                     <a class="text-text-light dark:text-text-dark hover:text-primary transition-colors"
+                        href="#testimonials">Testimonials</a>
+                    <a class="text-text-light dark:text-text-dark hover:text-primary transition-colors"
                         href="#contact">Contact</a>
                 </nav>
                 <div class="flex items-center space-x-4">
@@ -169,6 +171,8 @@
                         href="about.html">About</a>
                     <a class="text-text-light dark:text-text-dark hover:text-primary transition-colors py-2"
                         href="about.html#services">Services</a>
+                    <a class="text-text-light dark:text-text-dark hover:text-primary transition-colors py-2"
+                        href="#testimonials">Testimonials</a>
                     <a class="text-text-light dark:text-text-dark hover:text-primary transition-colors py-2"
                         href="#contact">Contact</a>
                     <a href="https://wa.me/918891401048" target="_blank" class="inline-block">
@@ -917,41 +921,296 @@
                     </div>
                 </div>
             </section>
-            <!-- Client Testimonials section commented out as requested
-            <section class="py-16 md:py-24">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-                    <div class="space-y-8">
-                        <div class="bg-card-light/70 dark:bg-card-dark/70 p-6 rounded-lg relative">
-                            <p class="font-handwritten text-lg text-text-light dark:text-text-dark">"EARTHWORMX didn't
-                                just give us a garden; they gave us a new way to connect with nature right outside our
-                                door. Absolutely magical."</p>
-                            <p class="text-md font-bold mt-3 text-primary dark:text-text-dark">- The Miller Family</p>
-                            <img class="w-16 h-16 rounded-full absolute -bottom-6 -right-6 border-4 border-white dark:border-background-light"
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCb12k59Vh2rfRx_ZbRw1X9xMIsFJJCmN2fzuMM_Pb5axoi5uWvhiMH-rJkrDGPdm1CWd4STic5dq-8wa4S7fASTww8VBIDRG0JLzOf4S9418z9j5YhZQAEBQT7xFhmcqGa18WWQQxKGCnDwvtF3kUDc6U0KWHyQ-jcA-e_9n1acBgZeTvSrnQtw6EEkO_E3q5U0yeTMcIpOM8CELWmvhxrqeiMsUR6bVtsGVPKvnm3DD22sntKBvjLhGeOjkDJUJfMgmybJAkuxSo" />
-                        </div>
-                        <div class="bg-card-light/70 dark:bg-card-dark/70 p-6 rounded-lg ml-8 relative">
-                            <p class="font-handwritten text-lg text-text-light dark:text-text-dark">"Our employees are
-                                happier and more productive with the green wall. It's like a living piece of art."</p>
-                            <p class="text-md font-bold mt-3 text-primary dark:text-text-dark">- CEO, TechBloom</p>
-                            <img class="w-16 h-16 rounded-full absolute -bottom-6 -right-6 border-4 border-white dark:border-background-light"
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAG_WbBYeS9KwsEhs6R3wiNVcHm1BJVK8mNiGjhUBF9baLFapywOGOSdcUYaH3AXRgo6pfK5Y5pFZPr4vzURDwW48zbXgmECKqRHnsiIiYm7FRxPVB2ua-9xXBqGgXOCNcVwwCYgoSzzU9RHLeWQ32IrgoMdLNBG4TEUwZu3WCN1e-9rTdPTkH5fe21zjeFIrciuSxyCModNfKNqXe4ZzR-8gPVsvBDY1tKSWKeWbmvSIjj8X3c34LmpEShFf1R40inC2_tWmr-K-M" />
+            <!-- Testimonials Section -->
+            <style>
+                @keyframes marquee-left {
+                    0% { transform: translateX(0); }
+                    100% { transform: translateX(-50%); }
+                }
+                @keyframes marquee-right {
+                    0% { transform: translateX(-50%); }
+                    100% { transform: translateX(0); }
+                }
+            </style>
+            <section class="py-10 sm:py-16 lg:py-24 overflow-hidden" id="testimonials">
+                <div class="max-w-6xl mx-auto px-4 mb-10 sm:mb-14">
+                    <div class="text-center">
+                        <span class="text-accent-mud font-handwritten text-base lg:text-lg font-bold">Client Stories</span>
+                        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-primary dark:text-text-dark mt-1 wavy-underline inline-block">Voices of Regeneration</h2>
+                        <p class="mt-3 text-sm sm:text-base text-text-muted-light dark:text-text-muted-dark font-handwritten max-w-2xl mx-auto">
+                            Hear from the families, architects, and directors who have partnered with us to transform their lands. (Hover to pause)
+                        </p>
+                    </div>
+                </div>
+
+                <div class="space-y-6 relative max-w-[100vw]">
+                    <!-- Gradient Fades on edges -->
+                    <div class="absolute inset-y-0 left-0 w-12 sm:w-24 bg-gradient-to-r from-background-light dark:from-background-dark to-transparent pointer-events-none z-10"></div>
+                    <div class="absolute inset-y-0 right-0 w-12 sm:w-24 bg-gradient-to-l from-background-light dark:from-background-dark to-transparent pointer-events-none z-10"></div>
+
+                    <!-- Row 1: Scrolling Left -->
+                    <div class="overflow-hidden w-full relative py-2">
+                        <div class="flex gap-6 w-max hover:[animation-play-state:paused] animate-[marquee-left_45s_linear_infinite]" style="animation: marquee-left 45s linear infinite;">
+                            <!-- Card 1: Mathews -->
+                            <div class="w-[380px] sm:w-[480px] md:w-[580px] lg:w-[620px] flex-shrink-0 bg-white dark:bg-background-dark border-4 border-card-light dark:border-card-dark rounded-2xl p-4 sm:p-5 shadow-md relative hover:border-primary transition-all duration-300 flex flex-row gap-4 h-[210px] sm:h-[250px] md:h-[270px] lg:h-[280px]">
+                                <!-- Left side: Image -->
+                                <div class="w-[110px] sm:w-[150px] md:w-[180px] lg:w-[200px] h-full flex-shrink-0 rounded-xl overflow-hidden relative">
+                                    <img src="testi/mathews.jpg" alt="Mathews with Azhar" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+                                </div>
+                                <!-- Right side: Content -->
+                                <div class="flex flex-col justify-between py-0.5 flex-grow overflow-hidden relative">
+                                    <span class="text-accent-mud/10 text-6xl font-serif absolute -top-3 -left-2 select-none pointer-events-none">“</span>
+                                    <div class="overflow-y-auto scrollbar-none pr-1 mt-3 flex-grow">
+                                        <p class="font-handwritten text-text-light dark:text-text-dark text-[11px] sm:text-xs md:text-[13px] lg:text-[14px] leading-relaxed italic">
+                                            "It’s been a really wonderful experience working with Azhar for the past few years to convert my plot which had zero trees to one with more than 100 trees. The food forest and bamboo shield he helped develop has come up beautifully and the next step is to make a miyawaki in a small portion of land. We’re very happy with Azhar and his team on how everything has turned out well for us."
+                                        </p>
+                                    </div>
+                                    <div class="border-t border-card-light/50 dark:border-card-dark/30 pt-2 mt-1 flex-shrink-0">
+                                        <h4 class="font-display font-bold text-primary dark:text-text-dark text-[11px] sm:text-xs md:text-sm leading-none">Mathews</h4>
+                                        <p class="font-handwritten text-[9px] sm:text-[10px] md:text-xs text-text-muted-light dark:text-text-muted-dark mt-1 leading-none">Director, Leading IT Company</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 2: Subbu Raghunathan -->
+                            <div class="w-[380px] sm:w-[480px] md:w-[580px] lg:w-[620px] flex-shrink-0 bg-white dark:bg-background-dark border-4 border-card-light dark:border-card-dark rounded-2xl p-4 sm:p-5 shadow-md relative hover:border-primary transition-all duration-300 flex flex-row gap-4 h-[210px] sm:h-[250px] md:h-[270px] lg:h-[280px]">
+                                <!-- Left side: Large Initials Placeholder -->
+                                <div class="w-[110px] sm:w-[150px] md:w-[180px] lg:w-[200px] h-full flex-shrink-0 rounded-xl bg-accent-mud/10 dark:bg-accent-mud/20 flex items-center justify-center border-2 border-primary/10 font-display font-bold text-primary dark:text-text-dark text-3xl sm:text-4xl md:text-5xl select-none">
+                                    SR
+                                </div>
+                                <!-- Right side: Content -->
+                                <div class="flex flex-col justify-between py-0.5 flex-grow overflow-hidden relative">
+                                    <span class="text-accent-mud/10 text-6xl font-serif absolute -top-3 -left-2 select-none pointer-events-none">“</span>
+                                    <div class="overflow-y-auto scrollbar-none pr-1 mt-3 flex-grow">
+                                        <p class="font-handwritten text-text-light dark:text-text-dark text-[11px] sm:text-xs md:text-[13px] lg:text-[14px] leading-relaxed italic">
+                                            "Azhar and the EarthwormX team have been doing an excellent job managing the plantation on my plot. From planting and basin formation to support sticks, irrigation, and mulching, everything is handled professionally and with great attention to detail. What stands out is their ownership, responsiveness, and genuine care for the plants. I am very happy with their work and would highly recommend EarthwormX for plantation and land care services."
+                                        </p>
+                                    </div>
+                                    <div class="border-t border-card-light/50 dark:border-card-dark/30 pt-2 mt-1 flex-shrink-0">
+                                        <h4 class="font-display font-bold text-primary dark:text-text-dark text-[11px] sm:text-xs md:text-sm leading-none">Subbu Raghunathan</h4>
+                                        <p class="font-handwritten text-[9px] sm:text-[10px] md:text-xs text-text-muted-light dark:text-text-muted-dark mt-1 leading-none">Landowner</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 3: Ar Preksha Romil -->
+                            <div class="w-[380px] sm:w-[480px] md:w-[580px] lg:w-[620px] flex-shrink-0 bg-white dark:bg-background-dark border-4 border-card-light dark:border-card-dark rounded-2xl p-4 sm:p-5 shadow-md relative hover:border-primary transition-all duration-300 flex flex-row gap-4 h-[210px] sm:h-[250px] md:h-[270px] lg:h-[280px]">
+                                <!-- Left side: Image -->
+                                <div class="w-[110px] sm:w-[150px] md:w-[180px] lg:w-[200px] h-full flex-shrink-0 rounded-xl overflow-hidden relative">
+                                    <img src="testi/preksha.jpg" alt="Ar. Preksha Romil" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+                                </div>
+                                <!-- Right side: Content -->
+                                <div class="flex flex-col justify-between py-0.5 flex-grow overflow-hidden relative">
+                                    <span class="text-accent-mud/10 text-6xl font-serif absolute -top-3 -left-2 select-none pointer-events-none">“</span>
+                                    <div class="overflow-y-auto scrollbar-none pr-1 mt-3 flex-grow">
+                                        <p class="font-handwritten text-text-light dark:text-text-dark text-[11px] sm:text-xs md:text-[13px] lg:text-[14px] leading-relaxed italic">
+                                            "I’ve worked with Azar on a couple of projects, including a 1 lakh sq. ft. Miyawaki forest in Rajasthan. He brings a strong understanding of landscape, planting techniques, and on-ground execution, along with a high level of involvement throughout the project. What I value most is the sense of confidence he brings to the process—once the landscape scope is handed over to him. His knowledge, commitment, and hands-on approach make him a very dependable landscape consultant to work with."
+                                        </p>
+                                    </div>
+                                    <div class="border-t border-card-light/50 dark:border-card-dark/30 pt-2 mt-1 flex-shrink-0">
+                                        <h4 class="font-display font-bold text-primary dark:text-text-dark text-[11px] sm:text-xs md:text-sm leading-none">Ar. Preksha Romil</h4>
+                                        <p class="font-handwritten text-[9px] sm:text-[10px] md:text-xs text-text-muted-light dark:text-text-muted-dark mt-1 leading-none">Architect & Landscape Consultant</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- DUPLICATE CARD 1 -->
+                            <div class="w-[380px] sm:w-[480px] md:w-[580px] lg:w-[620px] flex-shrink-0 bg-white dark:bg-background-dark border-4 border-card-light dark:border-card-dark rounded-2xl p-4 sm:p-5 shadow-md relative hover:border-primary transition-all duration-300 flex flex-row gap-4 h-[210px] sm:h-[250px] md:h-[270px] lg:h-[280px]">
+                                <!-- Left side: Image -->
+                                <div class="w-[110px] sm:w-[150px] md:w-[180px] lg:w-[200px] h-full flex-shrink-0 rounded-xl overflow-hidden relative">
+                                    <img src="testi/mathews.jpg" alt="Mathews with Azhar" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+                                </div>
+                                <!-- Right side: Content -->
+                                <div class="flex flex-col justify-between py-0.5 flex-grow overflow-hidden relative">
+                                    <span class="text-accent-mud/10 text-6xl font-serif absolute -top-3 -left-2 select-none pointer-events-none">“</span>
+                                    <div class="overflow-y-auto scrollbar-none pr-1 mt-3 flex-grow">
+                                        <p class="font-handwritten text-text-light dark:text-text-dark text-[11px] sm:text-xs md:text-[13px] lg:text-[14px] leading-relaxed italic">
+                                            "It’s been a really wonderful experience working with Azhar for the past few years to convert my plot which had zero trees to one with more than 100 trees. The food forest and bamboo shield he helped develop has come up beautifully and the next step is to make a miyawaki in a small portion of land. We’re very happy with Azhar and his team on how everything has turned out well for us."
+                                        </p>
+                                    </div>
+                                    <div class="border-t border-card-light/50 dark:border-card-dark/30 pt-2 mt-1 flex-shrink-0">
+                                        <h4 class="font-display font-bold text-primary dark:text-text-dark text-[11px] sm:text-xs md:text-sm leading-none">Mathews</h4>
+                                        <p class="font-handwritten text-[9px] sm:text-[10px] md:text-xs text-text-muted-light dark:text-text-muted-dark mt-1 leading-none">Director, Leading IT Company</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- DUPLICATE CARD 2 -->
+                            <div class="w-[380px] sm:w-[480px] md:w-[580px] lg:w-[620px] flex-shrink-0 bg-white dark:bg-background-dark border-4 border-card-light dark:border-card-dark rounded-2xl p-4 sm:p-5 shadow-md relative hover:border-primary transition-all duration-300 flex flex-row gap-4 h-[210px] sm:h-[250px] md:h-[270px] lg:h-[280px]">
+                                <!-- Left side: Large Initials Placeholder -->
+                                <div class="w-[110px] sm:w-[150px] md:w-[180px] lg:w-[200px] h-full flex-shrink-0 rounded-xl bg-accent-mud/10 dark:bg-accent-mud/20 flex items-center justify-center border-2 border-primary/10 font-display font-bold text-primary dark:text-text-dark text-3xl sm:text-4xl md:text-5xl select-none">
+                                    SR
+                                </div>
+                                <!-- Right side: Content -->
+                                <div class="flex flex-col justify-between py-0.5 flex-grow overflow-hidden relative">
+                                    <span class="text-accent-mud/10 text-6xl font-serif absolute -top-3 -left-2 select-none pointer-events-none">“</span>
+                                    <div class="overflow-y-auto scrollbar-none pr-1 mt-3 flex-grow">
+                                        <p class="font-handwritten text-text-light dark:text-text-dark text-[11px] sm:text-xs md:text-[13px] lg:text-[14px] leading-relaxed italic">
+                                            "Azhar and the EarthwormX team have been doing an excellent job managing the plantation on my plot. From planting and basin formation to support sticks, irrigation, and mulching, everything is handled professionally and with great attention to detail. What stands out is their ownership, responsiveness, and genuine care for the plants. I am very happy with their work and would highly recommend EarthwormX for plantation and land care services."
+                                        </p>
+                                    </div>
+                                    <div class="border-t border-card-light/50 dark:border-card-dark/30 pt-2 mt-1 flex-shrink-0">
+                                        <h4 class="font-display font-bold text-primary dark:text-text-dark text-[11px] sm:text-xs md:text-sm leading-none">Subbu Raghunathan</h4>
+                                        <p class="font-handwritten text-[9px] sm:text-[10px] md:text-xs text-text-muted-light dark:text-text-muted-dark mt-1 leading-none">Landowner</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- DUPLICATE CARD 3 -->
+                            <div class="w-[380px] sm:w-[480px] md:w-[580px] lg:w-[620px] flex-shrink-0 bg-white dark:bg-background-dark border-4 border-card-light dark:border-card-dark rounded-2xl p-4 sm:p-5 shadow-md relative hover:border-primary transition-all duration-300 flex flex-row gap-4 h-[210px] sm:h-[250px] md:h-[270px] lg:h-[280px]">
+                                <!-- Left side: Image -->
+                                <div class="w-[110px] sm:w-[150px] md:w-[180px] lg:w-[200px] h-full flex-shrink-0 rounded-xl overflow-hidden relative">
+                                    <img src="testi/preksha.jpg" alt="Ar. Preksha Romil" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+                                </div>
+                                <!-- Right side: Content -->
+                                <div class="flex flex-col justify-between py-0.5 flex-grow overflow-hidden relative">
+                                    <span class="text-accent-mud/10 text-6xl font-serif absolute -top-3 -left-2 select-none pointer-events-none">“</span>
+                                    <div class="overflow-y-auto scrollbar-none pr-1 mt-3 flex-grow">
+                                        <p class="font-handwritten text-text-light dark:text-text-dark text-[11px] sm:text-xs md:text-[13px] lg:text-[14px] leading-relaxed italic">
+                                            "I’ve worked with Azar on a couple of projects, including a 1 lakh sq. ft. Miyawaki forest in Rajasthan. He brings a strong understanding of landscape, planting techniques, and on-ground execution, along with a high level of involvement throughout the project. What I value most is the sense of confidence he brings to the process—once the landscape scope is handed over to him. His knowledge, commitment, and hands-on approach make him a very dependable landscape consultant to work with."
+                                        </p>
+                                    </div>
+                                    <div class="border-t border-card-light/50 dark:border-card-dark/30 pt-2 mt-1 flex-shrink-0">
+                                        <h4 class="font-display font-bold text-primary dark:text-text-dark text-[11px] sm:text-xs md:text-sm leading-none">Ar. Preksha Romil</h4>
+                                        <p class="font-handwritten text-[9px] sm:text-[10px] md:text-xs text-text-muted-light dark:text-text-muted-dark mt-1 leading-none">Architect & Landscape Consultant</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="text-center md:text-left">
-                        <h2
-                            class="text-4xl md:text-5xl font-display font-bold leading-tight text-primary dark:text-text-dark">
-                            Client Testimonials
-                        </h2>
-                        <p class="mt-4 text-lg text-text-muted-light dark:text-text-muted-dark font-handwritten">
-                            Partners in regeneration—landowners, corporates, and citizens creating lasting impact.</p>
-                        <a href="about.html"><button
-                                class="bg-accent-mud text-white px-8 py-3 rounded-lg font-handwritten text-xl shadow-lg hover:bg-opacity-90 transition-transform hover:scale-105 mt-6">
-                                Learn More
-                            </button></a>
+
+                    <!-- Row 2: Scrolling Right -->
+                    <div class="overflow-hidden w-full relative py-2">
+                        <div class="flex gap-6 w-max hover:[animation-play-state:paused] animate-[marquee-right_45s_linear_infinite]" style="animation: marquee-right 45s linear infinite;">
+                            <!-- Card 4: Bijuraj Raju -->
+                            <div class="w-[380px] sm:w-[480px] md:w-[580px] lg:w-[620px] flex-shrink-0 bg-white dark:bg-background-dark border-4 border-card-light dark:border-card-dark rounded-2xl p-4 sm:p-5 shadow-md relative hover:border-primary transition-all duration-300 flex flex-row gap-4 h-[210px] sm:h-[250px] md:h-[270px] lg:h-[280px]">
+                                <!-- Left side: Image -->
+                                <div class="w-[110px] sm:w-[150px] md:w-[180px] lg:w-[200px] h-full flex-shrink-0 rounded-xl overflow-hidden relative">
+                                    <img src="testi/biju.jpg" alt="Bijuraj Raju" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+                                </div>
+                                <!-- Right side: Content -->
+                                <div class="flex flex-col justify-between py-0.5 flex-grow overflow-hidden relative">
+                                    <span class="text-accent-mud/10 text-6xl font-serif absolute -top-3 -left-2 select-none pointer-events-none">“</span>
+                                    <div class="overflow-y-auto scrollbar-none pr-1 mt-3 flex-grow">
+                                        <p class="font-handwritten text-text-light dark:text-text-dark text-[11px] sm:text-xs md:text-[13px] lg:text-[14px] leading-relaxed italic">
+                                            "We’ve been working with Azhar for the past four years, and the transformation of our property has been remarkable. He developed our food forest and landscape and has continued to maintain it with great care. The difference over the years is clearly visible, and we’re very happy with his approach, commitment and the way he manages the entire space."
+                                        </p>
+                                    </div>
+                                    <div class="border-t border-card-light/50 dark:border-card-dark/30 pt-2 mt-1 flex-shrink-0">
+                                        <h4 class="font-display font-bold text-primary dark:text-text-dark text-[11px] sm:text-xs md:text-sm leading-none">Bijuraj Raju</h4>
+                                        <p class="font-handwritten text-[9px] sm:text-[10px] md:text-xs text-text-muted-light dark:text-text-muted-dark mt-1 leading-none">Director, Cisco</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 5: Mallikarjun -->
+                            <div class="w-[380px] sm:w-[480px] md:w-[580px] lg:w-[620px] flex-shrink-0 bg-white dark:bg-background-dark border-4 border-card-light dark:border-card-dark rounded-2xl p-4 sm:p-5 shadow-md relative hover:border-primary transition-all duration-300 flex flex-row gap-4 h-[210px] sm:h-[250px] md:h-[270px] lg:h-[280px]">
+                                <!-- Left side: Image -->
+                                <div class="w-[110px] sm:w-[150px] md:w-[180px] lg:w-[200px] h-full flex-shrink-0 rounded-xl overflow-hidden relative">
+                                    <img src="testi/malli.jpg" alt="Mallikarjun" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+                                </div>
+                                <!-- Right side: Content -->
+                                <div class="flex flex-col justify-between py-0.5 flex-grow overflow-hidden relative">
+                                    <span class="text-accent-mud/10 text-6xl font-serif absolute -top-3 -left-2 select-none pointer-events-none">“</span>
+                                    <div class="overflow-y-auto scrollbar-none pr-1 mt-3 flex-grow">
+                                        <p class="font-handwritten text-text-light dark:text-text-dark text-[11px] sm:text-xs md:text-[13px] lg:text-[14px] leading-relaxed italic">
+                                            "Azhar has been taking care of our food forest and landscape for the last four years. What I appreciate most is his consistent involvement and practical approach to the work. The property has changed significantly over time, and it’s great to see the plants and landscape becoming healthier and more established. We’re very happy with his work and continued support."
+                                        </p>
+                                    </div>
+                                    <div class="border-t border-card-light/50 dark:border-card-dark/30 pt-2 mt-1 flex-shrink-0">
+                                        <h4 class="font-display font-bold text-primary dark:text-text-dark text-[11px] sm:text-xs md:text-sm leading-none">Mallikarjun</h4>
+                                        <p class="font-handwritten text-[9px] sm:text-[10px] md:text-xs text-text-muted-light dark:text-text-muted-dark mt-1 leading-none">Director, Cisco</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 6: Vineesh S -->
+                            <div class="w-[380px] sm:w-[480px] md:w-[580px] lg:w-[620px] flex-shrink-0 bg-white dark:bg-background-dark border-4 border-card-light dark:border-card-dark rounded-2xl p-4 sm:p-5 shadow-md relative hover:border-primary transition-all duration-300 flex flex-row gap-4 h-[210px] sm:h-[250px] md:h-[270px] lg:h-[280px]">
+                                <!-- Left side: Image -->
+                                <div class="w-[110px] sm:w-[150px] md:w-[180px] lg:w-[200px] h-full flex-shrink-0 rounded-xl overflow-hidden relative">
+                                    <img src="testi/vineesh.jpeg" alt="Vineesh S" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+                                </div>
+                                <!-- Right side: Content -->
+                                <div class="flex flex-col justify-between py-0.5 flex-grow overflow-hidden relative">
+                                    <span class="text-accent-mud/10 text-6xl font-serif absolute -top-3 -left-2 select-none pointer-events-none">“</span>
+                                    <div class="overflow-y-auto scrollbar-none pr-1 mt-3 flex-grow">
+                                        <p class="font-handwritten text-text-light dark:text-text-dark text-[11px] sm:text-xs md:text-[13px] lg:text-[14px] leading-relaxed italic">
+                                            "Working from Germany, managing a farm back home used to be a challenge. But for the past 3.5 years, Azar has taken care of our 22-cent land as if it were his own child. From turning a barren plot (save for a single tamarind tree) into a lush Miyawki forest alive with peacocks, to proactively managing our irrigation, fencing, and fertilizers, Azar’s dedication is unmatched. He gives us complete peace of mind. If you need someone reliable and deeply passionate about nature, Azar is simply the best."
+                                        </p>
+                                    </div>
+                                    <div class="border-t border-card-light/50 dark:border-card-dark/30 pt-2 mt-1 flex-shrink-0">
+                                        <h4 class="font-display font-bold text-primary dark:text-text-dark text-[11px] sm:text-xs md:text-sm leading-none">Vineesh S</h4>
+                                        <p class="font-handwritten text-[9px] sm:text-[10px] md:text-xs text-text-muted-light dark:text-text-muted-dark mt-1 leading-none">EMC Engineer Technical Expert, Germany</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- DUPLICATE CARD 4 -->
+                            <div class="w-[380px] sm:w-[480px] md:w-[580px] lg:w-[620px] flex-shrink-0 bg-white dark:bg-background-dark border-4 border-card-light dark:border-card-dark rounded-2xl p-4 sm:p-5 shadow-md relative hover:border-primary transition-all duration-300 flex flex-row gap-4 h-[210px] sm:h-[250px] md:h-[270px] lg:h-[280px]">
+                                <!-- Left side: Image -->
+                                <div class="w-[110px] sm:w-[150px] md:w-[180px] lg:w-[200px] h-full flex-shrink-0 rounded-xl overflow-hidden relative">
+                                    <img src="testi/biju.jpg" alt="Bijuraj Raju" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+                                </div>
+                                <!-- Right side: Content -->
+                                <div class="flex flex-col justify-between py-0.5 flex-grow overflow-hidden relative">
+                                    <span class="text-accent-mud/10 text-6xl font-serif absolute -top-3 -left-2 select-none pointer-events-none">“</span>
+                                    <div class="overflow-y-auto scrollbar-none pr-1 mt-3 flex-grow">
+                                        <p class="font-handwritten text-text-light dark:text-text-dark text-[11px] sm:text-xs md:text-[13px] lg:text-[14px] leading-relaxed italic">
+                                            "We’ve been working with Azhar for the past four years, and the transformation of our property has been remarkable. He developed our food forest and landscape and has continued to maintain it with great care. The difference over the years is clearly visible, and we’re very happy with his approach, commitment and the way he manages the entire space."
+                                        </p>
+                                    </div>
+                                    <div class="border-t border-card-light/50 dark:border-card-dark/30 pt-2 mt-1 flex-shrink-0">
+                                        <h4 class="font-display font-bold text-primary dark:text-text-dark text-[11px] sm:text-xs md:text-sm leading-none">Bijuraj Raju</h4>
+                                        <p class="font-handwritten text-[9px] sm:text-[10px] md:text-xs text-text-muted-light dark:text-text-muted-dark mt-1 leading-none">Director, Cisco</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- DUPLICATE CARD 5 -->
+                            <div class="w-[380px] sm:w-[480px] md:w-[580px] lg:w-[620px] flex-shrink-0 bg-white dark:bg-background-dark border-4 border-card-light dark:border-card-dark rounded-2xl p-4 sm:p-5 shadow-md relative hover:border-primary transition-all duration-300 flex flex-row gap-4 h-[210px] sm:h-[250px] md:h-[270px] lg:h-[280px]">
+                                <!-- Left side: Image -->
+                                <div class="w-[110px] sm:w-[150px] md:w-[180px] lg:w-[200px] h-full flex-shrink-0 rounded-xl overflow-hidden relative">
+                                    <img src="testi/malli.jpg" alt="Mallikarjun" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+                                </div>
+                                <!-- Right side: Content -->
+                                <div class="flex flex-col justify-between py-0.5 flex-grow overflow-hidden relative">
+                                    <span class="text-accent-mud/10 text-6xl font-serif absolute -top-3 -left-2 select-none pointer-events-none">“</span>
+                                    <div class="overflow-y-auto scrollbar-none pr-1 mt-3 flex-grow">
+                                        <p class="font-handwritten text-text-light dark:text-text-dark text-[11px] sm:text-xs md:text-[13px] lg:text-[14px] leading-relaxed italic">
+                                            "Azhar has been taking care of our food forest and landscape for the last four years. What I appreciate most is his consistent involvement and practical approach to the work. The property has changed significantly over time, and it’s great to see the plants and landscape becoming healthier and more established. We’re very happy with his work and continued support."
+                                        </p>
+                                    </div>
+                                    <div class="border-t border-card-light/50 dark:border-card-dark/30 pt-2 mt-1 flex-shrink-0">
+                                        <h4 class="font-display font-bold text-primary dark:text-text-dark text-[11px] sm:text-xs md:text-sm leading-none">Mallikarjun</h4>
+                                        <p class="font-handwritten text-[9px] sm:text-[10px] md:text-xs text-text-muted-light dark:text-text-muted-dark mt-1 leading-none">Director, Cisco</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- DUPLICATE CARD 6 -->
+                            <div class="w-[380px] sm:w-[480px] md:w-[580px] lg:w-[620px] flex-shrink-0 bg-white dark:bg-background-dark border-4 border-card-light dark:border-card-dark rounded-2xl p-4 sm:p-5 shadow-md relative hover:border-primary transition-all duration-300 flex flex-row gap-4 h-[210px] sm:h-[250px] md:h-[270px] lg:h-[280px]">
+                                <!-- Left side: Image -->
+                                <div class="w-[110px] sm:w-[150px] md:w-[180px] lg:w-[200px] h-full flex-shrink-0 rounded-xl overflow-hidden relative">
+                                    <img src="testi/vineesh.jpeg" alt="Vineesh S" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+                                </div>
+                                <!-- Right side: Content -->
+                                <div class="flex flex-col justify-between py-0.5 flex-grow overflow-hidden relative">
+                                    <span class="text-accent-mud/10 text-6xl font-serif absolute -top-3 -left-2 select-none pointer-events-none">“</span>
+                                    <div class="overflow-y-auto scrollbar-none pr-1 mt-3 flex-grow">
+                                        <p class="font-handwritten text-text-light dark:text-text-dark text-[11px] sm:text-xs md:text-[13px] lg:text-[14px] leading-relaxed italic">
+                                            "Working from Germany, managing a farm back home used to be a challenge. But for the past 3.5 years, Azar has taken care of our 22-cent land as if it were his own child. From turning a barren plot (save for a single tamarind tree) into a lush Miyawki forest alive with peacocks, to proactively managing our irrigation, fencing, and fertilizers, Azar’s dedication is unmatched. He gives us complete peace of mind. If you need someone reliable and deeply passionate about nature, Azar is simply the best."
+                                        </p>
+                                    </div>
+                                    <div class="border-t border-card-light/50 dark:border-card-dark/30 pt-2 mt-1 flex-shrink-0">
+                                        <h4 class="font-display font-bold text-primary dark:text-text-dark text-[11px] sm:text-xs md:text-sm leading-none">Vineesh S</h4>
+                                        <p class="font-handwritten text-[9px] sm:text-[10px] md:text-xs text-text-muted-light dark:text-text-muted-dark mt-1 leading-none">EMC Engineer Technical Expert, Germany</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
-            -->
             <section class="py-10 sm:py-16 lg:py-24" id="faq">
                 <div class="text-center mb-8 lg:mb-10">
                     <h2 class="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-primary dark:text-text-dark">Frequently Asked
